@@ -1,7 +1,10 @@
-# kiveukoi - Application Android
-# Alexis, Benjamin, Edouard, Matthieu, Ronan
+#################################################################
+#								#
+# kiveukoi - Application Android				#
+# Alexis, Benjamin, Edouard, Matthieu, Ronan			#
+#								#
+#################################################################
 #
-################################################################
+# Fichiers ignorés par le git :
 #
 README.md
-bin/jarlist.cache
