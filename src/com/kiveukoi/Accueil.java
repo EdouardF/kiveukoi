@@ -39,7 +39,7 @@ public class Accueil extends Activity implements OnClickListener{
 			startActivity(monIntent);
 		}
 		if (v == btnAjout) {
-			Intent monIntent = new Intent(this,Statistiques.class);
+			Intent monIntent = new Intent(this,AjoutModif.class);
 			startActivity(monIntent);
 		}
 		if (v == btnProfil) {

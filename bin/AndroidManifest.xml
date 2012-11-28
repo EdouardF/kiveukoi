@@ -38,6 +38,8 @@
         <activity
             android:name="com.kiveukoi.Profil"
             android:label="@string/title_activity_profil" >
+        </activity>
+        <activity
             android:name="com.kiveukoi.AjoutModif"
             android:label="@string/title_activity_ajout_modif" >
         </activity>
