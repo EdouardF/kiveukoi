@@ -29,10 +29,8 @@ public class MainActivity extends Activity implements OnClickListener {
 	@Override
 	public void onClick(View v) {
 		if (v == btnConnexion) {
-
 			Intent monIntent = new Intent(this,Accueil.class);
 			startActivity(monIntent);
-
 		}
 	}
 

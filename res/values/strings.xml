@@ -7,5 +7,9 @@
     <string name="title_activity_accueil">Accueil</string>
     <string name="login">Connexion</string>
     <string name="title_pin">Veuillez saisir votre code PIN</string>
-
+    <string name="title_activity_statistiques">Statistiques</string>
+    <string name="title_activity_profil">Profil</string>
+	<string name="btnprofil">Profil</string>
+	<string name="btnstatistiques">Statistiques</string>
+	<string name="btnajouter">Ajouter</string>
 </resources>
