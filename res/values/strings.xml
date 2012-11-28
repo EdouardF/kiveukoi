@@ -5,6 +5,7 @@
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
     <string name="title_activity_accueil">Accueil</string>
+<<<<<<< HEAD
     <string name="login">Connexion</string>
     <string name="title_pin">Veuillez saisir votre code PIN</string>
     <string name="title_activity_statistiques">Statistiques</string>
@@ -12,4 +13,9 @@
 	<string name="btnprofil">Profil</string>
 	<string name="btnstatistiques">Statistiques</string>
 	<string name="btnajouter">Ajouter</string>
+=======
+    <string name="TitreAjoutModif">Reservation</string><string name="title_activity_ajout_modif">AjoutModif</string>
+    
+
+>>>>>>> 41b7731d6750a6433ccab0c6d9cd8a2e2f7e75cd
 </resources>
