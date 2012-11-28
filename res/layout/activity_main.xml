@@ -15,4 +15,14 @@
         android:inputType="numberPassword" >
         <requestFocus />
     </EditText>
+
+    <Button
+        android:id="@+id/btnConnexion"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/txtPasswordNum"
+        android:layout_marginTop="16dp"
+        android:text="Connexion" />
+
 </RelativeLayout>
