@@ -38,6 +38,7 @@
 
         <LinearLayout
             style="@style/LoginFormContainer"
+            android:layout_height="229dp"
             android:orientation="vertical" >
 
             <EditText
