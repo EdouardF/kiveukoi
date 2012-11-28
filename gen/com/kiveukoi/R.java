@@ -14,7 +14,6 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-<<<<<<< HEAD
         public static final int btnAjout=0x7f070003;
         public static final int btnConnexion=0x7f070010;
         public static final int btnProfil=0x7f070002;
@@ -34,7 +33,6 @@ public final class R {
         public static final int sign_in_button=0x7f07000a;
         public static final int tableRow1=0x7f070000;
         public static final int textView1=0x7f07000b;
-=======
         public static final int btnConnexion=0x7f070014;
         public static final int editText1=0x7f070010;
         public static final int editText2=0x7f070011;
@@ -58,11 +56,9 @@ public final class R {
         public static final int textView6=0x7f070006;
         public static final int textView7=0x7f070007;
         public static final int textView8=0x7f070008;
->>>>>>> 9282a4eb2f9b29e01d91888be3a1b4fe7d9f5267
     }
     public static final class layout {
         public static final int activity_accueil=0x7f030000;
-<<<<<<< HEAD
         public static final int activity_identification=0x7f030001;
         public static final int activity_main=0x7f030002;
         public static final int activity_profil=0x7f030003;
@@ -100,7 +96,6 @@ public final class R {
         public static final int title_activity_profil=0x7f040007;
         public static final int title_activity_statistiques=0x7f040006;
         public static final int title_pin=0x7f040005;
-=======
         public static final int activity_ajout_modif=0x7f030001;
         public static final int activity_identification=0x7f030002;
         public static final int activity_main=0x7f030003;
@@ -113,13 +108,10 @@ public final class R {
     }
     public static final class string {
         public static final int TitreAjoutModif=0x7f040004;
-<<<<<<< HEAD
         public static final int action_sign_in_register=0x7f040009;
         public static final int action_sign_in_short=0x7f04000a;
-=======
         public static final int action_sign_in_register=0x7f040013;
         public static final int action_sign_in_short=0x7f040014;
->>>>>>> 9282a4eb2f9b29e01d91888be3a1b4fe7d9f5267
         public static final int app_name=0x7f040000;
         public static final int date=0x7f040008;
         public static final int error_field_required=0x7f04001a;
@@ -128,16 +120,13 @@ public final class R {
         public static final int error_invalid_password=0x7f040018;
         public static final int groupe=0x7f04000e;
         public static final int hello_world=0x7f040001;
-<<<<<<< HEAD
         public static final int login_progress_signing_in=0x7f04000c;
         public static final int menu_forgot_password=0x7f04000b;
-=======
         public static final int heureDebut=0x7f040009;
         public static final int heureFin=0x7f04000a;
         public static final int login=0x7f040006;
         public static final int login_progress_signing_in=0x7f040016;
         public static final int menu_forgot_password=0x7f040015;
->>>>>>> 9282a4eb2f9b29e01d91888be3a1b4fe7d9f5267
         public static final int menu_settings=0x7f040002;
         public static final int nombrePoste=0x7f04000f;
         public static final int processeur=0x7f04000c;
@@ -149,13 +138,9 @@ public final class R {
         public static final int ram=0x7f04000b;
         public static final int title_activity_accueil=0x7f040003;
         public static final int title_activity_ajout_modif=0x7f040005;
-<<<<<<< HEAD
         public static final int title_activity_identification=0x7f040006;
->>>>>>> 41b7731d6750a6433ccab0c6d9cd8a2e2f7e75cd
-=======
         public static final int title_activity_identification=0x7f040010;
         public static final int title_pin=0x7f040007;
->>>>>>> 9282a4eb2f9b29e01d91888be3a1b4fe7d9f5267
     }
     public static final class style {
         /** 
