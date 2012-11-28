@@ -1,17 +1,17 @@
 <resources>
 
-    <string name="title_activity_identification">Sign in</string>
+    <string name="title_activity_identification">Connexion</string>
 
     <!-- Strings related to login -->
-    <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password</string>
-    <string name="action_sign_in_register"><b>Sign in</b> or register</string>
-    <string name="action_sign_in_short">Sign in</string>
-    <string name="menu_forgot_password">Recover lost password</string>
-    <string name="login_progress_signing_in">Signing in&#8230;</string>
-    <string name="error_invalid_email">This email address is invalid</string>
-    <string name="error_invalid_password">This password is too short</string>
-    <string name="error_incorrect_password">This password is incorrect</string>
-    <string name="error_field_required">This field is required</string>
+    <string name="prompt_email">Adresse email</string>
+    <string name="prompt_password">Mot de passe</string>
+    <string name="action_sign_in_register"><b>Connexion</b>ou enregistrement</string>
+    <string name="action_sign_in_short">Connexion</string>
+    <string name="menu_forgot_password">Mot de passe oublier</string>
+    <string name="login_progress_signing_in">Connexion ...</string>
+    <string name="error_invalid_email">Adresse email invalide</string>
+    <string name="error_invalid_password">Mot de passe incvalide</string>
+    <string name="error_incorrect_password">Mot de passe incorrect</string>
+    <string name="error_field_required">Ce champs est requis</string>
 
 </resources>
