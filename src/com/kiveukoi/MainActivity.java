@@ -29,8 +29,6 @@ public class MainActivity extends Activity implements OnClickListener {
 
 		btnConnexion.setOnClickListener(this);
 		
-		EditText editText1 = (EditText)findViewById(R.id.editText1);
-		//editText1.isActivated();
 	}
 
 	/**
