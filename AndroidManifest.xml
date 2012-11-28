@@ -27,6 +27,10 @@
             android:label="@string/title_activity_identification"
             android:windowSoftInputMode="adjustResize|stateVisible" >
         </activity>
+        <activity
+            android:name="com.kiveukoi.Accueil"
+            android:label="@string/title_activity_accueil" >
+        </activity>
     </application>
 
 </manifest>
