@@ -5,5 +5,7 @@
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
     <string name="title_activity_accueil">Accueil</string>
+    <string name="TitreAjoutModif">Reservation</string><string name="title_activity_ajout_modif">AjoutModif</string>
+    
 
 </resources>
