@@ -28,12 +28,14 @@ public class MainActivity extends Activity implements OnClickListener {
 
 		btnConnexion.setOnClickListener(this);
 		
-		/**
-		 * passer d'une case à l'autre pour la saisie du code PIN
-		 */
 		EditText editText1 = (EditText)findViewById(R.id.editText1);
 		EditText editText2 = (EditText)findViewById(R.id.editText2);
 		EditText editText3 = (EditText)findViewById(R.id.editText3);
+		
+		/**
+		 * Passer d'une case à la suivante
+		 * Quand le premier est rempli, on passe au second
+		 */
 		editText1.addTextChangedListener(new TextWatcher() {
 		    @Override
 		    public void afterTextChanged(Editable s) {
@@ -52,6 +54,9 @@ public class MainActivity extends Activity implements OnClickListener {
 		    	editText2.requestFocus();
 			}
 		});
+		/**
+		 * Quand le deuxième est rempli, on passe au troisième
+		 */
 		editText2.addTextChangedListener(new TextWatcher() {
 		    @Override
 		    public void afterTextChanged(Editable s) {
@@ -70,6 +75,9 @@ public class MainActivity extends Activity implements OnClickListener {
 		    	editText3.requestFocus();
 			}
 		});
+		/**
+		 * Quand la troisième est rempli, on passe au dernier
+		 */
 		editText3.addTextChangedListener(new TextWatcher() {
 		    @Override
 		    public void afterTextChanged(Editable s) {
@@ -107,6 +115,15 @@ public class MainActivity extends Activity implements OnClickListener {
 		EditText editText4 = (EditText)findViewById(R.id.editText4);
 		String content4 = editText4.getText().toString();
 		
+		/**
+		 * On crée le code PIN à partir des 4 chiffres saisis
+		 */
+		// String pin = content1+content2+content3+content4;
+		
+		/**
+		 * Si tous les champs ne sont pas remplis
+		 * @TODO si tous les champs sont remplis, on compare le code donné avec celui dans la base et on renvoie true => on va à l'accueil
+		 */
 		if (!content1.matches("") && !content2.matches("") && !content3.matches("") && !content4.matches("")) {
 			if (v == btnConnexion) {
 				Intent monIntent = new Intent(this,Accueil.class);
