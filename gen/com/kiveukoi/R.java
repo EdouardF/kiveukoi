@@ -12,17 +12,17 @@ public final class R {
     }
     public static final class id {
         public static final int btnAjout=0x7f060003;
-        public static final int btnConnexion=0x7f060023;
+        public static final int btnConnexion=0x7f06001f;
         public static final int btnProfil=0x7f060002;
         public static final int btnStatistiques=0x7f060001;
         public static final int dixh=0x7f060006;
         public static final int dixhuith=0x7f06000e;
         public static final int dixsepth=0x7f06000d;
         public static final int douzeh=0x7f060008;
-        public static final int editText1=0x7f06001f;
-        public static final int editText2=0x7f060020;
-        public static final int editText3=0x7f060021;
-        public static final int editText4=0x7f060022;
+        public static final int editText1=0x7f060020;
+        public static final int editText2=0x7f060023;
+        public static final int editText3=0x7f060022;
+        public static final int editText4=0x7f060021;
         public static final int email=0x7f06001a;
         public static final int huith=0x7f060004;
         public static final int login=0x7f06001c;

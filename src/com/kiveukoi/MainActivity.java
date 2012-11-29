@@ -1,17 +1,16 @@
 package com.kiveukoi;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends Activity implements OnClickListener {
@@ -29,6 +28,70 @@ public class MainActivity extends Activity implements OnClickListener {
 
 		btnConnexion.setOnClickListener(this);
 
+		EditText editText1 = (EditText) findViewById(R.id.editText1);
+		EditText editText2 = (EditText) findViewById(R.id.editText2);
+		EditText editText3 = (EditText) findViewById(R.id.editText3);
+		EditText editText4 = (EditText) findViewById(R.id.editText4);
+		editText1.addTextChangedListener(new TextWatcher() {
+			@Override
+			public void afterTextChanged(Editable s) {
+				EditText editText2 = (EditText) findViewById(R.id.editText2);
+				editText2.requestFocus();
+			}
+
+			@Override
+			public void beforeTextChanged(CharSequence s, int start, int count,
+					int after) {
+				// TODO Auto-generated method stub
+			}
+
+			@Override
+			public void onTextChanged(CharSequence s, int start, int before,
+					int count) {
+				EditText editText2 = (EditText) findViewById(R.id.editText2);
+				editText2.requestFocus();
+			}
+		});
+		editText1.addTextChangedListener(new TextWatcher() {
+			@Override
+			public void afterTextChanged(Editable s) {
+				EditText editText3 = (EditText) findViewById(R.id.editText3);
+				editText3.requestFocus();
+			}
+
+			@Override
+			public void beforeTextChanged(CharSequence s, int start, int count,
+					int after) {
+				// TODO Auto-generated method stub
+			}
+
+			@Override
+			public void onTextChanged(CharSequence s, int start, int before,
+					int count) {
+				EditText editText3 = (EditText) findViewById(R.id.editText3);
+				editText3.requestFocus();
+			}
+		});
+		editText1.addTextChangedListener(new TextWatcher() {
+			@Override
+			public void afterTextChanged(Editable s) {
+				EditText editText4 = (EditText) findViewById(R.id.editText4);
+				editText4.requestFocus();
+			}
+
+			@Override
+			public void beforeTextChanged(CharSequence s, int start, int count,
+					int after) {
+				// TODO Auto-generated method stub
+			}
+
+			@Override
+			public void onTextChanged(CharSequence s, int start, int before,
+					int count) {
+				EditText editText4 = (EditText) findViewById(R.id.editText4);
+				editText4.requestFocus();
+			}
+		});
 	}
 
 	/**
@@ -48,15 +111,15 @@ public class MainActivity extends Activity implements OnClickListener {
 		EditText editText4 = (EditText) findViewById(R.id.editText4);
 		String content4 = editText4.getText().toString();
 
-		//if (!content1.matches("") && !content2.matches("")
-			//	&& !content3.matches("") && !content4.matches("")) {
+		if (!content1.matches("") && !content2.matches("")
+				&& !content3.matches("") && !content4.matches("")) {
 			if (v == btnConnexion) {
 				Intent monIntent1 = new Intent(this, Accueil.class);
 				startActivity(monIntent1);
 			}
-		//} else {
-			//Toast.makeText(this, "Code incorrect", Toast.LENGTH_LONG).show();
-		//}
+		} else {
+			Toast.makeText(this, "Code incorrect", Toast.LENGTH_LONG).show();
+		}
 	}
 
 	public boolean onCreateOptionsMenu(Menu menu) {
