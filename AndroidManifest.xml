@@ -15,8 +15,8 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.kiveukoi.MainActivity"
-            android:windowSoftInputMode="adjustResize|stateAlwaysVisible"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustResize|stateAlwaysVisible" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -31,6 +31,11 @@
         <activity
             android:name="com.kiveukoi.Accueil"
             android:label="@string/title_activity_accueil" >
+        </activity>
+        <activity
+            android:name="com.kiveukoi.Connexion"
+            android:label="@string/title_activity_connexion"
+            android:windowSoftInputMode="adjustResize|stateAlwaysVisible" >
         </activity>
     </application>
 
