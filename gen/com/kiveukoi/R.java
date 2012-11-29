@@ -11,7 +11,7 @@ public final class R {
     public static final class attr {
     }
     public static final class id {
-        public static final int btnAjout=0x7f060003;
+        public static final int btnAjout=0x7f060004;
         public static final int btnConnexion=0x7f060017;
         public static final int btnProfil=0x7f060002;
         public static final int btnStatistiques=0x7f060001;
@@ -29,7 +29,7 @@ public final class R {
         public static final int password=0x7f060010;
         public static final int sign_in_button=0x7f060012;
         public static final int tableRow1=0x7f060000;
-        public static final int textView1=0x7f060004;
+        public static final int textView1=0x7f060003;
         public static final int textView2=0x7f060005;
         public static final int textView3=0x7f060006;
         public static final int textView4=0x7f060007;

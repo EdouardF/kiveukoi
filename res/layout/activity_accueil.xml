@@ -25,17 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginRight="26dp"
         android:text="@string/btnprofil" />
-
-    <Button
-        android:id="@+id/btnAjout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="18dp"
-        android:layout_toRightOf="@+id/btnProfil"
-        android:text="@string/btnajouter" />
 
     <TextView
         android:id="@+id/textView1"
@@ -44,5 +34,13 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Button
+        android:id="@+id/btnAjout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/btnajouter" />
 
 </RelativeLayout>

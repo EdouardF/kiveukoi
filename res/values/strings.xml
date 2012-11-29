@@ -11,7 +11,7 @@
 	<string name="btnstatistiques">Statistiques</string>
 	<string name="btnajouter">Ajouter</string>
     <string name="TitreAjoutModif">Reservation</string>
-    <string name="title_activity_ajout_modif">AjoutModif</string>
+    <string name="title_activity_ajout_modif">Réservation</string>
     <string name="login">Connexion</string>
     <string name="title_pin">Veuillez saisir votre code PIN</string>
     <string name="date">Date :</string>
