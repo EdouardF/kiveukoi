@@ -13,14 +13,35 @@
         android:text="@string/title_pin"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
+    <Button
+        android:id="@+id/btnConnexion"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/editText1"
+        android:layout_marginTop="42dp"
+        android:text="@string/login" />
+
+    <EditText
+        android:id="@+id/editText4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editText3"
+        android:layout_alignBottom="@+id/editText3"
+        android:layout_marginLeft="23dp"
+        android:layout_toRightOf="@+id/editText3"
+        android:ems="2"
+        android:inputType="numberPassword"
+        android:maxLength="1" />
+
     <EditText
         android:id="@+id/editText1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/textView1"
         android:layout_below="@+id/textView1"
-        android:layout_marginLeft="46dp"
-        android:layout_marginTop="19dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="22dp"
         android:ems="2"
         android:inputType="numberPassword"
         android:maxLength="1" >
@@ -30,45 +51,27 @@
     </EditText>
 
     <EditText
-        android:id="@+id/editText2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/editText1"
-        android:layout_alignBottom="@+id/editText1"
-        android:layout_toRightOf="@+id/editText1"
-        android:ems="2"
-        android:inputType="numberPassword"
-        android:maxLength="1" />
-
-    <EditText
         android:id="@+id/editText3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/editText2"
         android:layout_alignBottom="@+id/editText2"
+        android:layout_marginLeft="30dp"
         android:layout_toRightOf="@+id/editText2"
         android:ems="2"
         android:inputType="numberPassword"
-        android:maxLength="1" />
+        android:maxLength="1" >
+    </EditText>
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/editText2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/editText3"
-        android:layout_alignBottom="@+id/editText3"
-        android:layout_toRightOf="@+id/editText3"
+        android:layout_above="@+id/btnConnexion"
+        android:layout_marginLeft="28dp"
+        android:layout_toRightOf="@+id/editText1"
         android:ems="2"
         android:inputType="numberPassword"
         android:maxLength="1" />
-
-    <Button
-        android:id="@+id/btnConnexion"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/editText1"
-        android:layout_marginTop="42dp"
-        android:text="@string/login" />
 
 </RelativeLayout>
