@@ -32,7 +32,6 @@
             android:label="@string/title_activity_accueil" >
         </activity>
         <activity
-<<<<<<< HEAD
             android:name="com.kiveukoi.Statistiques"
             android:label="@string/title_activity_statistiques" >
         </activity>
