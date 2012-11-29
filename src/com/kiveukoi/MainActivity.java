@@ -128,6 +128,7 @@ public class MainActivity extends Activity implements OnClickListener {
 			if (v == btnConnexion) {
 				Intent monIntent = new Intent(this,Accueil.class);
 				startActivity(monIntent);
+				Toast.makeText(this, "Bienvenue sur Kiveukoi !", Toast.LENGTH_SHORT).show();
 			}
 		} else {
 			Toast.makeText(this, "Code incorrect", Toast.LENGTH_SHORT).show();
