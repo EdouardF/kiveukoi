@@ -1,13 +1,18 @@
 package com.kiveukoi;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends Activity implements OnClickListener {
 	Button btnConnexion = null;
@@ -23,16 +28,33 @@ public class MainActivity extends Activity implements OnClickListener {
 		btnConnexion = (Button) findViewById(R.id.btnConnexion);
 
 		btnConnexion.setOnClickListener(this);
-
+		
 	}
 
+	/**
+	 * Vérifie que le code PIN est renseigné pour accéder à l'accueil
+	 */
 	@Override
 	public void onClick(View v) {
-		if (v == btnConnexion) {
-
-			Intent monIntent = new Intent(this,Accueil.class);
-			startActivity(monIntent);
-
+		EditText editText1 = (EditText)findViewById(R.id.editText1);
+		String content1 = editText1.getText().toString();
+		
+		EditText editText2 = (EditText)findViewById(R.id.editText2);
+		String content2 = editText2.getText().toString();
+		
+		EditText editText3 = (EditText)findViewById(R.id.editText3);
+		String content3 = editText3.getText().toString();
+		
+		EditText editText4 = (EditText)findViewById(R.id.editText4);
+		String content4 = editText4.getText().toString();
+		
+		if (!content1.matches("") && !content2.matches("") && !content3.matches("") && !content4.matches("")) {
+			if (v == btnConnexion) {
+				Intent monIntent = new Intent(this,Accueil.class);
+				startActivity(monIntent);
+			}
+		} else {
+			Toast.makeText(this, "Code incorrect", Toast.LENGTH_LONG).show();
 		}
 	}
 
