@@ -10,10 +10,14 @@ package com.kiveukoi;
 public final class R {
     public static final class attr {
     }
+<<<<<<< HEAD
+=======
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
+        public static final int logo=0x7f020000;
     }
+>>>>>>> de420365f59497a57ba76512e2df3a973339268a
     public static final class id {
+<<<<<<< HEAD
         public static final int btnConnexion=0x7f070009;
         public static final int editText1=0x7f07000a;
         public static final int editText2=0x7f07000d;
@@ -29,37 +33,54 @@ public final class R {
         public static final int sign_in_button=0x7f070007;
         public static final int tableRow1=0x7f070000;
         public static final int textView1=0x7f070008;
+=======
+        public static final int btnConnexion=0x7f06000d;
+        public static final int editText1=0x7f060009;
+        public static final int editText2=0x7f06000a;
+        public static final int editText3=0x7f06000b;
+        public static final int editText4=0x7f06000c;
+        public static final int email=0x7f060004;
+        public static final int login=0x7f060006;
+        public static final int login_form=0x7f060003;
+        public static final int login_status=0x7f060001;
+        public static final int login_status_message=0x7f060002;
+        public static final int menu_forgot_password=0x7f06000e;
+        public static final int password=0x7f060005;
+        public static final int sign_in_button=0x7f060007;
+        public static final int tableRow1=0x7f060000;
+        public static final int textView1=0x7f060008;
+>>>>>>> ea4d68906f0aa6b8c1e17bdc5f577fd24b424218
     }
     public static final class layout {
-        public static final int activity_accueil=0x7f030000;
-        public static final int activity_identification=0x7f030001;
-        public static final int activity_main=0x7f030002;
+        public static final int activity_accueil=0x7f020000;
+        public static final int activity_identification=0x7f020001;
+        public static final int activity_main=0x7f020002;
     }
     public static final class menu {
-        public static final int activity_accueil=0x7f060000;
-        public static final int activity_identification=0x7f060001;
-        public static final int activity_main=0x7f060002;
+        public static final int activity_accueil=0x7f050000;
+        public static final int activity_identification=0x7f050001;
+        public static final int activity_main=0x7f050002;
     }
     public static final class string {
-        public static final int action_sign_in_register=0x7f040009;
-        public static final int action_sign_in_short=0x7f04000a;
-        public static final int app_name=0x7f040000;
-        public static final int error_field_required=0x7f040010;
-        public static final int error_incorrect_password=0x7f04000f;
-        public static final int error_invalid_email=0x7f04000d;
-        public static final int error_invalid_password=0x7f04000e;
-        public static final int hello_world=0x7f040001;
-        public static final int login=0x7f040004;
-        public static final int login_progress_signing_in=0x7f04000c;
-        public static final int menu_forgot_password=0x7f04000b;
-        public static final int menu_settings=0x7f040002;
+        public static final int action_sign_in_register=0x7f030009;
+        public static final int action_sign_in_short=0x7f03000a;
+        public static final int app_name=0x7f030000;
+        public static final int error_field_required=0x7f030010;
+        public static final int error_incorrect_password=0x7f03000f;
+        public static final int error_invalid_email=0x7f03000d;
+        public static final int error_invalid_password=0x7f03000e;
+        public static final int hello_world=0x7f030001;
+        public static final int login=0x7f030004;
+        public static final int login_progress_signing_in=0x7f03000c;
+        public static final int menu_forgot_password=0x7f03000b;
+        public static final int menu_settings=0x7f030002;
         /**  Strings related to login 
          */
-        public static final int prompt_email=0x7f040007;
-        public static final int prompt_password=0x7f040008;
-        public static final int title_activity_accueil=0x7f040003;
-        public static final int title_activity_identification=0x7f040006;
-        public static final int title_pin=0x7f040005;
+        public static final int prompt_email=0x7f030007;
+        public static final int prompt_password=0x7f030008;
+        public static final int title_activity_accueil=0x7f030003;
+        public static final int title_activity_identification=0x7f030006;
+        public static final int title_pin=0x7f030005;
     }
     public static final class style {
         /** 
@@ -83,11 +104,11 @@ public final class R {
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f050000;
+        public static final int AppBaseTheme=0x7f040000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f050001;
-        public static final int LoginFormContainer=0x7f050002;
+        public static final int AppTheme=0x7f040001;
+        public static final int LoginFormContainer=0x7f040002;
     }
 }
