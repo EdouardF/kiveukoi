@@ -1,17 +1,16 @@
 package com.kiveukoi;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends Activity implements OnClickListener {
@@ -29,8 +28,76 @@ public class MainActivity extends Activity implements OnClickListener {
 
 		btnConnexion.setOnClickListener(this);
 		
-	}
+		EditText editText1 = (EditText)findViewById(R.id.editText1);
+		EditText editText2 = (EditText)findViewById(R.id.editText2);
+		EditText editText3 = (EditText)findViewById(R.id.editText3);
+		
+		/**
+		 * Passer d'une case à la suivante
+		 * Quand le premier est rempli, on passe au second
+		 */
+		editText1.addTextChangedListener(new TextWatcher() {
+		    @Override
+		    public void afterTextChanged(Editable s) {
+		    	EditText editText2 = (EditText)findViewById(R.id.editText2);
+		    	editText2.requestFocus();
+		    }
 
+		    @Override
+		    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+		        // TODO Auto-generated method stub
+		    }
+
+			@Override
+			public void onTextChanged(CharSequence s, int start, int before, int count) {
+				EditText editText2 = (EditText)findViewById(R.id.editText2);
+		    	editText2.requestFocus();
+			}
+		});
+		/**
+		 * Quand le deuxième est rempli, on passe au troisième
+		 */
+		editText2.addTextChangedListener(new TextWatcher() {
+		    @Override
+		    public void afterTextChanged(Editable s) {
+		    	EditText editText3 = (EditText)findViewById(R.id.editText3);
+		    	editText3.requestFocus();
+		    }
+
+		    @Override
+		    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+		        // TODO Auto-generated method stub
+		    }
+
+			@Override
+			public void onTextChanged(CharSequence s, int start, int before, int count) {
+				EditText editText3 = (EditText)findViewById(R.id.editText3);
+		    	editText3.requestFocus();
+			}
+		});
+		/**
+		 * Quand la troisième est rempli, on passe au dernier
+		 */
+		editText3.addTextChangedListener(new TextWatcher() {
+		    @Override
+		    public void afterTextChanged(Editable s) {
+		    	EditText editText4 = (EditText)findViewById(R.id.editText4);
+		    	editText4.requestFocus();
+		    }
+
+		    @Override
+		    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+		        // TODO Auto-generated method stub
+		    }
+
+			@Override
+			public void onTextChanged(CharSequence s, int start, int before, int count) {
+				EditText editText4 = (EditText)findViewById(R.id.editText4);
+		    	editText4.requestFocus();
+			}
+		});
+	}
+	
 	/**
 	 * Vérifie que le code PIN est renseigné pour accéder à l'accueil
 	 */
@@ -38,7 +105,7 @@ public class MainActivity extends Activity implements OnClickListener {
 	public void onClick(View v) {
 		EditText editText1 = (EditText)findViewById(R.id.editText1);
 		String content1 = editText1.getText().toString();
-		
+
 		EditText editText2 = (EditText)findViewById(R.id.editText2);
 		String content2 = editText2.getText().toString();
 		
@@ -48,13 +115,22 @@ public class MainActivity extends Activity implements OnClickListener {
 		EditText editText4 = (EditText)findViewById(R.id.editText4);
 		String content4 = editText4.getText().toString();
 		
+		/**
+		 * On crée le code PIN à partir des 4 chiffres saisis
+		 */
+		// String pin = content1+content2+content3+content4;
+		
+		/**
+		 * Si tous les champs ne sont pas remplis
+		 * @TODO si tous les champs sont remplis, on compare le code donné avec celui dans la base et on renvoie true => on va à l'accueil
+		 */
 		if (!content1.matches("") && !content2.matches("") && !content3.matches("") && !content4.matches("")) {
 			if (v == btnConnexion) {
 				Intent monIntent = new Intent(this,Accueil.class);
 				startActivity(monIntent);
 			}
 		} else {
-			Toast.makeText(this, "Code incorrect", Toast.LENGTH_LONG).show();
+			Toast.makeText(this, "Code incorrect", Toast.LENGTH_SHORT).show();
 		}
 	}
 
