@@ -32,6 +32,7 @@
             android:label="@string/title_activity_accueil" >
         </activity>
         <activity
+<<<<<<< HEAD
             android:name="com.kiveukoi.Statistiques"
             android:label="@string/title_activity_statistiques" >
         </activity>
@@ -42,6 +43,10 @@
         <activity
             android:name="com.kiveukoi.AjoutModif"
             android:label="@string/title_activity_ajout_modif" >
+=======
+            android:name="com.kiveukoi.LoginWebService"
+            android:label="@string/title_activity_login_web_service" >
+>>>>>>> 1d048b118e7afda43f6047d1905eb5a8c5df618a
         </activity>
     </application>
 
