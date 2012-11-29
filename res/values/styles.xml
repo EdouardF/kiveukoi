@@ -24,5 +24,10 @@
         <item name="android:padding">16dp</item>
     </style>
 
+    <style name="ProgressBar1" parent="android:Widget.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@+id/progressBar1</item>
+        <item name="android:minHeight">10dip</item>
+        <item name="android:maxHeight">20dip</item>
+    </style>
 
 </resources>
