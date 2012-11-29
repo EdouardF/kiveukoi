@@ -10,6 +10,12 @@ package com.kiveukoi;
 public final class R {
     public static final class attr {
     }
+<<<<<<< HEAD
+=======
+    public static final class drawable {
+        public static final int logo=0x7f020000;
+    }
+>>>>>>> de420365f59497a57ba76512e2df3a973339268a
     public static final class id {
         public static final int btnConnexion=0x7f06000d;
         public static final int editText1=0x7f060009;
