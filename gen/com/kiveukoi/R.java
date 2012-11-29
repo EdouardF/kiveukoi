@@ -11,7 +11,11 @@ public final class R {
     public static final class attr {
     }
     public static final class drawable {
+<<<<<<< HEAD
         public static final int ic_launcher=0x7f020000;
+=======
+        public static final int logo=0x7f020000;
+>>>>>>> 061ed7b1ec423c2e115dfe970d97575bf666f1f2
     }
     public static final class id {
         public static final int btnAjout=0x7f070003;
