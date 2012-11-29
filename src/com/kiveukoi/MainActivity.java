@@ -28,10 +28,12 @@ public class MainActivity extends Activity implements OnClickListener {
 
 		btnConnexion.setOnClickListener(this);
 		
+		/**
+		 * passer d'une case à l'autre pour la saisie du code PIN
+		 */
 		EditText editText1 = (EditText)findViewById(R.id.editText1);
 		EditText editText2 = (EditText)findViewById(R.id.editText2);
 		EditText editText3 = (EditText)findViewById(R.id.editText3);
-		EditText editText4 = (EditText)findViewById(R.id.editText4);
 		editText1.addTextChangedListener(new TextWatcher() {
 		    @Override
 		    public void afterTextChanged(Editable s) {
@@ -50,7 +52,7 @@ public class MainActivity extends Activity implements OnClickListener {
 		    	editText2.requestFocus();
 			}
 		});
-		editText1.addTextChangedListener(new TextWatcher() {
+		editText2.addTextChangedListener(new TextWatcher() {
 		    @Override
 		    public void afterTextChanged(Editable s) {
 		    	EditText editText3 = (EditText)findViewById(R.id.editText3);
@@ -68,7 +70,7 @@ public class MainActivity extends Activity implements OnClickListener {
 		    	editText3.requestFocus();
 			}
 		});
-		editText1.addTextChangedListener(new TextWatcher() {
+		editText3.addTextChangedListener(new TextWatcher() {
 		    @Override
 		    public void afterTextChanged(Editable s) {
 		    	EditText editText4 = (EditText)findViewById(R.id.editText4);
