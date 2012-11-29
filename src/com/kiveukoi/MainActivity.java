@@ -28,7 +28,7 @@ public class MainActivity extends Activity implements OnClickListener {
 		btnConnexion = (Button) findViewById(R.id.btnConnexion);
 
 		btnConnexion.setOnClickListener(this);
-		
+
 	}
 
 	/**
@@ -36,31 +36,26 @@ public class MainActivity extends Activity implements OnClickListener {
 	 */
 	@Override
 	public void onClick(View v) {
-		if (v == btnConnexion) {
-			Intent monIntent = new Intent(this, Accueil.class);
-			startActivity(monIntent);
-			EditText editText1 = (EditText) findViewById(R.id.editText1);
-			String content1 = editText1.getText().toString();
+		EditText editText1 = (EditText) findViewById(R.id.editText1);
+		String content1 = editText1.getText().toString();
 
-			EditText editText2 = (EditText) findViewById(R.id.editText2);
-			String content2 = editText2.getText().toString();
+		EditText editText2 = (EditText) findViewById(R.id.editText2);
+		String content2 = editText2.getText().toString();
 
-			EditText editText3 = (EditText) findViewById(R.id.editText3);
-			String content3 = editText3.getText().toString();
+		EditText editText3 = (EditText) findViewById(R.id.editText3);
+		String content3 = editText3.getText().toString();
 
-			EditText editText4 = (EditText) findViewById(R.id.editText4);
-			String content4 = editText4.getText().toString();
+		EditText editText4 = (EditText) findViewById(R.id.editText4);
+		String content4 = editText4.getText().toString();
 
-			if (!content1.matches("") && !content2.matches("")
-					&& !content3.matches("") && !content4.matches("")) {
-				if (v == btnConnexion) {
-					Intent monIntent1 = new Intent(this, Accueil.class);
-					startActivity(monIntent1);
-				}
-			} else {
-				Toast.makeText(this, "Code incorrect", Toast.LENGTH_LONG)
-						.show();
+		if (!content1.matches("") && !content2.matches("")
+				&& !content3.matches("") && !content4.matches("")) {
+			if (v == btnConnexion) {
+				Intent monIntent1 = new Intent(this, Accueil.class);
+				startActivity(monIntent1);
 			}
+		} else {
+			Toast.makeText(this, "Code incorrect", Toast.LENGTH_LONG).show();
 		}
 	}
 
