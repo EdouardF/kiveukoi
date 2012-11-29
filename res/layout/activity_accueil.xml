@@ -41,7 +41,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/btnProfil"
-        android:layout_marginLeft="52dp"        
+        android:layout_marginLeft="52dp"
         android:layout_marginTop="45dp"
         android:text="@string/huith"
         android:textAppearance="?android:attr/textAppearanceSmall" />
@@ -52,7 +52,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/huith"
-        android:layout_marginLeft="52dp"   
+        android:layout_marginLeft="52dp"
         android:layout_marginTop="10dp"
         android:text="@string/neufh"
         android:textAppearance="?android:attr/textAppearanceSmall" />
@@ -63,7 +63,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/neufh"
-        android:layout_marginLeft="52dp"   
+        android:layout_marginLeft="52dp"
         android:layout_marginTop="10dp"
         android:text="@string/dixh"
         android:textAppearance="?android:attr/textAppearanceSmall" />
@@ -74,7 +74,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/dixh"
-        android:layout_marginLeft="52dp"   
+        android:layout_marginLeft="52dp"
         android:layout_marginTop="10dp"
         android:text="@string/onzeh"
         android:textAppearance="?android:attr/textAppearanceSmall" />
@@ -85,7 +85,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/onzeh"
-        android:layout_marginLeft="52dp"   
+        android:layout_marginLeft="52dp"
         android:layout_marginTop="10dp"
         android:text="@string/douzeh"
         android:textAppearance="?android:attr/textAppearanceSmall" />
@@ -96,7 +96,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/douzeh"
-        android:layout_marginLeft="52dp"   
+        android:layout_marginLeft="52dp"
         android:layout_marginTop="10dp"
         android:text="@string/treizeh"
         android:textAppearance="?android:attr/textAppearanceSmall" />
@@ -107,7 +107,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/treizeh"
-        android:layout_marginLeft="52dp"   
+        android:layout_marginLeft="52dp"
         android:layout_marginTop="10dp"
         android:text="@string/quatorzeh"
         android:textAppearance="?android:attr/textAppearanceSmall" />
@@ -118,7 +118,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/quatorzeh"
-        android:layout_marginLeft="52dp"   
+        android:layout_marginLeft="52dp"
         android:layout_marginTop="10dp"
         android:text="@string/quinzeh"
         android:textAppearance="?android:attr/textAppearanceSmall" />
@@ -129,7 +129,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/quinzeh"
-        android:layout_marginLeft="52dp"   
+        android:layout_marginLeft="52dp"
         android:layout_marginTop="10dp"
         android:text="@string/seizeh"
         android:textAppearance="?android:attr/textAppearanceSmall" />
@@ -140,7 +140,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/seizeh"
-        android:layout_marginLeft="52dp"   
+        android:layout_marginLeft="52dp"
         android:layout_marginTop="10dp"
         android:text="@string/dixsepth"
         android:textAppearance="?android:attr/textAppearanceSmall" />
@@ -151,9 +151,11 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/dixsepth"
-        android:layout_marginLeft="52dp"   
+        android:layout_marginLeft="52dp"
         android:layout_marginTop="10dp"
         android:text="@string/dixhuith"
         android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    
 
 </RelativeLayout>

@@ -14,8 +14,8 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.kiveukoi.MainActivity"
-            android:windowSoftInputMode="adjustResize|stateAlwaysVisible"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustResize|stateAlwaysVisible" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -42,10 +42,10 @@
         <activity
             android:name="com.kiveukoi.AjoutModif"
             android:label="@string/title_activity_ajout_modif" >
-=======
+        </activity>
+        <activity
             android:name="com.kiveukoi.LoginWebService"
             android:label="@string/title_activity_login_web_service" >
->>>>>>> 1d048b118e7afda43f6047d1905eb5a8c5df618a
         </activity>
     </application>
 
