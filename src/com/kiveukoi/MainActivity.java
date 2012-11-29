@@ -48,15 +48,15 @@ public class MainActivity extends Activity implements OnClickListener {
 		EditText editText4 = (EditText) findViewById(R.id.editText4);
 		String content4 = editText4.getText().toString();
 
-		if (!content1.matches("") && !content2.matches("")
-				&& !content3.matches("") && !content4.matches("")) {
+		//if (!content1.matches("") && !content2.matches("")
+			//	&& !content3.matches("") && !content4.matches("")) {
 			if (v == btnConnexion) {
 				Intent monIntent1 = new Intent(this, Accueil.class);
 				startActivity(monIntent1);
 			}
-		} else {
-			Toast.makeText(this, "Code incorrect", Toast.LENGTH_LONG).show();
-		}
+		//} else {
+			//Toast.makeText(this, "Code incorrect", Toast.LENGTH_LONG).show();
+		//}
 	}
 
 	public boolean onCreateOptionsMenu(Menu menu) {

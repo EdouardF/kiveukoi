@@ -29,4 +29,15 @@
     <string name="nom_champ_pin">Code PIN :</string>
     <string name="hint_mail">wxy@exemple.com</string>
     <string name="hint_password">P4ssSw0rd</string>
+    <string name="huith">8h</string>
+    <string name="neufh">9h</string>
+    <string name="dixh">10h</string>
+    <string name="onzeh">11h</string>
+    <string name="douzeh">12h</string>
+    <string name="treizeh">13h</string>
+    <string name="quatorzeh">14h</string>
+    <string name="quinzeh">15h</string>
+    <string name="seizeh">16h</string>
+    <string name="dixsepth">17h</string>
+    <string name="dixhuith">18h</string>
 </resources>
