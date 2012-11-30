@@ -22,4 +22,5 @@
     <string name="professeur">Professeur :</string>
     <string name="groupe">Groupe :</string>
     <string name="nombrePoste">Nombre de poste :</string>
+    <string name="choixDate">Choisir une date</string>
 </resources>
