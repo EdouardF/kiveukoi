@@ -6,6 +6,6 @@
     <string name="menu_settings">Settings</string>
     <string name="title_activity_accueil">Accueil</string>
     <string name="login">Connexion</string>
-    <string name="title_pin">Veuillez saisir votre code PIN</string>
+    <string name="title_pin">Veuillez saisir votre code</string>
 
 </resources>

@@ -116,29 +116,45 @@ public class MainActivity extends Activity implements OnClickListener {
 		String content4 = editText4.getText().toString();
 		
 		/**
-		 * On crée le code PIN à partir des 4 chiffres saisis
+		 * Vérification du code PIN saisi
 		 */
-		// String pin = content1+content2+content3+content4;
+		String pin = content1+content2+content3+content4;
+		boolean loginok = checkPIN(pin);
 		
 		/**
 		 * Si tous les champs ne sont pas remplis
 		 * @TODO si tous les champs sont remplis, on compare le code donné avec celui dans la base et on renvoie true => on va à l'accueil
 		 */
 		if (!content1.matches("") && !content2.matches("") && !content3.matches("") && !content4.matches("")) {
-			if (v == btnConnexion) {
-				Intent monIntent = new Intent(this,Accueil.class);
-				startActivity(monIntent);
-				Toast.makeText(this, "Bienvenue sur Kiveukoi !", Toast.LENGTH_SHORT).show();
+			if (loginok) {
+				if (v == btnConnexion) {
+					Intent monIntent = new Intent(this,Accueil.class);
+					startActivity(monIntent);
+					Toast.makeText(this, "Code accepté\nBienvenue sur Kiveukoi !", Toast.LENGTH_SHORT).show();
+				}
+			} else {
+				Toast.makeText(this, "Code incorrect", Toast.LENGTH_SHORT).show();
 			}
 		} else {
-			Toast.makeText(this, "Code incorrect", Toast.LENGTH_SHORT).show();
+			Toast.makeText(this, "Veuillez saisir les 4 chiffres", Toast.LENGTH_SHORT).show();
 		}
 	}
-
+	
+	/**
+	 * Vérifie que le code PIN saisi est le bon
+	 * @param pin String de longueur 4
+	 * @return true si le code est bon, false sinon
+	 */
+	public boolean checkPIN(String pin) {
+		// on récupère le PIN dans la base
+		// puis on compare avec celui saisi
+		// return pin.matches(_PIN de la BDD_);
+		return pin.matches("0123");
+	}
+	
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.activity_main, menu);
 		return true;
 	}
-	
 }
