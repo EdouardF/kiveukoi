@@ -118,22 +118,39 @@ public class MainActivity extends Activity implements OnClickListener {
 		/**
 		 * On crée le code PIN à partir des 4 chiffres saisis
 		 */
-		// String pin = content1+content2+content3+content4;
+		String pin = content1+content2+content3+content4;
+		
+		boolean pinok = checkPIN(pin);
 		
 		/**
 		 * Si tous les champs ne sont pas remplis
 		 * @TODO si tous les champs sont remplis, on compare le code donné avec celui dans la base et on renvoie true => on va à l'accueil
 		 */
 		if (!content1.matches("") && !content2.matches("") && !content3.matches("") && !content4.matches("")) {
-			if (v == btnConnexion) {
-				Intent monIntent = new Intent(this,Accueil.class);
-				startActivity(monIntent);
+			if (pinok) {
+				if (v == btnConnexion) {
+					Intent monIntent = new Intent(this,Accueil.class);
+					startActivity(monIntent);
+					Toast.makeText(this, "Code accepté\nBienvenue sur Kiveukoi !", Toast.LENGTH_SHORT).show();
+				}
+			} else {
+				Toast.makeText(this, "Code incorrect", Toast.LENGTH_SHORT).show();
 			}
 		} else {
-			Toast.makeText(this, "Code incorrect", Toast.LENGTH_SHORT).show();
+			Toast.makeText(this, "Veuillez saisir les 4 chiffres", Toast.LENGTH_SHORT).show();
 		}
 	}
 
+	/**
+	 * Vérification du code PIN
+	 * @param pin String de longueur 4
+	 * @return true si bon code, false sinon
+	 */
+	public boolean checkPIN(String pin) {
+		// comparer le pin avec celui de la BDD du device
+		return pin.matches("0123");
+	}
+	
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.activity_main, menu);
