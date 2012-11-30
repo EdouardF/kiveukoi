@@ -13,6 +13,7 @@ public final class R {
     public static final class id {
         public static final int ancienCode=0x7f06002e;
         public static final int btnAjout=0x7f060003;
+<<<<<<< HEAD
         public static final int btnConnexion=0x7f060029;
         public static final int btnProfil=0x7f060002;
         public static final int btnStatistiques=0x7f060001;
@@ -62,6 +63,36 @@ public final class R {
         public static final int textView7=0x7f06001f;
         public static final int textView8=0x7f060020;
         public static final int treizeh=0x7f060009;
+=======
+        public static final int btnConnexion=0x7f06001a;
+        public static final int btnProfil=0x7f060002;
+        public static final int btnStatistiques=0x7f060001;
+        public static final int displayDate=0x7f06000e;
+        public static final int editText1=0x7f060016;
+        public static final int editText2=0x7f060017;
+        public static final int editText3=0x7f060018;
+        public static final int editText4=0x7f060019;
+        public static final int email=0x7f060012;
+        public static final int login=0x7f060014;
+        public static final int login_form=0x7f060011;
+        public static final int login_status=0x7f06000f;
+        public static final int login_status_message=0x7f060010;
+        public static final int menu_forgot_password=0x7f06001c;
+        public static final int menu_settings=0x7f06001b;
+        public static final int password=0x7f060013;
+        public static final int pickDate=0x7f06000d;
+        public static final int sign_in_button=0x7f060015;
+        public static final int tableRow1=0x7f060000;
+        public static final int textView1=0x7f060004;
+        public static final int textView2=0x7f060006;
+        public static final int textView3=0x7f060007;
+        public static final int textView4=0x7f060008;
+        public static final int textView5=0x7f060005;
+        public static final int textView6=0x7f060009;
+        public static final int textView7=0x7f06000a;
+        public static final int textView8=0x7f06000b;
+        public static final int textView9=0x7f06000c;
+>>>>>>> 514c96087f376701c8a27b131755e4b159e0a273
     }
     public static final class layout {
         public static final int activity_accueil=0x7f020000;
@@ -81,14 +112,21 @@ public final class R {
     }
     public static final class string {
         public static final int TitreAjoutModif=0x7f030009;
+<<<<<<< HEAD
         public static final int action_sign_in_register=0x7f03002d;
         public static final int action_sign_in_short=0x7f03002e;
         public static final int ancienCode=0x7f030027;
+=======
+        public static final int action_sign_in_register=0x7f030019;
+        public static final int action_sign_in_short=0x7f03001a;
+>>>>>>> 514c96087f376701c8a27b131755e4b159e0a273
         public static final int app_name=0x7f030000;
         public static final int btnajouter=0x7f030008;
         public static final int btnprofil=0x7f030006;
         public static final int btnstatistiques=0x7f030007;
+        public static final int choixDate=0x7f030015;
         public static final int date=0x7f03000d;
+<<<<<<< HEAD
         public static final int dixh=0x7f03001e;
         public static final int dixhuith=0x7f030026;
         public static final int dixsepth=0x7f030025;
@@ -97,6 +135,12 @@ public final class R {
         public static final int error_incorrect_password=0x7f030033;
         public static final int error_invalid_email=0x7f030031;
         public static final int error_invalid_password=0x7f030032;
+=======
+        public static final int error_field_required=0x7f030020;
+        public static final int error_incorrect_password=0x7f03001f;
+        public static final int error_invalid_email=0x7f03001d;
+        public static final int error_invalid_password=0x7f03001e;
+>>>>>>> 514c96087f376701c8a27b131755e4b159e0a273
         public static final int groupe=0x7f030013;
         public static final int hello_world=0x7f030001;
         public static final int heureDebut=0x7f03000e;
@@ -105,8 +149,13 @@ public final class R {
         public static final int hint_password=0x7f03001b;
         public static final int huith=0x7f03001c;
         public static final int login=0x7f03000b;
+<<<<<<< HEAD
         public static final int login_progress_signing_in=0x7f030030;
         public static final int menu_forgot_password=0x7f03002f;
+=======
+        public static final int login_progress_signing_in=0x7f03001c;
+        public static final int menu_forgot_password=0x7f03001b;
+>>>>>>> 514c96087f376701c8a27b131755e4b159e0a273
         public static final int menu_settings=0x7f030002;
         public static final int neufh=0x7f03001d;
         public static final int nom_bouton_connexion=0x7f030018;
@@ -120,17 +169,26 @@ public final class R {
         public static final int professeur=0x7f030012;
         /**  Strings related to login 
          */
+<<<<<<< HEAD
         public static final int prompt_email=0x7f03002b;
         public static final int prompt_password=0x7f03002c;
         public static final int quatorzeh=0x7f030022;
         public static final int quinzeh=0x7f030023;
+=======
+        public static final int prompt_email=0x7f030017;
+        public static final int prompt_password=0x7f030018;
+>>>>>>> 514c96087f376701c8a27b131755e4b159e0a273
         public static final int ram=0x7f030010;
         public static final int repeterCode=0x7f030029;
         public static final int seizeh=0x7f030024;
         public static final int title_activity_accueil=0x7f030003;
         public static final int title_activity_ajout_modif=0x7f03000a;
+<<<<<<< HEAD
         public static final int title_activity_identification=0x7f03002a;
         public static final int title_activity_login_web_service=0x7f030015;
+=======
+        public static final int title_activity_identification=0x7f030016;
+>>>>>>> 514c96087f376701c8a27b131755e4b159e0a273
         public static final int title_activity_profil=0x7f030005;
         public static final int title_activity_statistiques=0x7f030004;
         public static final int title_pin=0x7f03000c;
