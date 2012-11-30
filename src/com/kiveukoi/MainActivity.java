@@ -50,8 +50,7 @@ public class MainActivity extends Activity implements OnClickListener {
 
 			@Override
 			public void onTextChanged(CharSequence s, int start, int before, int count) {
-				EditText editText2 = (EditText)findViewById(R.id.editText2);
-		    	editText2.requestFocus();
+				// TODO Auto-generated method stub
 			}
 		});
 		/**
@@ -71,8 +70,7 @@ public class MainActivity extends Activity implements OnClickListener {
 
 			@Override
 			public void onTextChanged(CharSequence s, int start, int before, int count) {
-				EditText editText3 = (EditText)findViewById(R.id.editText3);
-		    	editText3.requestFocus();
+				// TODO Auto-generated method stub
 			}
 		});
 		/**
@@ -92,8 +90,7 @@ public class MainActivity extends Activity implements OnClickListener {
 
 			@Override
 			public void onTextChanged(CharSequence s, int start, int before, int count) {
-				EditText editText4 = (EditText)findViewById(R.id.editText4);
-		    	editText4.requestFocus();
+				// TODO Auto-generated method stub
 			}
 		});
 	}
