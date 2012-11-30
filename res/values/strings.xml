@@ -22,13 +22,12 @@
     <string name="professeur">Professeur :</string>
     <string name="groupe">Groupe :</string>
     <string name="nombrePoste">Nombre de poste :</string>
-<<<<<<< HEAD
     <string name="title_activity_login_web_service">Connexion</string>
     <string name="nom_champ_adresse_mail">Adresse email :</string>
     <string name="nom_champ_password">Mot de passe :</string>
     <string name="nom_bouton_connexion">Connexion</string>
     <string name="nom_champ_pin">Code PIN :</string>
-    <string name="hint_mail">wxy@exemple.com</string>
+    <string name="hint_mail">wxy@gmail.com</string>
     <string name="hint_password">P4ssSw0rd</string>
     <string name="huith">8h</string>
     <string name="neufh">9h</string>
@@ -44,8 +43,5 @@
     <string name="ancienCode">Ancien code :</string>
     <string name="nouveauCode">Nouveau code :</string>
     <string name="repeterCode">Répéter code :</string>
-    
-=======
     <string name="choixDate">Choisir une date</string>
->>>>>>> 514c96087f376701c8a27b131755e4b159e0a273
 </resources>

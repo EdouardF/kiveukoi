@@ -9,12 +9,8 @@
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-<<<<<<< HEAD
         android:layout_marginRight="19dp"
-        android:layout_marginTop="118dp"
-=======
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/textView1"
         android:layout_marginLeft="41dp"
         android:layout_marginTop="120dp"
         android:text="@string/ram" />
@@ -26,7 +22,6 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/textView5"
         android:layout_marginLeft="41dp"
->>>>>>> 514c96087f376701c8a27b131755e4b159e0a273
         android:text="@string/date" />
 
     <TextView

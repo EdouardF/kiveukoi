@@ -24,7 +24,9 @@
         android:id="@+id/btnProfil"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/btnAjout"
         android:text="@string/btnprofil" />
 
     <Button
@@ -32,7 +34,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
+        android:layout_toLeftOf="@+id/btnStatistiques"
         android:text="@string/btnajouter" />
 
     <TextView
@@ -42,7 +44,7 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/btnProfil"
         android:layout_marginLeft="52dp"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="20dp"
         android:text="@string/huith"
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
@@ -164,6 +166,7 @@
         android:layout_alignRight="@+id/btnAjout"
         android:layout_alignTop="@+id/huith"
         android:layout_toRightOf="@+id/dixh"
+        android:layout_marginLeft="5dp"
         android:max="50"
         android:minHeight="16dp"
         android:minWidth="30dp"
@@ -178,6 +181,7 @@
         android:layout_alignRight="@+id/btnAjout"
         android:layout_alignTop="@+id/neufh"
         android:layout_toRightOf="@+id/dixh"
+        android:layout_marginLeft="5dp"
         android:max="50"
         android:minHeight="16dp"
         android:minWidth="30dp"
@@ -192,6 +196,7 @@
         android:layout_alignRight="@+id/btnAjout"
         android:layout_alignTop="@+id/dixh"
         android:layout_toRightOf="@+id/dixh"
+        android:layout_marginLeft="5dp"
         android:max="50"
         android:minHeight="16dp"
         android:minWidth="30dp"
@@ -206,6 +211,7 @@
         android:layout_alignRight="@+id/btnAjout"
         android:layout_alignTop="@+id/onzeh"
         android:layout_toRightOf="@+id/dixh"
+        android:layout_marginLeft="5dp"
         android:max="50"
         android:minHeight="16dp"
         android:minWidth="30dp"
@@ -220,6 +226,7 @@
         android:layout_alignRight="@+id/btnAjout"
         android:layout_alignTop="@+id/douzeh"
         android:layout_toRightOf="@+id/dixh"
+        android:layout_marginLeft="5dp"
         android:max="50"
         android:minHeight="16dp"
         android:minWidth="30dp"
@@ -234,6 +241,7 @@
         android:layout_alignRight="@+id/btnAjout"
         android:layout_alignTop="@+id/treizeh"
         android:layout_toRightOf="@+id/dixh"
+        android:layout_marginLeft="5dp"
         android:max="50"
         android:minHeight="16dp"
         android:minWidth="30dp"
@@ -248,6 +256,7 @@
         android:layout_alignRight="@+id/btnAjout"
         android:layout_alignTop="@+id/quatorzeh"
         android:layout_toRightOf="@+id/dixh"
+        android:layout_marginLeft="5dp"
         android:max="50"
         android:minHeight="16dp"
         android:minWidth="30dp"
@@ -262,6 +271,7 @@
         android:layout_alignRight="@+id/btnAjout"
         android:layout_alignTop="@+id/quinzeh"
         android:layout_toRightOf="@+id/dixh"
+        android:layout_marginLeft="5dp"
         android:max="50"
         android:minHeight="16dp"
         android:minWidth="30dp"
@@ -276,6 +286,7 @@
         android:layout_alignRight="@+id/btnAjout"
         android:layout_alignTop="@+id/seizeh"
         android:layout_toRightOf="@+id/dixh"
+        android:layout_marginLeft="5dp"
         android:max="50"
         android:minHeight="16dp"
         android:minWidth="30dp"
@@ -290,6 +301,7 @@
         android:layout_alignRight="@+id/btnAjout"
         android:layout_alignTop="@+id/dixsepth"
         android:layout_toRightOf="@+id/dixh"
+        android:layout_marginLeft="5dp"
         android:max="50"
         android:minHeight="16dp"
         android:minWidth="30dp"
@@ -304,10 +316,23 @@
         android:layout_alignRight="@+id/btnAjout"
         android:layout_alignTop="@+id/dixhuith"
         android:layout_toRightOf="@+id/dixh"
+        android:layout_marginLeft="5dp"
         android:max="50"
         android:minHeight="16dp"
         android:minWidth="30dp"
         android:progress="10"
         android:secondaryProgress="80" />
+
+    <ProgressBar
+        android:id="@+id/ProgressBar01"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:max="100"
+        android:minHeight="16dp"
+        android:minWidth="30dp"
+        android:progress="33" />
 
 </RelativeLayout>
