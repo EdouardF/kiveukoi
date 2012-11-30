@@ -40,4 +40,8 @@
     <string name="seizeh">16h</string>
     <string name="dixsepth">17h</string>
     <string name="dixhuith">18h</string>
+    <string name="ancienCode">Ancien code :</string>
+    <string name="nouveauCode">Nouveau code :</string>
+    <string name="repeterCode">Répéter code :</string>
+    
 </resources>
