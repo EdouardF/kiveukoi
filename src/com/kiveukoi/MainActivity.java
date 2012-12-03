@@ -26,7 +26,7 @@ public class MainActivity extends Activity implements OnClickListener {
 		btnConnexion.setOnClickListener(this);
 		
 		/**
-		 * passer d'une case Ã  l'autre pour la saisie du code PIN
+		 * Passer d'une case à l'autre pour la saisie du code PIN
 		 */
 		EditText editText1 = (EditText)findViewById(R.id.editText1);
 		EditText editText2 = (EditText)findViewById(R.id.editText2);
@@ -141,7 +141,7 @@ public class MainActivity extends Activity implements OnClickListener {
 	}
 	
 	/**
-	 * Vérifie que le code PIN est renseigné pour accéder Ã  l'accueil
+	 * Vérifie que le code PIN est renseigné pour accéder à l'accueil
 	 */
 	@Override
 	public void onClick(View v) {

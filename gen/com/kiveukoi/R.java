@@ -85,8 +85,8 @@ public final class R {
     }
     public static final class string {
         public static final int TitreAjoutModif=0x7f040009;
-        public static final int action_sign_in_register=0x7f040031;
-        public static final int action_sign_in_short=0x7f040032;
+        public static final int action_sign_in_register=0x7f040032;
+        public static final int action_sign_in_short=0x7f040033;
         public static final int ancienCode=0x7f040026;
         public static final int app_name=0x7f040000;
         public static final int btn_update_pin=0x7f04002d;
@@ -99,10 +99,10 @@ public final class R {
         public static final int dixhuith=0x7f040025;
         public static final int dixsepth=0x7f040024;
         public static final int douzeh=0x7f04001f;
-        public static final int error_field_required=0x7f040038;
-        public static final int error_incorrect_password=0x7f040037;
-        public static final int error_invalid_email=0x7f040035;
-        public static final int error_invalid_password=0x7f040036;
+        public static final int error_field_required=0x7f040039;
+        public static final int error_incorrect_password=0x7f040038;
+        public static final int error_invalid_email=0x7f040036;
+        public static final int error_invalid_password=0x7f040037;
         public static final int groupe=0x7f040012;
         public static final int hello_world=0x7f040001;
         public static final int heureDebut=0x7f04000d;
@@ -110,9 +110,10 @@ public final class R {
         public static final int hint_mail=0x7f040019;
         public static final int hint_password=0x7f04001a;
         public static final int huith=0x7f04001b;
+        public static final int itemQuitter=0x7f04002e;
         public static final int login=0x7f04000b;
-        public static final int login_progress_signing_in=0x7f040034;
-        public static final int menu_forgot_password=0x7f040033;
+        public static final int login_progress_signing_in=0x7f040035;
+        public static final int menu_forgot_password=0x7f040034;
         public static final int menu_settings=0x7f040002;
         public static final int neufh=0x7f04001c;
         public static final int nom_bouton_connexion=0x7f040017;
@@ -126,8 +127,8 @@ public final class R {
         public static final int professeur=0x7f040011;
         /**  Strings related to login 
          */
-        public static final int prompt_email=0x7f04002f;
-        public static final int prompt_password=0x7f040030;
+        public static final int prompt_email=0x7f040030;
+        public static final int prompt_password=0x7f040031;
         public static final int quatorzeh=0x7f040021;
         public static final int quinzeh=0x7f040022;
         public static final int ram=0x7f04000f;
@@ -135,7 +136,7 @@ public final class R {
         public static final int seizeh=0x7f040023;
         public static final int title_activity_accueil=0x7f040003;
         public static final int title_activity_ajout_modif=0x7f04000a;
-        public static final int title_activity_identification=0x7f04002e;
+        public static final int title_activity_identification=0x7f04002f;
         public static final int title_activity_login_web_service=0x7f040014;
         public static final int title_activity_main=0x7f04002b;
         public static final int title_activity_profil=0x7f040005;

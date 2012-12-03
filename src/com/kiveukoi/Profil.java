@@ -28,7 +28,6 @@ public class Profil extends Activity implements OnClickListener {
 		 */
 		EditText editText1 = (EditText)findViewById(R.id.editText1);
 		EditText editText2 = (EditText)findViewById(R.id.editText2);
-		EditText editText3 = (EditText)findViewById(R.id.editText3);
 		
 		/**
 		 * Passer d'une case à la suivante
@@ -140,5 +139,4 @@ public class Profil extends Activity implements OnClickListener {
 		getMenuInflater().inflate(R.menu.activity_profil, menu);
 		return true;
 	}
-
 }

@@ -47,5 +47,6 @@
     <string name="title_activity_main">Connexion</string>
     <string name="update_pin">Modification du code</string>
     <string name="btn_update_pin">Modifier</string>
+    <string name="itemQuitter">Quitter</string>
 
 </resources>

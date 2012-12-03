@@ -47,5 +47,4 @@ public class Accueil extends Activity implements OnClickListener{
 			startActivity(monIntent);
 		}
 	}
-	
 }

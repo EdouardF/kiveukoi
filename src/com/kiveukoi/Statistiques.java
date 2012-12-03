@@ -18,5 +18,4 @@ public class Statistiques extends Activity {
 		getMenuInflater().inflate(R.menu.activity_statistiques, menu);
 		return true;
 	}
-
 }
