@@ -40,11 +40,7 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/textView1"
         android:layout_below="@+id/textView1"
-<<<<<<< HEAD
         android:layout_marginLeft="20dp"
-=======
-        android:layout_marginLeft="34dp"
->>>>>>> f54b48b79b0d51f166ceb1de6504861284bbf2e0
         android:layout_marginTop="22dp"
         android:ems="2"
         android:inputType="numberPassword"

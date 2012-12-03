@@ -27,14 +27,9 @@ public class MainActivity extends Activity implements OnClickListener {
 
 		btnConnexion.setOnClickListener(this);
 		
-<<<<<<< HEAD
 		/**
 		 * passer d'une case Ã  l'autre pour la saisie du code PIN
 		 */
-		EditText editText1 = (EditText)findViewById(R.id.editText1);
-		EditText editText2 = (EditText)findViewById(R.id.editText2);
-		EditText editText3 = (EditText)findViewById(R.id.editText3);
-=======
 		EditText editText1 = (EditText)findViewById(R.id.editText1);
 		EditText editText2 = (EditText)findViewById(R.id.editText2);
 		EditText editText3 = (EditText)findViewById(R.id.editText3);
@@ -43,7 +38,6 @@ public class MainActivity extends Activity implements OnClickListener {
 		 * Passer d'une case à la suivante
 		 * Quand le premier est rempli, on passe au second
 		 */
->>>>>>> f54b48b79b0d51f166ceb1de6504861284bbf2e0
 		editText1.addTextChangedListener(new TextWatcher() {
 		    @Override
 		    public void afterTextChanged(Editable s) {
@@ -55,7 +49,6 @@ public class MainActivity extends Activity implements OnClickListener {
 		    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 		        // TODO Auto-generated method stub
 		    }
-<<<<<<< HEAD
 
 			@Override
 			public void onTextChanged(CharSequence s, int start, int before, int count) {
@@ -75,9 +68,6 @@ public class MainActivity extends Activity implements OnClickListener {
 		        // TODO Auto-generated method stub
 		    }
 
-			@Override
-			public void onTextChanged(CharSequence s, int start, int before, int count) {
-=======
 
 			@Override
 			public void onTextChanged(CharSequence s, int start, int before, int count) {
@@ -102,17 +92,13 @@ public class MainActivity extends Activity implements OnClickListener {
 
 			@Override
 			public void onTextChanged(CharSequence s, int start, int before, int count) {
->>>>>>> f54b48b79b0d51f166ceb1de6504861284bbf2e0
 				EditText editText3 = (EditText)findViewById(R.id.editText3);
 		    	editText3.requestFocus();
 			}
 		});
-<<<<<<< HEAD
-=======
 		/**
 		 * Quand la troisième est rempli, on passe au dernier
 		 */
->>>>>>> f54b48b79b0d51f166ceb1de6504861284bbf2e0
 		editText3.addTextChangedListener(new TextWatcher() {
 		    @Override
 		    public void afterTextChanged(Editable s) {
@@ -171,11 +157,8 @@ public class MainActivity extends Activity implements OnClickListener {
 				Toast.makeText(this, "Code incorrect", Toast.LENGTH_SHORT).show();
 			}
 		} else {
-<<<<<<< HEAD
 			Toast.makeText(this, "Code incorrect", Toast.LENGTH_SHORT).show();
-=======
 			Toast.makeText(this, "Veuillez saisir les 4 chiffres", Toast.LENGTH_SHORT).show();
->>>>>>> f54b48b79b0d51f166ceb1de6504861284bbf2e0
 		}
 	}
 	

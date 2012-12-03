@@ -13,8 +13,6 @@
     <string name="TitreAjoutModif">Reservation</string>
     <string name="title_activity_ajout_modif">Réservation</string>
     <string name="login">Connexion</string>
-<<<<<<< HEAD
-    <string name="title_pin">Veuillez saisir votre code PIN</string>
     <string name="date">Date :</string>
     <string name="heureDebut">Heure de début :</string>
     <string name="heureFin">Heure de fin :</string>
@@ -45,8 +43,6 @@
     <string name="nouveauCode">Nouveau code :</string>
     <string name="repeterCode">Répéter code :</string>
     <string name="choixDate">Choisir une date</string>
-=======
     <string name="title_pin">Veuillez saisir votre code</string>
 
->>>>>>> f54b48b79b0d51f166ceb1de6504861284bbf2e0
 </resources>
