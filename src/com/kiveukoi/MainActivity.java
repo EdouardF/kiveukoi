@@ -33,16 +33,24 @@ public class MainActivity extends Activity implements OnClickListener {
 		EditText editText1 = (EditText)findViewById(R.id.editText1);
 		EditText editText2 = (EditText)findViewById(R.id.editText2);
 		EditText editText3 = (EditText)findViewById(R.id.editText3);
+		EditText editText4 = (EditText)findViewById(R.id.editText4);
 		
 		/**
 		 * Passer d'une case à la suivante
 		 * Quand le premier est rempli, on passe au second
+		 * Si on supprime, on reste sur cette case
 		 */
 		editText1.addTextChangedListener(new TextWatcher() {
 		    @Override
 		    public void afterTextChanged(Editable s) {
-		    	EditText editText2 = (EditText)findViewById(R.id.editText2);
-		    	editText2.requestFocus();
+		    	String code = s.toString();
+		    	if (!code.matches("")) {
+		    		EditText editText2 = (EditText)findViewById(R.id.editText2);
+		    		editText2.requestFocus();
+		    	} else {
+		    		EditText editText1 = (EditText)findViewById(R.id.editText1);
+		    		editText1.requestFocus();
+		    	}
 		    }
 
 		    @Override
@@ -52,37 +60,24 @@ public class MainActivity extends Activity implements OnClickListener {
 
 			@Override
 			public void onTextChanged(CharSequence s, int start, int before, int count) {
-				EditText editText2 = (EditText)findViewById(R.id.editText2);
-		    	editText2.requestFocus();
-			}
-		});
-		editText2.addTextChangedListener(new TextWatcher() {
-		    @Override
-		    public void afterTextChanged(Editable s) {
-		    	EditText editText3 = (EditText)findViewById(R.id.editText3);
-		    	editText3.requestFocus();
-		    }
-
-		    @Override
-		    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-		        // TODO Auto-generated method stub
-		    }
-
-
-			@Override
-			public void onTextChanged(CharSequence s, int start, int before, int count) {
-				EditText editText2 = (EditText)findViewById(R.id.editText2);
-		    	editText2.requestFocus();
+				// TODO Auto-generated method stub
 			}
 		});
 		/**
 		 * Quand le deuxième est rempli, on passe au troisième
+		 * Si on supprime, on retourne à la case d'avant
 		 */
 		editText2.addTextChangedListener(new TextWatcher() {
 		    @Override
 		    public void afterTextChanged(Editable s) {
-		    	EditText editText3 = (EditText)findViewById(R.id.editText3);
-		    	editText3.requestFocus();
+		    	String code = s.toString();
+		    	if (!code.matches("")) {
+		    		EditText editText3 = (EditText)findViewById(R.id.editText3);
+		    		editText3.requestFocus();
+		    	} else {
+		    		EditText editText1 = (EditText)findViewById(R.id.editText1);
+		    		editText1.requestFocus();
+		    	}
 		    }
 
 		    @Override
@@ -92,18 +87,24 @@ public class MainActivity extends Activity implements OnClickListener {
 
 			@Override
 			public void onTextChanged(CharSequence s, int start, int before, int count) {
-				EditText editText3 = (EditText)findViewById(R.id.editText3);
-		    	editText3.requestFocus();
+				// TODO Auto-generated method stub
 			}
 		});
 		/**
-		 * Quand la troisième est rempli, on passe au dernier
+		 * Quand la troisième est remplie, on passe au dernier
+		 * Si on supprime, on retourne à la case d'avant
 		 */
 		editText3.addTextChangedListener(new TextWatcher() {
 		    @Override
 		    public void afterTextChanged(Editable s) {
-		    	EditText editText4 = (EditText)findViewById(R.id.editText4);
-		    	editText4.requestFocus();
+		    	String code = s.toString();
+		    	if (!code.matches("")) {
+		    		EditText editText4 = (EditText)findViewById(R.id.editText4);
+		    		editText4.requestFocus();
+		    	} else {
+		    		EditText editText2 = (EditText)findViewById(R.id.editText2);
+		    		editText2.requestFocus();
+		    	}
 		    }
 
 		    @Override
@@ -113,8 +114,30 @@ public class MainActivity extends Activity implements OnClickListener {
 
 			@Override
 			public void onTextChanged(CharSequence s, int start, int before, int count) {
-				EditText editText4 = (EditText)findViewById(R.id.editText4);
-		    	editText4.requestFocus();
+				// TODO Auto-generated method stub
+			}
+		});
+		/**
+		 * Si on supprime, on retourne à la case d'avant
+		 */
+		editText4.addTextChangedListener(new TextWatcher() {
+		    @Override
+		    public void afterTextChanged(Editable s) {
+		    	String code = s.toString();
+		    	if (code.matches("")) {
+		    		EditText editText3 = (EditText)findViewById(R.id.editText3);
+		    		editText3.requestFocus();
+		    	}
+		    }
+
+			@Override
+			public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+				// TODO Auto-generated method stub
+			}
+
+			@Override
+			public void onTextChanged(CharSequence s, int start, int before, int count) {
+				// TODO Auto-generated method stub
 			}
 		});
 	}
