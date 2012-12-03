@@ -19,12 +19,10 @@ public class MainActivity extends Activity implements OnClickListener {
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
-
 		super.onCreate(savedInstanceState);
-
 		setContentView(R.layout.activity_main);
-		btnConnexion = (Button) findViewById(R.id.btnConnexion);
-
+		
+		btnConnexion = (Button)findViewById(R.id.btnConnexion);
 		btnConnexion.setOnClickListener(this);
 		
 		/**
@@ -143,7 +141,7 @@ public class MainActivity extends Activity implements OnClickListener {
 	}
 	
 	/**
-	 * VÃ©rifie que le code PIN est renseignÃ© pour accÃ©der Ã  l'accueil
+	 * Vérifie que le code PIN est renseigné pour accéder Ã  l'accueil
 	 */
 	@Override
 	public void onClick(View v) {
