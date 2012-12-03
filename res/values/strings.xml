@@ -43,6 +43,6 @@
     <string name="nouveauCode">Nouveau code :</string>
     <string name="repeterCode">Répéter code :</string>
     <string name="choixDate">Choisir une date</string>
-    <string name="title_pin">Veuillez saisir votre code</string>
+    <string name="title_pin">Veuillez saisir votre code secret</string>
 
 </resources>
