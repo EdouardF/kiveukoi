@@ -2,7 +2,6 @@ package com.kiveukoi;
 
 import android.app.Activity;
 import android.content.Intent;
-
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -14,33 +13,51 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivity extends Activity implements OnClickListener {
-	Button btnConnexion = null;
+    Button btnConnexion = null;
 
 	/** Called when the activity is first created. */
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
-
 		super.onCreate(savedInstanceState);
-
 		setContentView(R.layout.activity_main);
-		btnConnexion = (Button) findViewById(R.id.btnConnexion);
-
+		
+		btnConnexion = (Button)findViewById(R.id.btnConnexion);
 		btnConnexion.setOnClickListener(this);
 		
+<<<<<<< HEAD
 		EditText editText1 = (EditText)findViewById(R.id.editText1);
 		EditText editText2 = (EditText)findViewById(R.id.editText2);
 		EditText editText3 = (EditText)findViewById(R.id.editText3);
+=======
+		/**
+		 * Passer d'une case à l'autre pour la saisie du code PIN
+		 */
+		EditText editText1 = (EditText)findViewById(R.id.editText1);
+		EditText editText2 = (EditText)findViewById(R.id.editText2);
+		EditText editText3 = (EditText)findViewById(R.id.editText3);
+		EditText editText4 = (EditText)findViewById(R.id.editText4);
+>>>>>>> d163ce50720444a9172ec85b2e8c020739c4a4aa
 		
 		/**
 		 * Passer d'une case à la suivante
 		 * Quand le premier est rempli, on passe au second
+<<<<<<< HEAD
+=======
+		 * Si on supprime, on reste sur cette case
+>>>>>>> d163ce50720444a9172ec85b2e8c020739c4a4aa
 		 */
 		editText1.addTextChangedListener(new TextWatcher() {
 		    @Override
 		    public void afterTextChanged(Editable s) {
-		    	EditText editText2 = (EditText)findViewById(R.id.editText2);
-		    	editText2.requestFocus();
+		    	String code = s.toString();
+		    	if (!code.matches("")) {
+		    		EditText editText2 = (EditText)findViewById(R.id.editText2);
+		    		editText2.requestFocus();
+		    	} else {
+		    		EditText editText1 = (EditText)findViewById(R.id.editText1);
+		    		editText1.requestFocus();
+		    	}
 		    }
 
 		    @Override
@@ -55,12 +72,22 @@ public class MainActivity extends Activity implements OnClickListener {
 		});
 		/**
 		 * Quand le deuxième est rempli, on passe au troisième
+<<<<<<< HEAD
+=======
+		 * Si on supprime, on retourne à la case d'avant
+>>>>>>> d163ce50720444a9172ec85b2e8c020739c4a4aa
 		 */
 		editText2.addTextChangedListener(new TextWatcher() {
 		    @Override
 		    public void afterTextChanged(Editable s) {
-		    	EditText editText3 = (EditText)findViewById(R.id.editText3);
-		    	editText3.requestFocus();
+		    	String code = s.toString();
+		    	if (!code.matches("")) {
+		    		EditText editText3 = (EditText)findViewById(R.id.editText3);
+		    		editText3.requestFocus();
+		    	} else {
+		    		EditText editText1 = (EditText)findViewById(R.id.editText1);
+		    		editText1.requestFocus();
+		    	}
 		    }
 
 		    @Override
@@ -74,13 +101,24 @@ public class MainActivity extends Activity implements OnClickListener {
 			}
 		});
 		/**
+<<<<<<< HEAD
 		 * Quand la troisième est rempli, on passe au dernier
+=======
+		 * Quand la troisième est remplie, on passe au dernier
+		 * Si on supprime, on retourne à la case d'avant
+>>>>>>> d163ce50720444a9172ec85b2e8c020739c4a4aa
 		 */
 		editText3.addTextChangedListener(new TextWatcher() {
 		    @Override
 		    public void afterTextChanged(Editable s) {
-		    	EditText editText4 = (EditText)findViewById(R.id.editText4);
-		    	editText4.requestFocus();
+		    	String code = s.toString();
+		    	if (!code.matches("")) {
+		    		EditText editText4 = (EditText)findViewById(R.id.editText4);
+		    		editText4.requestFocus();
+		    	} else {
+		    		EditText editText2 = (EditText)findViewById(R.id.editText2);
+		    		editText2.requestFocus();
+		    	}
 		    }
 
 		    @Override
@@ -91,6 +129,32 @@ public class MainActivity extends Activity implements OnClickListener {
 			@Override
 			public void onTextChanged(CharSequence s, int start, int before, int count) {
 				// TODO Auto-generated method stub
+<<<<<<< HEAD
+=======
+			}
+		});
+		/**
+		 * Si on supprime, on retourne à la case d'avant
+		 */
+		editText4.addTextChangedListener(new TextWatcher() {
+		    @Override
+		    public void afterTextChanged(Editable s) {
+		    	String code = s.toString();
+		    	if (code.matches("")) {
+		    		EditText editText3 = (EditText)findViewById(R.id.editText3);
+		    		editText3.requestFocus();
+		    	}
+		    }
+
+			@Override
+			public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+				// TODO Auto-generated method stub
+			}
+
+			@Override
+			public void onTextChanged(CharSequence s, int start, int before, int count) {
+				// TODO Auto-generated method stub
+>>>>>>> d163ce50720444a9172ec85b2e8c020739c4a4aa
 			}
 		});
 	}
@@ -113,18 +177,29 @@ public class MainActivity extends Activity implements OnClickListener {
 		String content4 = editText4.getText().toString();
 		
 		/**
+<<<<<<< HEAD
 		 * On crée le code PIN à partir des 4 chiffres saisis
 		 */
 		String pin = content1+content2+content3+content4;
 		
 		boolean pinok = checkPIN(pin);
+=======
+		 * Vérification du code PIN saisi
+		 */
+		String pin = content1+content2+content3+content4;
+		boolean loginok = checkPIN(pin);
+>>>>>>> d163ce50720444a9172ec85b2e8c020739c4a4aa
 		
 		/**
 		 * Si tous les champs ne sont pas remplis
 		 * @TODO si tous les champs sont remplis, on compare le code donné avec celui dans la base et on renvoie true => on va à l'accueil
 		 */
 		if (!content1.matches("") && !content2.matches("") && !content3.matches("") && !content4.matches("")) {
+<<<<<<< HEAD
 			if (pinok) {
+=======
+			if (loginok) {
+>>>>>>> d163ce50720444a9172ec85b2e8c020739c4a4aa
 				if (v == btnConnexion) {
 					Intent monIntent = new Intent(this,Accueil.class);
 					startActivity(monIntent);
@@ -137,6 +212,7 @@ public class MainActivity extends Activity implements OnClickListener {
 			Toast.makeText(this, "Veuillez saisir les 4 chiffres", Toast.LENGTH_SHORT).show();
 		}
 	}
+<<<<<<< HEAD
 
 	/**
 	 * Vérification du code PIN
@@ -145,6 +221,18 @@ public class MainActivity extends Activity implements OnClickListener {
 	 */
 	public boolean checkPIN(String pin) {
 		// comparer le pin avec celui de la BDD du device
+=======
+	
+	/**
+	 * Vérifie que le code PIN saisi est le bon
+	 * @param pin String de longueur 4
+	 * @return true si le code est bon, false sinon
+	 */
+	public boolean checkPIN(String pin) {
+		// on récupère le PIN dans la base
+		// puis on compare avec celui saisi
+		// return pin.matches(_PIN de la BDD_);
+>>>>>>> d163ce50720444a9172ec85b2e8c020739c4a4aa
 		return pin.matches("0123");
 	}
 	
@@ -153,5 +241,4 @@ public class MainActivity extends Activity implements OnClickListener {
 		getMenuInflater().inflate(R.menu.activity_main, menu);
 		return true;
 	}
-	
 }

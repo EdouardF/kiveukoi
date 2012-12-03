@@ -1,11 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">kiveukoi</string>
+    <string name="app_name">Kiveukoi</string>
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
     <string name="title_activity_accueil">Accueil</string>
+    <string name="title_activity_statistiques">Statistiques</string>
+    <string name="title_activity_profil">Profil</string>
+	<string name="btnprofil">Profil</string>
+	<string name="btnstatistiques">Statistiques</string>
+	<string name="btnajouter">Ajouter</string>
+    <string name="TitreAjoutModif">Reservation</string>
+    <string name="title_activity_ajout_modif">Réservation</string>
     <string name="login">Connexion</string>
+<<<<<<< HEAD
     <string name="title_pin">Veuillez saisir votre code secret</string>
+=======
+    <string name="date">Date :</string>
+    <string name="heureDebut">Heure de début :</string>
+    <string name="heureFin">Heure de fin :</string>
+    <string name="ram">RAM :</string>
+    <string name="processeur">Processeur(s) :</string>
+    <string name="professeur">Professeur :</string>
+    <string name="groupe">Groupe :</string>
+    <string name="nombrePoste">Nombre de poste :</string>
+    <string name="title_activity_login_web_service">Connexion</string>
+    <string name="nom_champ_adresse_mail">Adresse email :</string>
+    <string name="nom_champ_password">Mot de passe :</string>
+    <string name="nom_bouton_connexion">Connexion</string>
+    <string name="nom_champ_pin">Code PIN :</string>
+    <string name="hint_mail">wxy@gmail.com</string>
+    <string name="hint_password">P4ssSw0rd</string>
+    <string name="huith">8h</string>
+    <string name="neufh">9h</string>
+    <string name="dixh">10h</string>
+    <string name="onzeh">11h</string>
+    <string name="douzeh">12h</string>
+    <string name="treizeh">13h</string>
+    <string name="quatorzeh">14h</string>
+    <string name="quinzeh">15h</string>
+    <string name="seizeh">16h</string>
+    <string name="dixsepth">17h</string>
+    <string name="dixhuith">18h</string>
+    <string name="ancienCode">Ancien code :</string>
+    <string name="nouveauCode">Nouveau code :</string>
+    <string name="repeterCode">Répéter code :</string>
+    <string name="choixDate">Choisir une date</string>
+    <string name="title_pin">Veuillez saisir votre code secret</string>
+    <string name="title_activity_main">Connexion</string>
+    <string name="update_pin">Modification du code</string>
+    <string name="btn_update_pin">Modifier</string>
+    <string name="itemQuitter">Quitter</string>
+>>>>>>> d163ce50720444a9172ec85b2e8c020739c4a4aa
 
 </resources>
