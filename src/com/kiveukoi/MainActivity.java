@@ -27,12 +27,23 @@ public class MainActivity extends Activity implements OnClickListener {
 
 		btnConnexion.setOnClickListener(this);
 		
+<<<<<<< HEAD
 		/**
 		 * passer d'une case Ã  l'autre pour la saisie du code PIN
 		 */
 		EditText editText1 = (EditText)findViewById(R.id.editText1);
 		EditText editText2 = (EditText)findViewById(R.id.editText2);
 		EditText editText3 = (EditText)findViewById(R.id.editText3);
+=======
+		EditText editText1 = (EditText)findViewById(R.id.editText1);
+		EditText editText2 = (EditText)findViewById(R.id.editText2);
+		EditText editText3 = (EditText)findViewById(R.id.editText3);
+		
+		/**
+		 * Passer d'une case à la suivante
+		 * Quand le premier est rempli, on passe au second
+		 */
+>>>>>>> f54b48b79b0d51f166ceb1de6504861284bbf2e0
 		editText1.addTextChangedListener(new TextWatcher() {
 		    @Override
 		    public void afterTextChanged(Editable s) {
@@ -44,6 +55,7 @@ public class MainActivity extends Activity implements OnClickListener {
 		    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 		        // TODO Auto-generated method stub
 		    }
+<<<<<<< HEAD
 
 			@Override
 			public void onTextChanged(CharSequence s, int start, int before, int count) {
@@ -65,10 +77,42 @@ public class MainActivity extends Activity implements OnClickListener {
 
 			@Override
 			public void onTextChanged(CharSequence s, int start, int before, int count) {
+=======
+
+			@Override
+			public void onTextChanged(CharSequence s, int start, int before, int count) {
+				EditText editText2 = (EditText)findViewById(R.id.editText2);
+		    	editText2.requestFocus();
+			}
+		});
+		/**
+		 * Quand le deuxième est rempli, on passe au troisième
+		 */
+		editText2.addTextChangedListener(new TextWatcher() {
+		    @Override
+		    public void afterTextChanged(Editable s) {
+		    	EditText editText3 = (EditText)findViewById(R.id.editText3);
+		    	editText3.requestFocus();
+		    }
+
+		    @Override
+		    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+		        // TODO Auto-generated method stub
+		    }
+
+			@Override
+			public void onTextChanged(CharSequence s, int start, int before, int count) {
+>>>>>>> f54b48b79b0d51f166ceb1de6504861284bbf2e0
 				EditText editText3 = (EditText)findViewById(R.id.editText3);
 		    	editText3.requestFocus();
 			}
 		});
+<<<<<<< HEAD
+=======
+		/**
+		 * Quand la troisième est rempli, on passe au dernier
+		 */
+>>>>>>> f54b48b79b0d51f166ceb1de6504861284bbf2e0
 		editText3.addTextChangedListener(new TextWatcher() {
 		    @Override
 		    public void afterTextChanged(Editable s) {
@@ -106,20 +150,50 @@ public class MainActivity extends Activity implements OnClickListener {
 		EditText editText4 = (EditText)findViewById(R.id.editText4);
 		String content4 = editText4.getText().toString();
 		
+		/**
+		 * Vérification du code PIN saisi
+		 */
+		String pin = content1+content2+content3+content4;
+		boolean loginok = checkPIN(pin);
+		
+		/**
+		 * Si tous les champs ne sont pas remplis
+		 * @TODO si tous les champs sont remplis, on compare le code donné avec celui dans la base et on renvoie true => on va à l'accueil
+		 */
 		if (!content1.matches("") && !content2.matches("") && !content3.matches("") && !content4.matches("")) {
-			if (v == btnConnexion) {
-				Intent monIntent = new Intent(this,Accueil.class);
-				startActivity(monIntent);
+			if (loginok) {
+				if (v == btnConnexion) {
+					Intent monIntent = new Intent(this,Accueil.class);
+					startActivity(monIntent);
+					Toast.makeText(this, "Code accepté\nBienvenue sur Kiveukoi !", Toast.LENGTH_SHORT).show();
+				}
+			} else {
+				Toast.makeText(this, "Code incorrect", Toast.LENGTH_SHORT).show();
 			}
 		} else {
+<<<<<<< HEAD
 			Toast.makeText(this, "Code incorrect", Toast.LENGTH_SHORT).show();
+=======
+			Toast.makeText(this, "Veuillez saisir les 4 chiffres", Toast.LENGTH_SHORT).show();
+>>>>>>> f54b48b79b0d51f166ceb1de6504861284bbf2e0
 		}
 	}
-
+	
+	/**
+	 * Vérifie que le code PIN saisi est le bon
+	 * @param pin String de longueur 4
+	 * @return true si le code est bon, false sinon
+	 */
+	public boolean checkPIN(String pin) {
+		// on récupère le PIN dans la base
+		// puis on compare avec celui saisi
+		// return pin.matches(_PIN de la BDD_);
+		return pin.matches("0123");
+	}
+	
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.activity_main, menu);
 		return true;
 	}
-	
 }
