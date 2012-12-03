@@ -15,7 +15,6 @@ public final class R {
     }
     public static final class id {
         public static final int ProgressBar01=0x7f07001a;
-        public static final int ancienCode=0x7f070032;
         public static final int btnAjout=0x7f070003;
         public static final int btnConnexion=0x7f07002d;
         public static final int btnProfil=0x7f070002;
@@ -35,10 +34,9 @@ public final class R {
         public static final int login_form=0x7f070027;
         public static final int login_status=0x7f070025;
         public static final int login_status_message=0x7f070026;
-        public static final int menu_forgot_password=0x7f070036;
-        public static final int menu_settings=0x7f070035;
+        public static final int menu_forgot_password=0x7f070033;
+        public static final int menu_settings=0x7f070032;
         public static final int neufh=0x7f070005;
-        public static final int nouveauCode=0x7f070034;
         public static final int onzeh=0x7f070007;
         public static final int password=0x7f070029;
         public static final int pickDate=0x7f070023;
@@ -55,7 +53,6 @@ public final class R {
         public static final int progressBar9=0x7f070017;
         public static final int quatorzeh=0x7f07000a;
         public static final int quinzeh=0x7f07000b;
-        public static final int repeterCode=0x7f070033;
         public static final int seizeh=0x7f07000c;
         public static final int sign_in_button=0x7f07002b;
         public static final int tableRow1=0x7f070000;

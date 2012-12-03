@@ -157,7 +157,6 @@ public class MainActivity extends Activity implements OnClickListener {
 				Toast.makeText(this, "Code incorrect", Toast.LENGTH_SHORT).show();
 			}
 		} else {
-			Toast.makeText(this, "Code incorrect", Toast.LENGTH_SHORT).show();
 			Toast.makeText(this, "Veuillez saisir les 4 chiffres", Toast.LENGTH_SHORT).show();
 		}
 	}
