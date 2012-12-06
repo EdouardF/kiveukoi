@@ -7,9 +7,9 @@
     <string name="title_activity_accueil">Accueil</string>
     <string name="title_activity_statistiques">Statistiques</string>
     <string name="title_activity_profil">Profil</string>
-	<string name="btnprofil">Profil</string>
-	<string name="btnstatistiques">Statistiques</string>
-	<string name="btnajouter">Ajouter</string>
+    <string name="btnprofil">Profil</string>
+    <string name="btnstatistiques">Statistiques</string>
+    <string name="btnajouter">Ajouter</string>
     <string name="TitreAjoutModif">Reservation</string>
     <string name="title_activity_ajout_modif">Réservation</string>
     <string name="login">Connexion</string>
@@ -22,12 +22,6 @@
     <string name="groupe">Groupe :</string>
     <string name="nombrePoste">Nombre de poste :</string>
     <string name="title_activity_login_web_service">Connexion</string>
-    <string name="nom_champ_adresse_mail">Adresse email :</string>
-    <string name="nom_champ_password">Mot de passe :</string>
-    <string name="nom_bouton_connexion">Connexion</string>
-    <string name="nom_champ_pin">Code PIN :</string>
-    <string name="hint_mail">wxy@gmail.com</string>
-    <string name="hint_password">P4ssSw0rd</string>
     <string name="huith">8h</string>
     <string name="neufh">9h</string>
     <string name="dixh">10h</string>
@@ -48,5 +42,11 @@
     <string name="update_pin">Modification du code</string>
     <string name="btn_update_pin">Modifier</string>
     <string name="itemQuitter">Quitter</string>
+    <string name="title_activity_connexion">Connexion</string>
+    <string name="hint_login">Adresse mail</string>
+    <string name="hint_password">Mot de passe</string>
+    <string name="hint_secret">Code secret</string>
+    <string name="hint_secretRepeter">Répéter code secret</string>
+    <string name="label_secret">Saisir un code secret :</string>
 
 </resources>
