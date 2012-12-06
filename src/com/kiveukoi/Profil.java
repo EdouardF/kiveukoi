@@ -127,8 +127,10 @@ public class Profil extends Activity implements OnClickListener {
 			} else {
 				return false;
 			}
-		} else {
+		} else if (!actuel.matches("")){
 			Toast.makeText(this, "Le code actuel est incorrect", Toast.LENGTH_SHORT).show();
+			return false;
+		} else {
 			return false;
 		}
 	}

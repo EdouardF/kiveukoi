@@ -23,12 +23,25 @@
         android:text="@string/login" />
 
     <EditText
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="33dp"
+        android:ems="2"
+        android:inputType="numberPassword"
+        android:maxLength="1" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
         android:id="@+id/editText4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/btnConnexion"
         android:layout_alignRight="@+id/textView1"
-        android:layout_marginRight="33dp"
         android:ems="2"
         android:inputType="numberPassword"
         android:maxLength="1" />
@@ -38,7 +51,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/btnConnexion"
-        android:layout_marginRight="20dp"
+        android:layout_marginRight="44dp"
         android:layout_toLeftOf="@+id/editText4"
         android:ems="2"
         android:inputType="numberPassword"
@@ -49,26 +62,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/btnConnexion"
-        android:layout_marginRight="25dp"
-        android:layout_toLeftOf="@+id/editText3"
+        android:layout_marginLeft="44dp"
+        android:layout_toRightOf="@+id/editText1"
         android:ems="2"
         android:inputType="numberPassword"
         android:maxLength="1" />
-
-    <EditText
-        android:id="@+id/editText1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView1"
-        android:layout_marginRight="26dp"
-        android:layout_marginTop="33dp"
-        android:layout_toLeftOf="@+id/editText2"
-        android:ems="2"
-        android:inputType="numberPassword"
-        android:maxLength="1" >
-
-        <requestFocus />
-
-    </EditText>
 
 </RelativeLayout>
