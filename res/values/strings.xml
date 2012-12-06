@@ -23,4 +23,6 @@
     <string name="groupe">Groupe :</string>
     <string name="nombrePoste">Nombre de poste :</string>
     <string name="choixDate">Choisir une date</string>
+    <string name="choixHeureDeb">Choisir une heure de début</string>
+    <string name="choixHeureFin">Choisir une heure de fin</string>
 </resources>
