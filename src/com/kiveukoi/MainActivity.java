@@ -1,7 +1,5 @@
 package com.kiveukoi;
 
-import java.io.IOException;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.database.SQLException;
@@ -30,7 +28,11 @@ public class MainActivity extends Activity implements OnClickListener {
 		try {
 			myDbHelper.openDataBase();
 		} catch (SQLException sqle) {
-			// throw sqle;
+			/**
+			 * Si on n'a pas de base de données,
+			 * on redirige vers la première connexion
+			 * pour définir un code PIN
+			 */
 			Intent monIntent = new Intent(this, Connexion.class);
 			startActivity(monIntent);
 			Toast.makeText(this, "Bienvenue pour la première fois sur Kiveukoi !", Toast.LENGTH_SHORT).show();
