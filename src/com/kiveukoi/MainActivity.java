@@ -37,7 +37,7 @@ public class MainActivity extends Activity implements OnClickListener {
 			startActivity(monIntent);
 			Toast.makeText(this, "Bienvenue pour la première fois sur Kiveukoi !", Toast.LENGTH_SHORT).show();
 		}
-
+		
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 

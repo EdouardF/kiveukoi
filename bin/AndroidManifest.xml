@@ -48,8 +48,9 @@
             android:label="@string/title_activity_ajout_modif" >
         </activity>
         <activity
-            android:name="com.kiveukoi.LoginWebService"
-            android:label="@string/title_activity_login_web_service" >
+            android:screenOrientation="portrait"
+            android:name="com.kiveukoi.Connexion"
+            android:label="@string/title_activity_connexion" >
         </activity>
     </application>
 
