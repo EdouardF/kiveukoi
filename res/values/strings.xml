@@ -22,12 +22,11 @@
     <string name="groupe">Groupe :</string>
     <string name="nombrePoste">Nombre de poste :</string>
     <string name="title_activity_login_web_service">Connexion</string>
-    <string name="nom_champ_adresse_mail">Adresse email :</string>
-    <string name="nom_champ_password">Mot de passe :</string>
-    <string name="nom_bouton_connexion">Connexion</string>
-    <string name="nom_champ_pin">Code PIN :</string>
-    <string name="hint_mail">wxy@gmail.com</string>
-    <string name="hint_password">P4ssSw0rd</string>
+    <string name="hint_login">Adresse mail</string>
+    <string name="hint_password">Mot de passe</string>
+    <string name="hint_secret">Code secret</string>
+    <string name="hint_secretRepeter">Répéter code secret</string>
+    <string name="label_secret">Saisir un code secret :</string>
     <string name="huith">8h</string>
     <string name="neufh">9h</string>
     <string name="dixh">10h</string>
