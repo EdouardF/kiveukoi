@@ -13,9 +13,6 @@
     <string name="TitreAjoutModif">Reservation</string>
     <string name="title_activity_ajout_modif">Réservation</string>
     <string name="login">Connexion</string>
-<<<<<<< HEAD
-    <string name="title_pin">Veuillez saisir votre code secret</string>
-=======
     <string name="date">Date :</string>
     <string name="heureDebut">Heure de début :</string>
     <string name="heureFin">Heure de fin :</string>
@@ -51,6 +48,5 @@
     <string name="update_pin">Modification du code</string>
     <string name="btn_update_pin">Modifier</string>
     <string name="itemQuitter">Quitter</string>
->>>>>>> d163ce50720444a9172ec85b2e8c020739c4a4aa
 
 </resources>
