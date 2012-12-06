@@ -33,12 +33,8 @@ public class MainActivity extends Activity implements OnClickListener {
 			 * on redirige vers la première connexion
 			 * pour définir un code PIN
 			 */
-			try{
 			Intent monIntent = new Intent(this, Connexion.class);
 			startActivity(monIntent);
-			}catch(Exception ex){
-				Toast.makeText(this, ex.toString(), Toast.LENGTH_LONG).show();
-			}
 			Toast.makeText(this, "Bienvenue pour la première fois sur Kiveukoi !", Toast.LENGTH_SHORT).show();
 		}
 		

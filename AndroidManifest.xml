@@ -48,10 +48,7 @@
             android:label="@string/title_activity_ajout_modif" >
         </activity>
         <activity
-<<<<<<< HEAD
             android:screenOrientation="portrait"
-=======
->>>>>>> 65f54fcf0df4344afcde7b80f4ad8b6c06e5ed1e
             android:name="com.kiveukoi.Connexion"
             android:label="@string/title_activity_connexion" >
         </activity>
