@@ -2,7 +2,6 @@ package com.kiveukoi;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.SQLException;
@@ -19,12 +18,11 @@ import android.widget.Toast;
 public class MainActivity extends Activity implements OnClickListener {
 	Button btnConnexion = null;
 
-	/** Called when the activity is first created. */
-
+	/** 
+	 * Called when the activity is first created
+	 */
 	@Override
-	public void onCreate(Bundle savedInstanceState) {        
-		// User db = new User(this);
-		
+	public void onCreate(Bundle savedInstanceState) {
 		DataBaseHelper myDbHelper = new DataBaseHelper(null);
 		myDbHelper = new DataBaseHelper(this);
 
@@ -35,7 +33,7 @@ public class MainActivity extends Activity implements OnClickListener {
 	        AlertDialog.Builder dialog = new AlertDialog.Builder(this);
 	        dialog.setTitle("Première connexion");
 	        dialog.setMessage("C'est la première fois que vous utilisez Kiveukoi.\n" +
-	        		"Veuillez renseigner votre adresse email et mot de passe puis choissiez un code à 4 chiffres.");
+	        		"Veuillez renseigner votre adresse email et votre mot de passe, puis choissiez un code à 4 chiffres.");
 	        dialog.setIcon(android.R.drawable.ic_dialog_alert);
 	        dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
 				@Override
@@ -237,9 +235,7 @@ public class MainActivity extends Activity implements OnClickListener {
 
 	/**
 	 * Vérifie que le code PIN saisi est le bon
-	 * 
-	 * @param pin
-	 *            String de longueur 4
+	 * @param pin String de longueur 4
 	 * @return true si le code est bon, false sinon
 	 */
 	public boolean checkPIN(String pin) {
