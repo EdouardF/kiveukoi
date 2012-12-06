@@ -1,6 +1,9 @@
 package com.kiveukoi;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.SQLException;
 import android.os.Bundle;
@@ -19,7 +22,7 @@ public class MainActivity extends Activity implements OnClickListener {
 	/** Called when the activity is first created. */
 
 	@Override
-	public void onCreate(Bundle savedInstanceState) {
+	public void onCreate(Bundle savedInstanceState) {        
 		// User db = new User(this);
 		
 		DataBaseHelper myDbHelper = new DataBaseHelper(null);
@@ -28,14 +31,30 @@ public class MainActivity extends Activity implements OnClickListener {
 		try {
 			myDbHelper.openDataBase();
 		} catch (SQLException sqle) {
-			/**
-			 * Si on n'a pas de base de données,
-			 * on redirige vers la première connexion
-			 * pour définir un code PIN
-			 */
-			Intent monIntent = new Intent(this, Connexion.class);
-			startActivity(monIntent);
-			Toast.makeText(this, "Bienvenue pour la première fois sur Kiveukoi !", Toast.LENGTH_SHORT).show();
+			final Intent monIntent = new Intent(this, Connexion.class);
+	        AlertDialog.Builder dialog = new AlertDialog.Builder(this);
+	        dialog.setTitle("Première connexion");
+	        dialog.setMessage("C'est la première fois que vous utilisez Kiveukoi.\n" +
+	        		"Veuillez renseigner votre adresse email et mot de passe puis choissiez un code à 4 chiffres.");
+	        dialog.setIcon(android.R.drawable.ic_dialog_alert);
+	        dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+				@Override
+				public void onClick(DialogInterface arg0, int arg1) {
+					/**
+					 * Si on n'a pas de base de données,
+					 * on redirige vers la première connexion
+					 * pour définir un code PIN
+					 */
+					startActivity(monIntent);
+				}
+	        });
+	        dialog.setNegativeButton("Annuler", new DialogInterface.OnClickListener() {
+				@Override
+				public void onClick(DialogInterface dialog, int which) {
+					finish();
+				}
+	        });
+	        dialog.show();
 		}
 		
 		super.onCreate(savedInstanceState);

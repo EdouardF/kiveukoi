@@ -9,7 +9,6 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 public class Connexion extends Activity implements OnClickListener{
 
@@ -77,7 +76,6 @@ public class Connexion extends Activity implements OnClickListener{
 	
 			});
 		}catch(Exception ex){
-			Toast.makeText(this, ex.toString(), Toast.LENGTH_LONG).show();
 		}
 	}
 
