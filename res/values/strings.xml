@@ -21,7 +21,7 @@
     <string name="professeur">Professeur :</string>
     <string name="groupe">Groupe :</string>
     <string name="nombrePoste">Nombre de poste :</string>
-    <string name="title_activity_login_web_service">Connexion</string>
+    <string name="title_activity_connexion">Connexion</string>
     <string name="hint_login">Adresse mail</string>
     <string name="hint_password">Mot de passe</string>
     <string name="hint_secret">Code secret</string>

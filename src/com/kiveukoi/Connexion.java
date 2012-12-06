@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class Connexion extends Activity implements OnClickListener{
 
@@ -22,58 +23,62 @@ public class Connexion extends Activity implements OnClickListener{
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_connexion);
-		// Assignation
-		this.m_code1=(EditText)findViewById(R.id.txtSecret1);
-		this.m_code2=(EditText)findViewById(R.id.txtSecret2);
-		this.m_login=(EditText)findViewById(R.id.txtLogin);
-		this.m_password=(EditText)findViewById(R.id.txtPassword);
-		this.m_btnConnexion=(Button)findViewById(R.id.btnConnexion);
-
-		// Si le texte change
-		this.m_code1.addTextChangedListener(new TextWatcher(){
-
-			@Override
-			public void afterTextChanged(Editable s) {
-				m_code2.requestFocus();
-			}
-
-			@Override
-			public void beforeTextChanged(CharSequence s, int start, int count,
-					int after) {
-				// TODO Auto-generated method stub
-
-			}
-
-			@Override
-			public void onTextChanged(CharSequence s, int start, int before,
-					int count) {
-				// TODO Auto-generated method stub
-
-			}
-
-		});
-		this.m_code2.addTextChangedListener(new TextWatcher(){
-
-			@Override
-			public void afterTextChanged(Editable s) {
-
-			}
-
-			@Override
-			public void beforeTextChanged(CharSequence s, int start, int count,
-					int after) {
-				// TODO Auto-generated method stub
-
-			}
-
-			@Override
-			public void onTextChanged(CharSequence s, int start, int before,
-					int count) {
-				// TODO Auto-generated method stub
-
-			}
-
-		});
+		try{
+			// Assignation
+			this.m_code1=(EditText)findViewById(R.id.txtSecret1);
+			this.m_code2=(EditText)findViewById(R.id.txtSecret2);
+			this.m_login=(EditText)findViewById(R.id.txtLogin);
+			this.m_password=(EditText)findViewById(R.id.txtPassword);
+			this.m_btnConnexion=(Button)findViewById(R.id.btnConnexion);
+	
+			// Si le texte change
+			this.m_code1.addTextChangedListener(new TextWatcher(){
+	
+				@Override
+				public void afterTextChanged(Editable s) {
+					m_code2.requestFocus();
+				}
+	
+				@Override
+				public void beforeTextChanged(CharSequence s, int start, int count,
+						int after) {
+					// TODO Auto-generated method stub
+	
+				}
+	
+				@Override
+				public void onTextChanged(CharSequence s, int start, int before,
+						int count) {
+					// TODO Auto-generated method stub
+	
+				}
+	
+			});
+			this.m_code2.addTextChangedListener(new TextWatcher(){
+	
+				@Override
+				public void afterTextChanged(Editable s) {
+	
+				}
+	
+				@Override
+				public void beforeTextChanged(CharSequence s, int start, int count,
+						int after) {
+					// TODO Auto-generated method stub
+	
+				}
+	
+				@Override
+				public void onTextChanged(CharSequence s, int start, int before,
+						int count) {
+					// TODO Auto-generated method stub
+	
+				}
+	
+			});
+		}catch(Exception ex){
+			Toast.makeText(this, ex.toString(), Toast.LENGTH_LONG).show();
+		}
 	}
 
 	@Override

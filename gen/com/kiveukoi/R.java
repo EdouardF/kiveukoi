@@ -144,8 +144,8 @@ public final class R {
         public static final int seizeh=0x7f040022;
         public static final int title_activity_accueil=0x7f040003;
         public static final int title_activity_ajout_modif=0x7f04000a;
+        public static final int title_activity_connexion=0x7f040014;
         public static final int title_activity_identification=0x7f04002e;
-        public static final int title_activity_login_web_service=0x7f040014;
         public static final int title_activity_main=0x7f04002a;
         public static final int title_activity_profil=0x7f040005;
         public static final int title_activity_statistiques=0x7f040004;
