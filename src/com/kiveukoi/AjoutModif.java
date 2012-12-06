@@ -37,6 +37,7 @@ public class AjoutModif extends Activity {
 
 		/** Listener for click event of the button */
 		pPickDate.setOnClickListener(new View.OnClickListener() {
+			@SuppressWarnings("deprecation")
 			public void onClick(View v) {
 				showDialog(DATE_DIALOG_ID);
 			}
