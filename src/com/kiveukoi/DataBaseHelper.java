@@ -14,10 +14,10 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class DataBaseHelper extends SQLiteOpenHelper {
 
 	// The Android's default system path of your application database.
-	private static String DB_PATH = "/data/data/YOUR_PACKAGE/databases/";
-	private static String DB_NAME = "myDBName";
-	private SQLiteDatabase myDataBase;
-	private final Context myContext;
+	private static String DB_PATH = "/data/data/kiveukoi/databases/";
+	private static String DB_NAME = "kiveukoi";
+	private SQLiteDatabase DataBase;
+	private final Context Context;
 
 	/**
 	 * Constructor Takes and keeps a reference of the passed context in order to
@@ -27,7 +27,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 	 */
 	public DataBaseHelper(Context context) {
 		super(context, DB_NAME, null, 1);
-		this.myContext = context;
+		this.Context = context;
 	}
 
 	/**
@@ -80,7 +80,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 	private void copyDataBase() throws IOException {
 
 		// Open your local db as the input stream
-		InputStream myInput = myContext.getAssets().open(DB_NAME);
+		InputStream myInput = Context.getAssets().open(DB_NAME);
 
 		// Path to the just created empty db
 		String outFileName = DB_PATH + DB_NAME;
@@ -105,14 +105,14 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 	public void openDataBase() throws SQLException {
 		// Open the database
 		String myPath = DB_PATH + DB_NAME;
-		myDataBase = SQLiteDatabase.openDatabase(myPath, null,
+		DataBase = SQLiteDatabase.openDatabase(myPath, null,
 					SQLiteDatabase.OPEN_READONLY);
 	}
 
 	@Override
 	public synchronized void close() {
-		if (myDataBase != null) {
-			myDataBase.close();
+		if (DataBase != null) {
+			DataBase.close();
 		}
 		super.close();
 	}
