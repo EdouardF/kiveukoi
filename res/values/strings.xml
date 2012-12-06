@@ -5,12 +5,12 @@
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
     <string name="title_activity_accueil">Accueil</string>
-    <string name="login">Connexion</string>
+    <string name="login">Enregistrer</string>
     <string name="title_pin">Veuillez saisir votre code PIN</string>
     <string name="title_activity_connexion">Connexion</string>
-    <string name="label_login">Adresse email :</string>
-    <string name="hint_login">wxyz@exemple.com</string>
-    <string name="label_password">Mot de passe :</string>
-    <string name="label_pin">Définir code d\'accès :</string>
-
+    <string name="hint_login">Adresse mail</string>
+    <string name="hint_password">Mot de passe</string>
+    <string name="hint_secret">Code secret</string>
+    <string name="hint_secretRepeter">Répéter code secret</string>
+    <string name="label_secret">Saisir un code secret :</string>
 </resources>
