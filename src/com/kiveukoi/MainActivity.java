@@ -2,6 +2,7 @@ package com.kiveukoi;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -19,6 +20,9 @@ public class MainActivity extends Activity implements OnClickListener {
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
+		
+			User db =  new User(this);
+			
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
