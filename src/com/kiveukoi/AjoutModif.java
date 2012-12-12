@@ -4,6 +4,7 @@ import java.util.Calendar;
 import android.os.Bundle;
 import android.app.Activity;
 import android.app.DatePickerDialog;
+import android.app.DatePickerDialog.OnDateSetListener;
 import android.app.Dialog;
 import android.app.TimePickerDialog;
 import android.view.Menu;
@@ -12,6 +13,10 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.TextView;
 import android.widget.TimePicker;
+<<<<<<< HEAD
+=======
+import android.widget.Toast;
+>>>>>>> 6cc3140c3c56b5c146463fe695a3f07a5501317b
  
 public class AjoutModif extends Activity {
     private TextView pDisplayDate;
@@ -34,6 +39,7 @@ public class AjoutModif extends Activity {
          */
         static final int DATE_DIALOG_ID = 0;
  
+<<<<<<< HEAD
         @Override
         protected void onCreate(Bundle savedInstanceState) {
     		super.onCreate(savedInstanceState);
@@ -48,6 +54,24 @@ public class AjoutModif extends Activity {
             pPickTimeFin = (Button) findViewById(R.id.pickTimeFin);
             
             /** Listener for click event of the button */
+=======
+        
+        @Override
+        protected void onCreate(Bundle savedInstanceState) {
+                
+                super.onCreate(savedInstanceState);
+                setContentView(R.layout.activity_ajout_modif);
+                /** Capture our View elements */
+                pDisplayDate = (TextView) findViewById(R.id.displayDate);
+                pPickDate = (Button) findViewById(R.id.pickDate);
+                /** Listener for click event of the button */
+                pDisplayTimeDeb = (TextView) findViewById(R.id.displayTimeDeb);
+                pDisplayTimeFin = (TextView) findViewById(R.id.displayTimeFin);
+                pPickTimeDeb = (Button) findViewById(R.id.pickTimeDeb);
+                pPickTimeFin = (Button) findViewById(R.id.pickTimeFin);
+                
+                /** Listener for click event of the button */
+>>>>>>> 6cc3140c3c56b5c146463fe695a3f07a5501317b
                 pPickDate.setOnClickListener(new View.OnClickListener() {
                         public void onClick(View v) {
                                 showDialog(DATE_DIALOG_ID);
@@ -79,7 +103,11 @@ public class AjoutModif extends Activity {
                 mMinuteFin = cal.get(Calendar.MINUTE);
  
                 /** Display the current date in the TextView */
+<<<<<<< HEAD
             updateDisplay();
+=======
+                updateDisplay();
+>>>>>>> 6cc3140c3c56b5c146463fe695a3f07a5501317b
         }
  
         @Override
@@ -103,6 +131,7 @@ public class AjoutModif extends Activity {
                 }
         };
  
+<<<<<<< HEAD
         /** Create a new dialog for date picker */
         public void onDateSet(DatePicker view,int year, int monthOfYear,
                         int dayOfMonth) {
@@ -112,6 +141,32 @@ public class AjoutModif extends Activity {
                 updateDisplay();
                 //displayToast();
         }
+=======
+ 
+ 
+        /** Displays a notification when the date is updated */
+        /*private void displayToast() {
+                Toast.makeText(
+                                this,
+                                new StringBuilder().append("Date choosen is ").append(
+                                                pDisplayDate.getText()), Toast.LENGTH_SHORT).show();
+ 
+        }*/
+ 
+        /** Create a new dialog for date picker */
+ 
+ 
+ 
+                public void onDateSet(DatePicker view,int year, int monthOfYear,
+                                int dayOfMonth) {
+                        pYear = year;
+                        pMonth = monthOfYear;
+                        pDay = dayOfMonth;
+                        updateDisplay();
+                        //displayToast();
+                }
+        
+>>>>>>> 6cc3140c3c56b5c146463fe695a3f07a5501317b
  
         /** Updates the date in the TextView */
         private void updateDisplay() {
@@ -125,6 +180,22 @@ public class AjoutModif extends Activity {
                                 .append(":").append(mMinuteFin).append(" "));
         }
  
+<<<<<<< HEAD
+=======
+        /** Displays a notification when the date is updated */
+        /**
+         * private void displayToast() {
+         * 
+         * Toast.makeText( this, new
+         * StringBuilder().append("La date choisie est : ").append(
+         * pDisplayDate.getText()), Toast.LENGTH_SHORT).show(); Toast.makeText(
+         * this, new StringBuilder().append("L'heure choisie est : ").append(
+         * pDisplayTime.getText()), Toast.LENGTH_SHORT).show();
+         * 
+         * }
+         */
+ 
+>>>>>>> 6cc3140c3c56b5c146463fe695a3f07a5501317b
         /** Create a new dialog for date picker */
         protected Dialog onCreateDialog(int id) {
                 switch (id) {

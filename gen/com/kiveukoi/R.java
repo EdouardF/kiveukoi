@@ -30,9 +30,15 @@ public final class R {
         public static final int dixsepth=0x7f07000d;
         public static final int douzeh=0x7f070008;
         public static final int editText1=0x7f070034;
+<<<<<<< HEAD
         public static final int editText2=0x7f070036;
         public static final int editText3=0x7f070035;
         public static final int editText4=0x7f070037;
+=======
+        public static final int editText2=0x7f070037;
+        public static final int editText3=0x7f070036;
+        public static final int editText4=0x7f070035;
+>>>>>>> 6cc3140c3c56b5c146463fe695a3f07a5501317b
         public static final int email=0x7f070030;
         public static final int huith=0x7f070004;
         public static final int linearLayout1=0x7f07001b;

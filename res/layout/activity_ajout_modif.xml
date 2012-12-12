@@ -1,21 +1,44 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    tools:context=".AjoutModif" >
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
 
+<<<<<<< HEAD
 
     <LinearLayout
+=======
+    <RelativeLayout
+>>>>>>> 6cc3140c3c56b5c146463fe695a3f07a5501317b
         xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/linearLayout1"
-        android:layout_width="wrap_content"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:orientation="vertical" >
 
+=======
+        tools:context=".AjoutModif" >
+>>>>>>> 6cc3140c3c56b5c146463fe695a3f07a5501317b
 
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/linearLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+        </LinearLayout>
 
-    </LinearLayout>
+        <Button
+            android:id="@+id/pickDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="41dp"
+            android:layout_marginRight="19dp"
+            android:layout_marginTop="120dp"
+            android:text="@string/choixDate" />
 
+<<<<<<< HEAD
     <Button
         android:id="@+id/pickDate"
         android:layout_width="wrap_content"
@@ -54,52 +77,80 @@
         android:layout_marginRight="153dp"
         android:layout_toLeftOf="@+id/pickTimeDeb"
         android:textAppearance="?android:attr/textAppearanceMedium" />
+=======
+        <Button
+            android:id="@+id/pickTimeDeb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/pickDate"
+            android:text="@string/choixHeureDeb" />
+>>>>>>> 6cc3140c3c56b5c146463fe695a3f07a5501317b
 
-    <TextView
-        android:id="@+id/displayDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/pickDate"
-        android:layout_alignBottom="@+id/pickDate"
-        android:layout_alignLeft="@+id/displayTimeDeb"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        <TextView
+            android:id="@+id/textDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/pickDate"
+            android:layout_alignBottom="@+id/pickDate"
+            android:layout_alignParentLeft="true"
+            android:text="@string/date"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
 
-    <Button
-        android:id="@+id/pickTimeFin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/pickTimeDeb"
-        android:text="@string/choixHeureFin"/>
+        <TextView
+            android:id="@+id/displayTimeDeb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/pickTimeDeb"
+            android:layout_alignBottom="@+id/pickTimeDeb"
+            android:layout_marginRight="153dp"
+            android:layout_toLeftOf="@+id/pickTimeDeb"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
 
+        <TextView
+            android:id="@+id/displayDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/pickDate"
+            android:layout_alignBottom="@+id/pickDate"
+            android:layout_alignLeft="@+id/displayTimeDeb"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
 
-    <TextView
-        android:id="@+id/displayTimeFin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/pickTimeFin"
-        android:layout_alignBottom="@+id/pickTimeFin"
-        android:layout_alignRight="@+id/displayTimeDeb"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        <Button
+            android:id="@+id/pickTimeFin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/pickTimeDeb"
+            android:text="@string/choixHeureFin" />
 
-    <TextView
-        android:id="@+id/textheureDeb"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/displayTimeDeb"
-        android:layout_alignBottom="@+id/displayTimeDeb"
-        android:layout_alignParentLeft="true"
-        android:text="@string/heureDebut"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        <TextView
+            android:id="@+id/displayTimeFin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/pickTimeFin"
+            android:layout_alignBottom="@+id/pickTimeFin"
+            android:layout_alignRight="@+id/displayTimeDeb"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
 
-    <TextView
-        android:id="@+id/TextHeureFin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/displayTimeFin"
-        android:layout_alignBottom="@+id/displayTimeFin"
-        android:layout_alignParentLeft="true"
-        android:text="@string/heureFin"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        <TextView
+            android:id="@+id/textheureDeb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/displayTimeDeb"
+            android:layout_alignBottom="@+id/displayTimeDeb"
+            android:layout_alignParentLeft="true"
+            android:text="@string/heureDebut"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
 
-</RelativeLayout>
+        <TextView
+            android:id="@+id/TextHeureFin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/displayTimeFin"
+            android:layout_alignBottom="@+id/displayTimeFin"
+            android:layout_alignParentLeft="true"
+            android:text="@string/heureFin"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    </RelativeLayout>
+</ScrollView>

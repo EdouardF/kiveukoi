@@ -31,7 +31,6 @@
             android:windowSoftInputMode="adjustResize|stateAlwaysVisible" >
         </activity>
         <activity
-            android:screenOrientation="portrait"
             android:name="com.kiveukoi.Accueil"
             android:label="@string/title_activity_accueil" >
         </activity>
