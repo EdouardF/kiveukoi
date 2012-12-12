@@ -30,9 +30,9 @@ public final class R {
         public static final int dixsepth=0x7f07000d;
         public static final int douzeh=0x7f070008;
         public static final int editText1=0x7f070034;
-        public static final int editText2=0x7f070037;
-        public static final int editText3=0x7f070036;
-        public static final int editText4=0x7f070035;
+        public static final int editText2=0x7f070036;
+        public static final int editText3=0x7f070035;
+        public static final int editText4=0x7f070037;
         public static final int email=0x7f070030;
         public static final int huith=0x7f070004;
         public static final int linearLayout1=0x7f07001b;
@@ -44,8 +44,8 @@ public final class R {
         public static final int neufh=0x7f070005;
         public static final int onzeh=0x7f070007;
         public static final int password=0x7f070031;
-        public static final int pickDate=0x7f07001d;
-        public static final int pickTimeDeb=0x7f07001c;
+        public static final int pickDate=0x7f07001c;
+        public static final int pickTimeDeb=0x7f07001d;
         public static final int pickTimeFin=0x7f070021;
         public static final int progressBar1=0x7f07000f;
         public static final int progressBar10=0x7f070018;
