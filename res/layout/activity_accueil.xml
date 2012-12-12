@@ -202,7 +202,7 @@
         android:minWidth="30dp"
         android:progress="8"
         android:progressDrawable="@drawable/custom_progress_bar_horizontal"
-        android:secondaryProgress="80" />
+        android:secondaryProgress="70" />
 
     <!-- Barre de progression pour le creneau de 9h -->
 
@@ -220,7 +220,7 @@
         android:minWidth="30dp"
         android:progress="8"
         android:progressDrawable="@drawable/custom_progress_bar_horizontal"
-        android:secondaryProgress="80" />
+        android:secondaryProgress="70" />
 
     <!-- Barre de progression pour le creneau de 10h -->
 
@@ -238,7 +238,7 @@
         android:minWidth="30dp"
         android:progress="8"
         android:progressDrawable="@drawable/custom_progress_bar_horizontal"
-        android:secondaryProgress="80" />
+        android:secondaryProgress="70" />
 
     <!-- Barre de progression pour le creneau de 11h -->
 
@@ -256,7 +256,7 @@
         android:minWidth="30dp"
         android:progress="8"
         android:progressDrawable="@drawable/custom_progress_bar_horizontal"
-        android:secondaryProgress="80" />
+        android:secondaryProgress="70" />
 
     <!-- Barre de progression pour le creneau de 12h -->
 
@@ -274,7 +274,7 @@
         android:minWidth="30dp"
         android:progress="8"
         android:progressDrawable="@drawable/custom_progress_bar_horizontal"
-        android:secondaryProgress="80" />
+        android:secondaryProgress="70" />
 
     <!-- Barre de progression pour le creneau de 13h -->
 
@@ -292,7 +292,7 @@
         android:minWidth="30dp"
         android:progress="8"
         android:progressDrawable="@drawable/custom_progress_bar_horizontal"
-        android:secondaryProgress="80" />
+        android:secondaryProgress="70" />
 
     <!-- Barre de progression pour le creneau de 14h -->
 
@@ -310,7 +310,7 @@
         android:minWidth="30dp"
         android:progress="8"
         android:progressDrawable="@drawable/custom_progress_bar_horizontal"
-        android:secondaryProgress="80" />
+        android:secondaryProgress="70" />
 
     <!-- Barre de progression pour le creneau de 15h -->
 
@@ -328,7 +328,7 @@
         android:minWidth="30dp"
         android:progress="8"
         android:progressDrawable="@drawable/custom_progress_bar_horizontal"
-        android:secondaryProgress="80" />
+        android:secondaryProgress="70" />
 
     <!-- Barre de progression pour le creneau de 16h -->
 
@@ -346,7 +346,7 @@
         android:minWidth="30dp"
         android:progress="8"
         android:progressDrawable="@drawable/custom_progress_bar_horizontal"
-        android:secondaryProgress="80" />
+        android:secondaryProgress="70" />
 
     <!-- Barre de progression pour le creneau de 17h -->
 
@@ -364,7 +364,7 @@
         android:minWidth="30dp"
         android:progress="8"
         android:progressDrawable="@drawable/custom_progress_bar_horizontal"
-        android:secondaryProgress="80" />
+        android:secondaryProgress="70" />
 
     <!-- Barre de progression pour le creneau de 18h -->
 
@@ -382,7 +382,7 @@
         android:minWidth="30dp"
         android:progress="8"
         android:progressDrawable="@drawable/custom_progress_bar_horizontal"
-        android:secondaryProgress="80" />
+        android:secondaryProgress="70" />
 
     <!-- Barre de progression en bas de la page -->
 
@@ -397,7 +397,7 @@
         android:max="100"
         android:minHeight="16dp"
         android:minWidth="30dp"
-        android:progress="30"
+        android:progress="28"
         android:progressDrawable="@drawable/custom_progress_bar_horizontal"
         android:secondaryProgress="70" />
 
@@ -434,7 +434,8 @@
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/ProgressBar01"
+        android:layout_alignBaseline="@+id/textView3"
+        android:layout_alignBottom="@+id/textView3"
         android:layout_alignParentLeft="true"
         android:text="Mémoire RAM"
         android:textAppearance="?android:attr/textAppearanceSmall" />

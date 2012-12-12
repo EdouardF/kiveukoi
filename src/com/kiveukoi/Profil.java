@@ -94,7 +94,6 @@ public class Profil extends Activity implements OnClickListener {
 		 * Si tous les champs ne sont pas remplis
 		 * @TODO si tous les champs sont remplis, on compare le code donné avec celui dans la base et on renvoie true => on va à l'accueil
 		 */
-		
 		if (!actuel.matches("") && !new1.matches("") && !new2.matches("")) {
 			if (modifok) {
 				if (v == btnModifPIN) {
@@ -127,8 +126,10 @@ public class Profil extends Activity implements OnClickListener {
 			} else {
 				return false;
 			}
-		} else {
+		} else if (!actuel.matches("")){
 			Toast.makeText(this, "Le code actuel est incorrect", Toast.LENGTH_SHORT).show();
+			return false;
+		} else {
 			return false;
 		}
 	}
