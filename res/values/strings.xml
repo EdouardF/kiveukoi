@@ -42,7 +42,6 @@
     <string name="nouveauCode">Nouveau code :</string>
     <string name="repeterCode">Répéter code :</string>
     <string name="choixDate">Choisir une date</string>
-<<<<<<< HEAD
     <string name="title_pin">Veuillez saisir votre code secret</string>
     <string name="title_activity_main">Connexion</string>
     <string name="update_pin">Modification du code secret</string>
@@ -51,9 +50,6 @@
     <string name="coming_soon">A venir&#8230;</string>
     <string name="first_login_mdp">Identifiants</string>
     <string name="first_login_pin">Code secret</string>
-
-=======
     <string name="choixHeureDeb">Choisir une heure de début</string>
     <string name="choixHeureFin">Choisir une heure de fin</string>
->>>>>>> 68b14ac864b25664dad101076a3f93c11f1d4415
 </resources>

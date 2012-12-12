@@ -4,15 +4,14 @@
     android:layout_height="wrap_content"
     tools:context=".AjoutModif" >
 
-<<<<<<< HEAD
-=======
+
     <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/linearLayout1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical" >
->>>>>>> 68b14ac864b25664dad101076a3f93c11f1d4415
+
 
 
     </LinearLayout>
@@ -21,19 +20,12 @@
         android:id="@+id/pickDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-<<<<<<< HEAD
         android:layout_marginRight="19dp"
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="41dp"
         android:layout_marginTop="120dp"
-        android:text="@string/ram" />
-=======
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/linearLayout1"
-        android:layout_marginTop="39dp"
-        android:onClick="DATE_DIALOG_ID"
         android:text="@string/choixDate" />
->>>>>>> 68b14ac864b25664dad101076a3f93c11f1d4415
+
 
     <Button
         android:id="@+id/pickTimeDeb"
