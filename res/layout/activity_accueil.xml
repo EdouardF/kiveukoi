@@ -411,6 +411,8 @@
         android:text="  "
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
+    <!-- Légende sur la couleur de la memoire RAM -->
+    
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
@@ -421,6 +423,8 @@
         android:text="Autres"
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
+    <!-- Légende sur la couleur du nombre de coeurs -->
+    
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
@@ -430,6 +434,8 @@
         android:text="Nombre de Coeurs"
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
+    <!-- Légende sur la couleur de la memoire RAM -->
+    
     <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
