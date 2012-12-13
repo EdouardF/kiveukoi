@@ -174,7 +174,7 @@ public class AjoutModif extends Activity implements OnClickListener {
 
 		EditText postes = (EditText) findViewById(R.id.saisirNombrePoste);
 		String content3 = postes.getText().toString();
-
+		
 		return !content1.matches("") && !content2.matches("") && !content3.matches("");
 	}
 
