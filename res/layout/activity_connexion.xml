@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/btnConnexion"
     android:layout_width="match_parent"
+    android:background="#ffffff"
     android:layout_height="match_parent"
     tools:context=".Connexion" >
 
@@ -73,6 +74,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
+        android:background="@drawable/button5"
         android:layout_below="@+id/txtSecret2"
         android:text="@string/login" />
 

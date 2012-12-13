@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ffffff"
     tools:context=".Accueil" >
 
     <TableRow
@@ -20,6 +21,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
+		android:background="@drawable/button5"
         android:text="@string/btnstatistiques" />
 
     <!-- Bouton Profil -->
@@ -31,6 +33,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_toLeftOf="@+id/btnAjout"
+		android:background="@drawable/button5"
         android:text="@string/btnprofil" />
 
     <!-- Bouton Ajout -->
@@ -41,6 +44,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_toLeftOf="@+id/btnStatistiques"
+        android:background="@drawable/button5"
         android:text="@string/btnajouter" />
 
     <!-- affichage 8h -->
