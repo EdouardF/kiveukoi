@@ -3,6 +3,7 @@ package com.kiveukoi;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -56,7 +57,14 @@ public class Accueil extends Activity implements OnClickListener{
 		progressBar10.setOnClickListener(this);
 		progressBar11 = (ProgressBar) findViewById(R.id.progressBar11);
 		progressBar11.setOnClickListener(this);
-
+		
+		/* Alignement des boutons */
+		DisplayMetrics metrics = new DisplayMetrics();
+		 getWindowManager().getDefaultDisplay().getMetrics(metrics);
+		 btnAjout.setWidth(metrics.widthPixels/3);
+		 btnStatistiques.setWidth(metrics.widthPixels/3);
+		 btnProfil.setWidth(metrics.widthPixels/3);
+		 
 	}
 
 	@Override
