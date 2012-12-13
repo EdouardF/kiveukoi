@@ -132,9 +132,7 @@ public class AjoutModif extends Activity implements OnClickListener {
 
 	/**
 	 * Rajoute un zéro devant les heures et les minutes si à 1 chiffre
-	 * 
-	 * @param time
-	 *            Integer
+	 * @param time Integer
 	 * @return String minute/heure avec 0 si besoin
 	 */
 	public String timesWithZero(int time) {
@@ -189,16 +187,16 @@ public class AjoutModif extends Activity implements OnClickListener {
 	/** Create a new dialog for date picker */
 	protected Dialog onCreateDialog(int id) {
 		switch (id) {
-		case DATE_DIALOG_ID:
-			return new DatePickerDialog(this, pDateSetListener, pYear, pMonth,
-					pDay);
-		case TIME_DIALOG_ID_HEUREDEB:
-			return new TimePickerDialog(this, mTimeSetListenerHeureDeb,
-					mHourDeb, mMinuteDeb, true);
-
-		case TIME_DIALOG_ID_HEUREFIN:
-			return new TimePickerDialog(this, mTimeSetListenerHeureFin,
-					mHourFin, mMinuteFin, true);
+			case DATE_DIALOG_ID:
+				return new DatePickerDialog(this, pDateSetListener, pYear, pMonth,
+						pDay);
+			case TIME_DIALOG_ID_HEUREDEB:
+				return new TimePickerDialog(this, mTimeSetListenerHeureDeb,
+						mHourDeb, mMinuteDeb, true);
+	
+			case TIME_DIALOG_ID_HEUREFIN:
+				return new TimePickerDialog(this, mTimeSetListenerHeureFin,
+						mHourFin, mMinuteFin, true);
 		}
 		return null;
 	}
