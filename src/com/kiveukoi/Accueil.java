@@ -8,9 +8,13 @@ import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.LinearLayout.LayoutParams;
 import android.widget.ProgressBar;
+import android.widget.TextView;
+import android.widget.Toast;
 
-public class Accueil extends Activity implements OnClickListener{
+public class Accueil extends Activity implements OnClickListener {
 	Button btnAjout = null;
 	Button btnStatistiques = null;
 	Button btnProfil = null;
@@ -25,6 +29,8 @@ public class Accueil extends Activity implements OnClickListener{
 	ProgressBar progressBar9 = null;
 	ProgressBar progressBar10 = null;
 	ProgressBar progressBar11 = null;
+	TextView neufh = null;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -57,14 +63,16 @@ public class Accueil extends Activity implements OnClickListener{
 		progressBar10.setOnClickListener(this);
 		progressBar11 = (ProgressBar) findViewById(R.id.progressBar11);
 		progressBar11.setOnClickListener(this);
-		
+		neufh = (TextView) findViewById(R.id.neufh);
+		neufh.setOnClickListener(this);
+
 		/* Alignement des boutons */
 		DisplayMetrics metrics = new DisplayMetrics();
-		 getWindowManager().getDefaultDisplay().getMetrics(metrics);
-		 btnAjout.setWidth(metrics.widthPixels/3);
-		 btnStatistiques.setWidth(metrics.widthPixels/3);
-		 btnProfil.setWidth(metrics.widthPixels/3);
-		 
+		getWindowManager().getDefaultDisplay().getMetrics(metrics);
+		btnAjout.setWidth(metrics.widthPixels / 3);
+		btnStatistiques.setWidth(metrics.widthPixels / 3);
+		btnProfil.setWidth(metrics.widthPixels / 3);
+
 	}
 
 	@Override
@@ -77,59 +85,59 @@ public class Accueil extends Activity implements OnClickListener{
 	@Override
 	public void onClick(View v) {
 		if (v == btnStatistiques) {
-			Intent monIntent = new Intent(this,Statistiques.class);
+			Intent monIntent = new Intent(this, Statistiques.class);
 			startActivity(monIntent);
 		}
 		if (v == btnAjout) {
-			Intent monIntent = new Intent(this,AjoutModif.class);
+			Intent monIntent = new Intent(this, AjoutModif.class);
 			startActivity(monIntent);
 		}
 		if (v == btnProfil) {
-			Intent monIntent = new Intent(this,Profil.class);
+			Intent monIntent = new Intent(this, Profil.class);
 			startActivity(monIntent);
 		}
 		if (v == progressBar1) {
-			Intent monIntent = new Intent(this,AjoutModif.class);
+			Intent monIntent = new Intent(this, AjoutModif.class);
 			startActivity(monIntent);
 		}
 		if (v == progressBar2) {
-			Intent monIntent = new Intent(this,AjoutModif.class);
+			Intent monIntent = new Intent(this, AjoutModif.class);
 			startActivity(monIntent);
 		}
 		if (v == progressBar3) {
-			Intent monIntent = new Intent(this,AjoutModif.class);
+			Intent monIntent = new Intent(this, AjoutModif.class);
 			startActivity(monIntent);
 		}
 		if (v == progressBar4) {
-			Intent monIntent = new Intent(this,AjoutModif.class);
+			Intent monIntent = new Intent(this, AjoutModif.class);
 			startActivity(monIntent);
 		}
 		if (v == progressBar5) {
-			Intent monIntent = new Intent(this,AjoutModif.class);
+			Intent monIntent = new Intent(this, AjoutModif.class);
 			startActivity(monIntent);
 		}
 		if (v == progressBar6) {
-			Intent monIntent = new Intent(this,AjoutModif.class);
+			Intent monIntent = new Intent(this, AjoutModif.class);
 			startActivity(monIntent);
 		}
 		if (v == progressBar7) {
-			Intent monIntent = new Intent(this,AjoutModif.class);
+			Intent monIntent = new Intent(this, AjoutModif.class);
 			startActivity(monIntent);
 		}
 		if (v == progressBar8) {
-			Intent monIntent = new Intent(this,AjoutModif.class);
+			Intent monIntent = new Intent(this, AjoutModif.class);
 			startActivity(monIntent);
 		}
 		if (v == progressBar9) {
-			Intent monIntent = new Intent(this,AjoutModif.class);
+			Intent monIntent = new Intent(this, AjoutModif.class);
 			startActivity(monIntent);
 		}
 		if (v == progressBar10) {
-			Intent monIntent = new Intent(this,AjoutModif.class);
+			Intent monIntent = new Intent(this, AjoutModif.class);
 			startActivity(monIntent);
 		}
 		if (v == progressBar11) {
-			Intent monIntent = new Intent(this,AjoutModif.class);
+			Intent monIntent = new Intent(this, AjoutModif.class);
 			startActivity(monIntent);
 		}
 	}
