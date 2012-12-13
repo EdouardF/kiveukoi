@@ -51,6 +51,7 @@ public final class R {
         public static final int login_status=0x7f080038;
         public static final int login_status_message=0x7f080039;
         public static final int menu_forgot_password=0x7f080044;
+        public static final int menu_settings=0x7f080045;
         public static final int neufh=0x7f080005;
         public static final int nombrePoste=0x7f080023;
         public static final int onzeh=0x7f080007;
@@ -83,9 +84,9 @@ public final class R {
         public static final int tableRow1=0x7f080000;
         public static final int textDate=0x7f08002c;
         public static final int textHeureDeb=0x7f080026;
-        public static final int textView1=0x7f08001d;
+        public static final int textView1=0x7f08001c;
         public static final int textView2=0x7f080033;
-        public static final int textView3=0x7f08001c;
+        public static final int textView3=0x7f08001d;
         public static final int textViewAlignementProgressBar=0x7f080010;
         public static final int treizeh=0x7f080009;
         public static final int txtLogin=0x7f080032;
@@ -99,8 +100,12 @@ public final class R {
         public static final int activity_connexion=0x7f030002;
         public static final int activity_identification=0x7f030003;
         public static final int activity_main=0x7f030004;
-        public static final int activity_profil=0x7f030005;
-        public static final int activity_statistiques=0x7f030006;
+        public static final int activity_my_http_connection=0x7f030005;
+        public static final int activity_profil=0x7f030006;
+        public static final int activity_soap_helper=0x7f030007;
+        public static final int activity_soap_response_parser_handler=0x7f030008;
+        public static final int activity_statistiques=0x7f030009;
+        public static final int activity_test_soap=0x7f03000a;
     }
     public static final class menu {
         public static final int activity_accueil=0x7f070000;
@@ -108,13 +113,17 @@ public final class R {
         public static final int activity_connexion=0x7f070002;
         public static final int activity_identification=0x7f070003;
         public static final int activity_main=0x7f070004;
-        public static final int activity_profil=0x7f070005;
-        public static final int activity_statistiques=0x7f070006;
+        public static final int activity_my_http_connection=0x7f070005;
+        public static final int activity_profil=0x7f070006;
+        public static final int activity_soap_helper=0x7f070007;
+        public static final int activity_soap_response_parser_handler=0x7f070008;
+        public static final int activity_statistiques=0x7f070009;
+        public static final int activity_test_soap=0x7f07000a;
     }
     public static final class string {
         public static final int TitreAjoutModif=0x7f040009;
-        public static final int action_sign_in_register=0x7f04003c;
-        public static final int action_sign_in_short=0x7f04003d;
+        public static final int action_sign_in_register=0x7f040040;
+        public static final int action_sign_in_short=0x7f040041;
         public static final int ancienCode=0x7f040025;
         public static final int app_name=0x7f040000;
         public static final int btn_update_pin=0x7f04002c;
@@ -130,10 +139,10 @@ public final class R {
         public static final int dixhuith=0x7f040024;
         public static final int dixsepth=0x7f040023;
         public static final int douzeh=0x7f04001e;
-        public static final int error_field_required=0x7f040043;
-        public static final int error_incorrect_password=0x7f040042;
-        public static final int error_invalid_email=0x7f040040;
-        public static final int error_invalid_password=0x7f040041;
+        public static final int error_field_required=0x7f040047;
+        public static final int error_incorrect_password=0x7f040046;
+        public static final int error_invalid_email=0x7f040044;
+        public static final int error_invalid_password=0x7f040045;
         public static final int first_login_mdp=0x7f04002f;
         public static final int first_login_pin=0x7f040030;
         public static final int groupe=0x7f040012;
@@ -148,9 +157,9 @@ public final class R {
         public static final int itemQuitter=0x7f04002d;
         public static final int label_secret=0x7f040019;
         public static final int login=0x7f04000b;
-        public static final int login_progress_signing_in=0x7f04003f;
+        public static final int login_progress_signing_in=0x7f040043;
         public static final int memoireRAM=0x7f040037;
-        public static final int menu_forgot_password=0x7f04003e;
+        public static final int menu_forgot_password=0x7f040042;
         public static final int menu_settings=0x7f040002;
         public static final int nbCoeur=0x7f040038;
         public static final int neufh=0x7f04001b;
@@ -161,8 +170,8 @@ public final class R {
         public static final int professeur=0x7f040011;
         /**  Strings related to login 
          */
-        public static final int prompt_email=0x7f04003a;
-        public static final int prompt_password=0x7f04003b;
+        public static final int prompt_email=0x7f04003e;
+        public static final int prompt_password=0x7f04003f;
         public static final int quatorzeh=0x7f040020;
         public static final int quinzeh=0x7f040021;
         public static final int ram=0x7f04000f;
@@ -174,10 +183,14 @@ public final class R {
         public static final int title_activity_accueil=0x7f040003;
         public static final int title_activity_ajout_modif=0x7f04000a;
         public static final int title_activity_connexion=0x7f040014;
-        public static final int title_activity_identification=0x7f040039;
+        public static final int title_activity_identification=0x7f04003d;
         public static final int title_activity_main=0x7f04002a;
+        public static final int title_activity_my_http_connection=0x7f04003b;
         public static final int title_activity_profil=0x7f040005;
+        public static final int title_activity_soap_helper=0x7f040039;
+        public static final int title_activity_soap_response_parser_handler=0x7f04003c;
         public static final int title_activity_statistiques=0x7f040004;
+        public static final int title_activity_test_soap=0x7f04003a;
         public static final int title_pin=0x7f040029;
         public static final int titreMegaGiga=0x7f040036;
         public static final int treizeh=0x7f04001f;
