@@ -245,6 +245,10 @@ public class MainActivity extends Activity implements OnClickListener {
 		return true;
 	}
 	
+	/**
+	 * Redirection vers la page de première connexion
+	 * lors de la première utilisation de l'application
+	 */
 	private void redirectionConnexion(){
 		final Intent monIntent = new Intent(this, Connexion.class);
         AlertDialog.Builder dialog = new AlertDialog.Builder(this);
