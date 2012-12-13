@@ -6,7 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 public class UserDataBase {
-	private static final int VERSION_BDD = 1;
+    private static final int VERSION_BDD = 1;
 	private static final String NOM_BDD = "kiveukoi.db";
  
 	private static final String TABLE_USER = "table_user";
@@ -43,13 +43,13 @@ public class UserDataBase {
  
 	public long insertUser(User user){
 		long l_return;
-		if(this.getUser()!=null){
+		if(this.count()==0){
 			//Création d'un ContentValues (fonctionne comme une HashMap)
 			ContentValues values = new ContentValues();
 			//on lui ajoute une valeur associé à une clé (qui est le nom de la colonne dans laquelle on veut mettre la valeur)
 			values.put(COL_LOGIN, user.getLogin());
 			values.put(COL_PASSWORD, user.getPassword());
-			values.put(COL_SECRET, user.getSecret());
+			values.put(COL_SECRET, user.getPIN());
 			//on insère l'objet dans la BDD via le ContentValues
 			l_return = bdd.insert(TABLE_USER, null, values);
 		}else{
@@ -65,7 +65,7 @@ public class UserDataBase {
 		ContentValues values = new ContentValues();
 		values.put(COL_LOGIN, user.getLogin());
 		values.put(COL_PASSWORD, user.getPassword());
-		values.put(COL_SECRET, user.getSecret());
+		values.put(COL_SECRET, user.getPIN());
 		return bdd.update(TABLE_USER, values, COL_ID + " = 0", null);
 	}
  
@@ -80,6 +80,12 @@ public class UserDataBase {
 		return cursorToUser(c);
 	}
 	
+	public int count(){
+		//Récupère dans un Cursor les valeur correspondant à un livre contenu dans la BDD (ici on sélectionne le livre grâce à son titre)
+		Cursor c = bdd.query(TABLE_USER, new String[] {COL_ID, COL_LOGIN, COL_PASSWORD, COL_SECRET}, COL_ID + " = 0 ", null, null, null, null);
+		return c.getCount();
+	}
+	
 	private User cursorToUser(Cursor c){
 		//si aucun élément n'a été retourné dans la requête, on renvoie null
 		if (c.getCount() == 0)
@@ -92,11 +98,10 @@ public class UserDataBase {
 		//on lui affecte toutes les infos grâce aux infos contenues dans le Cursor
 		user.setLogin(c.getString(NUM_COL_LOGIN));
 		user.setPassword(c.getString(NUM_COL_PASSWORD));
-		user.setSecret(c.getString(NUM_COL_SECRET));
+		user.setPIN(c.getString(NUM_COL_SECRET));
 		//On ferme le cursor
 		c.close();
-
+		
 		return user;
 	}
-
 }

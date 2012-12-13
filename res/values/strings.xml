@@ -51,4 +51,12 @@
     <string name="first_login_pin">Code secret</string>
     <string name="choixHeureDeb">Choisir une heure de début</string>
     <string name="choixHeureFin">Choisir une heure de fin</string>
+    <string name="saisirRam">Saisir la RAM</string>
+    <string name="ramGiga">Go</string>
+    <string name="ramMega">Mo</string>
+	<string name="titreMegaGiga">Choisir la RAM</string>
+	<string-array name="megaGiga">	
+		<item>Mega</item>
+		<item>Giga</item>
+	</string-array>
 </resources>

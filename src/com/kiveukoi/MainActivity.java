@@ -16,43 +16,28 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivity extends Activity implements OnClickListener {
-	Button btnConnexion = null;
+    Button btnConnexion = null;
 
 	/** 
 	 * Called when the activity is first created
 	 */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
-		DataBaseHelper myDbHelper = new DataBaseHelper(null);
-		myDbHelper = new DataBaseHelper(this);
+		//DataBaseHelper myDbHelper = new DataBaseHelper(null);
+		//myDbHelper = new DataBaseHelper(this);
 
 		try {
-			myDbHelper.openDataBase();
+			UserDataBase l_dataBase=new UserDataBase(this);
+			l_dataBase.open();
+			//User l_user=l_dataBase.getUser();
+			//l_user.getPIN();
+			if(l_dataBase.count()==0){
+				this.redirectionConnexion();
+			}
+			l_dataBase.close();
+			//myDbHelper.openDataBase();
 		} catch (SQLException sqle) {
-			final Intent monIntent = new Intent(this, Connexion.class);
-	        AlertDialog.Builder dialog = new AlertDialog.Builder(this);
-	        dialog.setTitle("Première connexion");
-	        dialog.setMessage("C'est la première fois que vous utilisez Kiveukoi.\n" +
-	        		"Veuillez renseigner votre adresse email et votre mot de passe, puis choissiez un code à 4 chiffres.");
-	        dialog.setIcon(android.R.drawable.ic_dialog_alert);
-	        dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-				@Override
-				public void onClick(DialogInterface arg0, int arg1) {
-					/**
-					 * Si on n'a pas de base de données,
-					 * on redirige vers la première connexion
-					 * pour définir un code PIN
-					 */
-					startActivity(monIntent);
-				}
-	        });
-	        dialog.setNegativeButton("Annuler", new DialogInterface.OnClickListener() {
-				@Override
-				public void onClick(DialogInterface dialog, int which) {
-					finish();
-				}
-	        });
-	        dialog.show();
+			this.redirectionConnexion();
 		}
 		
 		super.onCreate(savedInstanceState);
@@ -68,7 +53,7 @@ public class MainActivity extends Activity implements OnClickListener {
 		EditText editText2 = (EditText) findViewById(R.id.editText2);
 		EditText editText3 = (EditText) findViewById(R.id.editText3);
 		EditText editText4 = (EditText) findViewById(R.id.editText4);
-		
+
 		/**
 		 * Passer d'une case à la suivante Quand le premier est rempli, on passe
 		 * au second Si on supprime, on reste sur cette case
@@ -84,7 +69,6 @@ public class MainActivity extends Activity implements OnClickListener {
 					EditText editText1 = (EditText) findViewById(R.id.editText1);
 					editText1.requestFocus();
 				}
-				checkWrittenPIN();
 			}
 
 			@Override
@@ -114,7 +98,6 @@ public class MainActivity extends Activity implements OnClickListener {
 					EditText editText1 = (EditText) findViewById(R.id.editText1);
 					editText1.requestFocus();
 				}
-				checkWrittenPIN();
 			}
 
 			@Override
@@ -145,7 +128,6 @@ public class MainActivity extends Activity implements OnClickListener {
 					EditText editText2 = (EditText) findViewById(R.id.editText2);
 					editText2.requestFocus();
 				}
-				checkWrittenPIN();
 			}
 
 			@Override
@@ -171,7 +153,6 @@ public class MainActivity extends Activity implements OnClickListener {
 					EditText editText3 = (EditText) findViewById(R.id.editText3);
 					editText3.requestFocus();
 				}
-				checkWrittenPIN();
 			}
 
 			@Override
@@ -187,53 +168,12 @@ public class MainActivity extends Activity implements OnClickListener {
 			}
 		});
 	}
-	
-	/**
-	 * Vérifie le code PIN pendant la saisie
-	 * Et redirige vers l'accueil si il est bon
-	 * - Sans avoir à cliquer sur le bouton "Connexion"
-	 */
-	public void checkWrittenPIN() {
-		boolean loginok = pinProcess();
-		
-		if (loginok) {
-			redirectToHome();
-			Toast.makeText(this, "Code accepté\nBienvenue sur Kiveukoi !", Toast.LENGTH_SHORT).show();
-		} else {
-			Toast.makeText(this, "Code incorrect", Toast.LENGTH_SHORT).show();
-		}
-	}
-	
+
 	/**
 	 * Vérifie que le code PIN est renseigné pour accéder à l'accueil
 	 */
 	@Override
 	public void onClick(View v) {
-		boolean loginok = pinProcess();
-
-		if (loginok) {
-			if (v == btnConnexion) {
-				redirectToHome();
-				Toast.makeText(this, "Code accepté\nBienvenue sur Kiveukoi !", Toast.LENGTH_SHORT).show();
-			}
-		} else {
-			Toast.makeText(this, "Code incorrect", Toast.LENGTH_SHORT).show();
-		}
-	}
-	
-	/**
-	 * Redirection vers l'accueil
-	 */
-	public void redirectToHome() {
-		Intent monIntent = new Intent(this, Accueil.class);
-		startActivity(monIntent);
-	}
-	
-	/**
-	 * Procédure de création du code PIN
-	 * @return String code pin
-	 */
-	public boolean pinProcess() {
 		EditText editText1 = (EditText) findViewById(R.id.editText1);
 		String content1 = editText1.getText().toString();
 
@@ -246,9 +186,38 @@ public class MainActivity extends Activity implements OnClickListener {
 		EditText editText4 = (EditText) findViewById(R.id.editText4);
 		String content4 = editText4.getText().toString();
 
-		return checkPIN(content1 + content2 + content3 + content4);
+		/**
+		 * Vérification du code PIN saisi
+		 */
+		String pin = content1 + content2 + content3 + content4;
+		boolean loginok = checkPIN(pin);
+
+		/**
+		 * Si tous les champs ne sont pas remplis
+		 * 
+		 * @TODO si tous les champs sont remplis, on compare le code donné avec
+		 *       celui dans la base et on renvoie true => on va à l'accueil
+		 */
+		if (!content1.matches("") && !content2.matches("")
+				&& !content3.matches("") && !content4.matches("")) {
+			if (loginok) {
+				if (v == btnConnexion) {
+					Intent monIntent = new Intent(this, Accueil.class);
+					startActivity(monIntent);
+					Toast.makeText(this,
+							"Code accepté\nBienvenue sur Kiveukoi !",
+							Toast.LENGTH_SHORT).show();
+				}
+			} else {
+				Toast.makeText(this, "Code incorrect", Toast.LENGTH_SHORT)
+						.show();
+			}
+		} else {
+			Toast.makeText(this, "Veuillez saisir les 4 chiffres",
+					Toast.LENGTH_SHORT).show();
+		}
 	}
-	
+
 	/**
 	 * Vérifie que le code PIN saisi est le bon
 	 * @param pin String de longueur 4
@@ -265,5 +234,32 @@ public class MainActivity extends Activity implements OnClickListener {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.activity_main, menu);
 		return true;
+	}
+	
+	private void redirectionConnexion(){
+		final Intent monIntent = new Intent(this, Connexion.class);
+        AlertDialog.Builder dialog = new AlertDialog.Builder(this);
+        dialog.setTitle("Première connexion");
+        dialog.setMessage("C'est la première fois que vous utilisez Kiveukoi.\n" +
+        		"Veuillez renseigner votre adresse email et votre mot de passe, puis choissiez un code à 4 chiffres.");
+        dialog.setIcon(android.R.drawable.ic_dialog_alert);
+        dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+			@Override
+			public void onClick(DialogInterface arg0, int arg1) {
+				/**
+				 * Si on n'a pas de base de données,
+				 * on redirige vers la première connexion
+				 * pour définir un code PIN
+				 */
+				startActivity(monIntent);
+			}
+        });
+        dialog.setNegativeButton("Annuler", new DialogInterface.OnClickListener() {
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				finish();
+			}
+        });
+        dialog.show();
 	}
 }

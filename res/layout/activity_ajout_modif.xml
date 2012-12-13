@@ -1,54 +1,101 @@
-<?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent" >
-
-<<<<<<< HEAD
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".AjoutModif" >
 
     <LinearLayout
-=======
-    <RelativeLayout
->>>>>>> 6cc3140c3c56b5c146463fe695a3f07a5501317b
         xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-<<<<<<< HEAD
         android:orientation="vertical" >
+    </LinearLayout>
 
-=======
-        tools:context=".AjoutModif" >
->>>>>>> 6cc3140c3c56b5c146463fe695a3f07a5501317b
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/pickTimeFin"
+        android:layout_alignTop="@+id/saisirRam"
+        android:entries="@array/megaGiga"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
 
-        <LinearLayout
-            xmlns:android="http://schemas.android.com/apk/res/android"
-            android:id="@+id/linearLayout1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" >
-        </LinearLayout>
+    <TextView
+        android:id="@+id/displayTimeFin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/pickTimeFin"
+        android:layout_alignBottom="@+id/pickTimeFin"
+        android:layout_toRightOf="@+id/nombrePoste"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
 
-        <Button
-            android:id="@+id/pickDate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_marginLeft="41dp"
-            android:layout_marginRight="19dp"
-            android:layout_marginTop="120dp"
-            android:text="@string/choixDate" />
+    <TextView
+        android:id="@+id/displayTimeDeb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/pickTimeDeb"
+        android:layout_alignBottom="@+id/pickTimeDeb"
+        android:layout_alignLeft="@+id/displayTimeFin"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
 
-<<<<<<< HEAD
+    <TextView
+        android:id="@+id/textHeureDeb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/displayTimeDeb"
+        android:layout_alignBottom="@+id/displayTimeDeb"
+        android:layout_alignParentLeft="true"
+        android:text="@string/heureDebut"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/TextHeureFin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/displayTimeFin"
+        android:layout_alignBottom="@+id/displayTimeFin"
+        android:layout_alignParentLeft="true"
+        android:text="@string/heureFin"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/groupe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/processeur"
+        android:layout_marginTop="30dp"
+        android:text="@string/groupe"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/nombrePoste"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/groupe"
+        android:layout_marginTop="28dp"
+        android:text="@string/nombrePoste"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/displayDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/pickDate"
+        android:layout_alignBottom="@+id/pickDate"
+        android:layout_alignLeft="@+id/displayTimeFin"
+        android:layout_alignParentTop="true"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
     <Button
         android:id="@+id/pickDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginRight="19dp"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="41dp"
-        android:layout_marginTop="120dp"
+        android:layout_alignLeft="@+id/pickTimeDeb"
+        android:layout_alignParentRight="true"
         android:text="@string/choixDate" />
-
 
     <Button
         android:id="@+id/pickTimeDeb"
@@ -58,6 +105,15 @@
         android:layout_below="@+id/pickDate"
         android:text="@string/choixHeureDeb" />
 
+    <Button
+        android:id="@+id/pickTimeFin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/pickTimeDeb"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/displayTimeDeb"
+        android:text="@string/choixHeureFin" />
+
     <TextView
         android:id="@+id/textDate"
         android:layout_width="wrap_content"
@@ -66,91 +122,69 @@
         android:layout_alignBottom="@+id/pickDate"
         android:layout_alignParentLeft="true"
         android:text="@string/date"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <TextView
-        android:id="@+id/displayTimeDeb"
+        android:id="@+id/ram"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/pickTimeDeb"
-        android:layout_alignBottom="@+id/pickTimeDeb"
-        android:layout_marginRight="153dp"
-        android:layout_toLeftOf="@+id/pickTimeDeb"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
-=======
-        <Button
-            android:id="@+id/pickTimeDeb"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_below="@+id/pickDate"
-            android:text="@string/choixHeureDeb" />
->>>>>>> 6cc3140c3c56b5c146463fe695a3f07a5501317b
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/pickTimeFin"
+        android:layout_marginTop="17dp"
+        android:text="@string/ram"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
 
-        <TextView
-            android:id="@+id/textDate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/pickDate"
-            android:layout_alignBottom="@+id/pickDate"
-            android:layout_alignParentLeft="true"
-            android:text="@string/date"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
+    <EditText
+        android:id="@+id/saisirRam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ram"
+        android:layout_toLeftOf="@+id/spinner1"
+        android:ems="3"
+        android:inputType="number"
+        android:textAppearance="?android:attr/textAppearanceSmall" >
 
-        <TextView
-            android:id="@+id/displayTimeDeb"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/pickTimeDeb"
-            android:layout_alignBottom="@+id/pickTimeDeb"
-            android:layout_marginRight="153dp"
-            android:layout_toLeftOf="@+id/pickTimeDeb"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
+        <requestFocus />
+    </EditText>
 
-        <TextView
-            android:id="@+id/displayDate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/pickDate"
-            android:layout_alignBottom="@+id/pickDate"
-            android:layout_alignLeft="@+id/displayTimeDeb"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
+    <EditText
+        android:id="@+id/saisirProcesseur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/processeur"
+        android:layout_alignBottom="@+id/processeur"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/saisirRam"
+        android:ems="3"
+        android:inputType="number"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
 
-        <Button
-            android:id="@+id/pickTimeFin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_below="@+id/pickTimeDeb"
-            android:text="@string/choixHeureFin" />
+    <TextView
+        android:id="@+id/processeur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/spinner1"
+        android:text="@string/processeur"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
 
-        <TextView
-            android:id="@+id/displayTimeFin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/pickTimeFin"
-            android:layout_alignBottom="@+id/pickTimeFin"
-            android:layout_alignRight="@+id/displayTimeDeb"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
+    <EditText
+        android:id="@+id/saisirGroupe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/groupe"
+        android:layout_toRightOf="@+id/saisirRam"
+        android:ems="8"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
 
-        <TextView
-            android:id="@+id/textheureDeb"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/displayTimeDeb"
-            android:layout_alignBottom="@+id/displayTimeDeb"
-            android:layout_alignParentLeft="true"
-            android:text="@string/heureDebut"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
+    <EditText
+        android:id="@+id/saisirNombrePoste"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/nombrePoste"
+        android:layout_toRightOf="@+id/saisirRam"
+        android:ems="9"
+        android:inputType="number"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
 
-        <TextView
-            android:id="@+id/TextHeureFin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/displayTimeFin"
-            android:layout_alignBottom="@+id/displayTimeFin"
-            android:layout_alignParentLeft="true"
-            android:text="@string/heureFin"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
-    </RelativeLayout>
-</ScrollView>
+</RelativeLayout>
