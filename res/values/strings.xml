@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="app_name">Kiveukoi</string>
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
@@ -9,7 +8,7 @@
     <string name="title_activity_profil">Profil</string>
 	<string name="btnprofil">Profil</string>
 	<string name="btnstatistiques">Statistiques</string>
-	<string name="btnajouter">Ajouter</string>
+	<string name="btnajouter">Ressources</string>
     <string name="TitreAjoutModif">Reservation</string>
     <string name="title_activity_ajout_modif">Réservation</string>
     <string name="login">Connexion</string>
@@ -20,7 +19,7 @@
     <string name="processeur">Processeur(s) :</string>
     <string name="professeur">Professeur :</string>
     <string name="groupe">Groupe :</string>
-    <string name="nombrePoste">Nombre de poste :</string>
+    <string name="nombrePoste">Nombre de postes :</string>
     <string name="title_activity_connexion">Connexion</string>
     <string name="hint_login">Adresse mail</string>
     <string name="hint_password">Mot de passe</string>
@@ -41,7 +40,7 @@
     <string name="ancienCode">Ancien code :</string>
     <string name="nouveauCode">Nouveau code :</string>
     <string name="repeterCode">Répéter code :</string>
-    <string name="choixDate">Choisir une date</string>
+    <string name="choixDate">Date</string>
     <string name="title_pin">Veuillez saisir votre code secret</string>
     <string name="title_activity_main">Connexion</string>
     <string name="update_pin">Modification du code secret</string>
@@ -50,6 +49,29 @@
     <string name="coming_soon">A venir&#8230;</string>
     <string name="first_login_mdp">Identifiants</string>
     <string name="first_login_pin">Code secret</string>
-    <string name="choixHeureDeb">Choisir une heure de début</string>
-    <string name="choixHeureFin">Choisir une heure de fin</string>
+    <string name="choixHeureDeb">Heure de début</string>
+    <string name="choixHeureFin">Heure de fin</string>
+    <string name="saisirRam">Saisir la RAM</string>
+    <string name="ramGiga">Go</string>
+    <string name="ramMega">Mo</string>
+    <string name="titreMegaGiga">Choisir la RAM</string>
+	<string-array name="megaGiga">	
+		<item>MegaOctet</item>
+		<item>GigaOctet</item>
+	</string-array>
+	<string name="ajouterModif">Ajouter modification</string>
+    <string-array name="groupe">	
+		<item>TGSI</item>
+		<item>TISN</item>
+		<item>SIO1</item>
+		<item>SIO1 SISR</item>
+		<item>SIO1 SLAM</item>
+		<item>SIO1 Groupe 1</item>
+		<item>SIO1 Groupe 2</item>
+		<item>SIO2 SISR</item>
+		<item>SIO2 SLAM</item>
+		<item>SIO2 Groupe 1</item>
+		<item>SIO2 Groupe 2</item>
+		<item>Bachelor</item>
+	</string-array>
 </resources>
