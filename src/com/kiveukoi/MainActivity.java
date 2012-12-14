@@ -23,11 +23,10 @@ public class MainActivity extends Activity implements OnClickListener {
 	 */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
-		DataBaseHelper myDbHelper = new DataBaseHelper(null);
-		myDbHelper = new DataBaseHelper(this);
+		UserDataBase l_dataBase = new UserDataBase(this);
 
 		try {
-			myDbHelper.openDataBase();
+			l_dataBase.open();
 		} catch (SQLException sqle) {
 			final Intent monIntent = new Intent(this, Connexion.class);
 	        AlertDialog.Builder dialog = new AlertDialog.Builder(this);
