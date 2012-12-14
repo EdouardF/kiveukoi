@@ -4,11 +4,13 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class Connexion extends Activity implements OnClickListener{
 
@@ -28,7 +30,8 @@ public class Connexion extends Activity implements OnClickListener{
 			this.m_code2=(EditText)findViewById(R.id.txtSecret2);
 			this.m_login=(EditText)findViewById(R.id.txtLogin);
 			this.m_password=(EditText)findViewById(R.id.txtPassword);
-			this.m_btnConnexion=(Button)findViewById(R.id.btnConnexion);
+			this.m_btnConnexion=(Button)findViewById(R.id.btnLogin);
+			this.m_btnConnexion.setOnClickListener(this);
 	
 			// Si le texte change
 			this.m_code1.addTextChangedListener(new TextWatcher(){
@@ -88,20 +91,22 @@ public class Connexion extends Activity implements OnClickListener{
 
 	@Override
 	public void onClick(View arg0) {
-		if(arg0 == this.m_btnConnexion){
-
-			//Recupere le login et le mot de passe
-			String l_login=this.m_login.toString();
-			String l_password=this.m_password.toString();
-
-			if(this.verifieLogin()){
-
-				//Ajoute les donnees dans la base sqlite
-				this.addDataSql(l_login,l_password,this.m_code1.toString());
-
-				//Termine l'activity
-				finish();
+		try{
+			if(arg0 == this.m_btnConnexion){
+				//Recupere le login et le mot de passe
+				String l_login=this.m_login.toString();
+				String l_password=this.m_password.toString();
+				if(this.verifieLogin()){
+		
+					//Ajoute les donnees dans la base sqlite
+					this.addDataSql(l_login,l_password,this.m_code1.toString());
+		
+					//Termine l'activity
+					finish();
+				}
 			}
+		}catch(Exception ex){
+			Toast.makeText(this, "Erreur : "+ex.toString(), Toast.LENGTH_SHORT).show();
 		}
 
 
@@ -111,7 +116,7 @@ public class Connexion extends Activity implements OnClickListener{
 	 * @return Vrai si le couple est correct
 	 */
 	private boolean verifieLogin(){
-		return this.m_code1.toString()==this.m_code2.toString();
+		return true;
 	}
 
 	/**
@@ -119,9 +124,18 @@ public class Connexion extends Activity implements OnClickListener{
 	 * @param _login Login de l'utilisateur
 	 * @param _password Password de l'utilisateur
 	 * @param _code Code PIN
+	 * @throws Exception 
 	 */
-	private void addDataSql(String _login,String _password,String _code){
-
+	private void addDataSql(String _login,String _password,String _code) throws Exception{
+		try{
+			UserDataBase l_dataBase=new  UserDataBase(this);
+			User l_user=new User(_login,_password,_code);
+			l_dataBase.open();
+			l_dataBase.insertUser(l_user);
+			l_dataBase.close();
+		}catch(Exception ex){
+			Log.e("Erreur", ex.toString());
+		}
 	}
 
 }
