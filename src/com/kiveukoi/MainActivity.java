@@ -27,31 +27,12 @@ public class MainActivity extends Activity implements OnClickListener {
 
 		try {
 			l_dataBase.open();
+			if(!l_dataBase.possedeData()){
+				redirectionConnexion();
+			}
+			l_dataBase.close();
 		} catch (SQLException sqle) {
-			final Intent monIntent = new Intent(this, Connexion.class);
-	        AlertDialog.Builder dialog = new AlertDialog.Builder(this);
-	        dialog.setTitle("Première connexion");
-	        dialog.setMessage("C'est la première fois que vous utilisez Kiveukoi.\n" +
-	        		"Veuillez renseigner votre adresse email et votre mot de passe, puis choissiez un code à 4 chiffres.");
-	        dialog.setIcon(android.R.drawable.ic_dialog_alert);
-	        dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-				@Override
-				public void onClick(DialogInterface arg0, int arg1) {
-					/**
-					 * Si on n'a pas de base de données,
-					 * on redirige vers la première connexion
-					 * pour définir un code PIN
-					 */
-					startActivity(monIntent);
-				}
-	        });
-	        dialog.setNegativeButton("Annuler", new DialogInterface.OnClickListener() {
-				@Override
-				public void onClick(DialogInterface dialog, int which) {
-					finish();
-				}
-	        });
-	        dialog.show();
+			redirectionConnexion();
 		}
 		
 		super.onCreate(savedInstanceState);
@@ -198,8 +179,6 @@ public class MainActivity extends Activity implements OnClickListener {
 		if (loginok) {
 			redirectToHome();
 			Toast.makeText(this, "Code accepté\nBienvenue sur Kiveukoi !", Toast.LENGTH_SHORT).show();
-		} else {
-			Toast.makeText(this, "Code incorrect", Toast.LENGTH_SHORT).show();
 		}
 	}
 	
@@ -257,12 +236,46 @@ public class MainActivity extends Activity implements OnClickListener {
 		// on récupère le PIN dans la base
 		// puis on compare avec celui saisi
 		// return pin.matches(_PIN de la BDD_);
-		return pin.matches("0123");
+		UserDataBase l_dataBase = new UserDataBase(this);
+		l_dataBase.open();
+		User l_user = l_dataBase.getUser();
+		return pin.matches(String.valueOf(l_user.getPIN()));
 	}
 
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.activity_main, menu);
 		return true;
+	}
+	
+	/**
+	 * Redirection vers la page de première connexion
+	 * lors de la première utilisation de l'application
+	 */
+	private void redirectionConnexion(){
+		final Intent monIntent = new Intent(this, Connexion.class);
+        AlertDialog.Builder dialog = new AlertDialog.Builder(this);
+        dialog.setTitle("Première connexion");
+        dialog.setMessage("C'est la première fois que vous utilisez Kiveukoi.\n" +
+        		"Veuillez renseigner votre adresse email et votre mot de passe, puis choissiez un code à 4 chiffres.");
+        dialog.setIcon(android.R.drawable.ic_dialog_alert);
+        dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+			@Override
+			public void onClick(DialogInterface arg0, int arg1) {
+				/**
+				 * Si on n'a pas de base de données,
+				 * on redirige vers la première connexion
+				 * pour définir un code PIN
+				 */
+				startActivity(monIntent);
+			}
+        });
+        dialog.setNegativeButton("Annuler", new DialogInterface.OnClickListener() {
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				finish();
+			}
+        });
+        dialog.show();
 	}
 }

@@ -12,7 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class Connexion extends Activity implements OnClickListener{
+public class Connexion extends Activity implements OnClickListener {
 
 	private EditText m_code1;
 	private EditText m_code2;
@@ -24,7 +24,7 @@ public class Connexion extends Activity implements OnClickListener{
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_connexion);
-		try{
+		try {
 			// Assignation
 			this.m_code1=(EditText)findViewById(R.id.txtSecret1);
 			this.m_code2=(EditText)findViewById(R.id.txtSecret2);
@@ -33,52 +33,58 @@ public class Connexion extends Activity implements OnClickListener{
 			this.m_btnConnexion=(Button)findViewById(R.id.btnLogin);
 			this.m_btnConnexion.setOnClickListener(this);
 	
+			this.m_code1 = (EditText) findViewById(R.id.txtSecret1);
+			this.m_code2 = (EditText) findViewById(R.id.txtSecret2);
+			this.m_login = (EditText) findViewById(R.id.txtLogin);
+			this.m_password = (EditText) findViewById(R.id.txtPassword);
+			this.m_btnConnexion = (Button) findViewById(R.id.btnConnexion);
+
 			// Si le texte change
-			this.m_code1.addTextChangedListener(new TextWatcher(){
-	
+			this.m_code1.addTextChangedListener(new TextWatcher() {
+
 				@Override
 				public void afterTextChanged(Editable s) {
 					m_code2.requestFocus();
 				}
-	
+
 				@Override
-				public void beforeTextChanged(CharSequence s, int start, int count,
-						int after) {
+				public void beforeTextChanged(CharSequence s, int start,
+						int count, int after) {
 					// TODO Auto-generated method stub
-	
+
 				}
-	
+
 				@Override
-				public void onTextChanged(CharSequence s, int start, int before,
-						int count) {
+				public void onTextChanged(CharSequence s, int start,
+						int before, int count) {
 					// TODO Auto-generated method stub
-	
+
 				}
-	
+
 			});
-			this.m_code2.addTextChangedListener(new TextWatcher(){
-	
+			this.m_code2.addTextChangedListener(new TextWatcher() {
+
 				@Override
 				public void afterTextChanged(Editable s) {
-	
+
 				}
-	
+
 				@Override
-				public void beforeTextChanged(CharSequence s, int start, int count,
-						int after) {
+				public void beforeTextChanged(CharSequence s, int start,
+						int count, int after) {
 					// TODO Auto-generated method stub
-	
+
 				}
-	
+
 				@Override
-				public void onTextChanged(CharSequence s, int start, int before,
-						int count) {
+				public void onTextChanged(CharSequence s, int start,
+						int before, int count) {
 					// TODO Auto-generated method stub
-	
+
 				}
-	
+
 			});
-		}catch(Exception ex){
+		} catch (Exception ex) {
 		}
 	}
 
@@ -108,15 +114,15 @@ public class Connexion extends Activity implements OnClickListener{
 		}catch(Exception ex){
 			Toast.makeText(this, "Erreur : "+ex.toString(), Toast.LENGTH_SHORT).show();
 		}
-
-
 	}
+
 	/**
 	 * Verifie que le login et le mot de passe sont correct
+	 * 
 	 * @return Vrai si le couple est correct
 	 */
-	private boolean verifieLogin(){
-		return true;
+	private boolean verifieLogin() {
+		return this.m_code1.toString() == this.m_code2.toString();
 	}
 
 	/**
@@ -137,5 +143,4 @@ public class Connexion extends Activity implements OnClickListener{
 			Log.e("Erreur", ex.toString());
 		}
 	}
-
 }

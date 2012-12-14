@@ -11,6 +11,7 @@
         android:layout_gravity="center"
         android:gravity="center_horizontal"
         android:orientation="vertical"
+        android:background="#ffffff"
         android:visibility="gone" >
 
         <ProgressBar
@@ -39,6 +40,7 @@
         <LinearLayout
             style="@style/LoginFormContainer"
             android:layout_height="229dp"
+            android:background="#ffffff"
             android:orientation="vertical" >
 
             <EditText
@@ -70,6 +72,7 @@
                 android:layout_marginTop="16dp"
                 android:paddingLeft="32dp"
                 android:paddingRight="32dp"
+       			android:background="@drawable/button5"
                 android:text="@string/action_sign_in_register" />
         </LinearLayout>
     </ScrollView>

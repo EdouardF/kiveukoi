@@ -2,8 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="#ffffff"
     tools:context=".AjoutModif" >
-
 
     <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
@@ -11,67 +11,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical" >
-
-
-
     </LinearLayout>
 
-    <Button
-        android:id="@+id/pickDate"
+    <Spinner
+        android:id="@+id/spinner1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginRight="19dp"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="41dp"
-        android:layout_marginTop="120dp"
-        android:text="@string/choixDate" />
-
-
-    <Button
-        android:id="@+id/pickTimeDeb"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/pickTimeFin"
         android:layout_alignParentRight="true"
-        android:layout_below="@+id/pickDate"
-        android:text="@string/choixHeureDeb" />
-
-    <TextView
-        android:id="@+id/textDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/pickDate"
-        android:layout_alignBottom="@+id/pickDate"
-        android:layout_alignParentLeft="true"
-        android:text="@string/date"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    <TextView
-        android:id="@+id/displayTimeDeb"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/pickTimeDeb"
-        android:layout_alignBottom="@+id/pickTimeDeb"
-        android:layout_marginRight="153dp"
-        android:layout_toLeftOf="@+id/pickTimeDeb"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    <TextView
-        android:id="@+id/displayDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/pickDate"
-        android:layout_alignBottom="@+id/pickDate"
-        android:layout_alignLeft="@+id/displayTimeDeb"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    <Button
-        android:id="@+id/pickTimeFin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/pickTimeDeb"
-        android:text="@string/choixHeureFin"/>
-
+        android:layout_alignTop="@+id/saisirRam"
+        android:entries="@array/megaGiga"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <TextView
         android:id="@+id/displayTimeFin"
@@ -79,18 +29,27 @@
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/pickTimeFin"
         android:layout_alignBottom="@+id/pickTimeFin"
-        android:layout_alignRight="@+id/displayTimeDeb"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:layout_toRightOf="@+id/nombrePoste"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <TextView
-        android:id="@+id/textheureDeb"
+        android:id="@+id/displayTimeDeb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/pickTimeDeb"
+        android:layout_alignBottom="@+id/pickTimeDeb"
+        android:layout_alignLeft="@+id/displayTimeFin"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/textHeureDeb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/displayTimeDeb"
         android:layout_alignBottom="@+id/displayTimeDeb"
         android:layout_alignParentLeft="true"
         android:text="@string/heureDebut"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <TextView
         android:id="@+id/TextHeureFin"
@@ -100,6 +59,150 @@
         android:layout_alignBottom="@+id/displayTimeFin"
         android:layout_alignParentLeft="true"
         android:text="@string/heureFin"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/groupe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/processeur"
+        android:layout_marginTop="30dp"
+        android:text="@string/groupe"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/nombrePoste"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/groupe"
+        android:layout_marginTop="28dp"
+        android:text="@string/nombrePoste"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/displayDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/pickDate"
+        android:layout_alignBottom="@+id/pickDate"
+        android:layout_alignLeft="@+id/displayTimeFin"
+        android:layout_alignParentTop="true"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <Button
+        android:id="@+id/pickDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/pickTimeDeb"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/button5"
+        android:text="@string/choixDate" />
+
+    <Button
+        android:id="@+id/pickTimeDeb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/pickDate"
+        android:background="@drawable/button5"
+        android:text="@string/choixHeureDeb" />
+
+    <Button
+        android:id="@+id/pickTimeFin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/pickTimeDeb"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/displayTimeDeb"
+        android:background="@drawable/button5"
+        android:text="@string/choixHeureFin" />
+
+    <TextView
+        android:id="@+id/textDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/pickDate"
+        android:layout_alignBottom="@+id/pickDate"
+        android:layout_alignParentLeft="true"
+        android:text="@string/date"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/ram"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/pickTimeFin"
+        android:layout_marginTop="17dp"
+        android:text="@string/ram"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <EditText
+        android:id="@+id/saisirRam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ram"
+        android:layout_toLeftOf="@+id/spinner1"
+        android:ems="3"
+        android:inputType="number"
+        android:textAppearance="?android:attr/textAppearanceSmall" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/saisirProcesseur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/processeur"
+        android:layout_alignBottom="@+id/processeur"
+        android:layout_alignLeft="@+id/saisirRam"
+        android:layout_alignParentRight="true"
+        android:ems="3"
+        android:inputType="number"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <EditText
+        android:id="@+id/saisirNombrePoste"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/nombrePoste"
+        android:layout_alignLeft="@+id/saisirProcesseur"
+        android:layout_alignParentRight="true"
+        android:ems="9"
+        android:inputType="number"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/processeur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/spinner1"
+        android:layout_marginTop="20dp"
+        android:text="@string/processeur"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <Button
+        android:id="@+id/btnAjout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/nombrePoste"
+        android:background="@drawable/button5"
+        android:text="@string/ajouterModif" />
+
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/saisirNombrePoste"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/groupe"
+        android:entries="@array/groupe"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
 
 </RelativeLayout>
