@@ -8,7 +8,7 @@
     <string name="title_activity_profil">Profil</string>
 	<string name="btnprofil">Profil</string>
 	<string name="btnstatistiques">Statistiques</string>
-	<string name="btnajouter">Ajouter</string>
+	<string name="btnajouter">Ressources</string>
     <string name="TitreAjoutModif">Reservation</string>
     <string name="title_activity_ajout_modif">Réservation</string>
     <string name="login">Connexion</string>

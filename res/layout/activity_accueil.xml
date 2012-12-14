@@ -21,7 +21,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
-    	android:background="@drawable/button5"
+		android:background="@drawable/button5"
         android:text="@string/btnstatistiques" />
 
     <!-- Bouton Profil -->
@@ -418,6 +418,20 @@
     <!-- LÃ©gende sur la couleur de la memoire RAM -->
 
     <!-- LÃ©gende sur la couleur du nombre de coeurs -->
+
+    <!-- Légende sur la couleur de la memoire RAM -->
+    
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView3"
+        android:layout_alignBottom="@+id/textView3"
+        android:layout_toRightOf="@+id/progressBar11"
+        android:text=" "
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <!-- Légende sur la couleur du nombre de coeurs -->
     
     <TextView
         android:id="@+id/textView3"
@@ -428,7 +442,7 @@
         android:text="Nombre de coeurs"
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
-    <!-- LÃ©gende sur la couleur de la memoire RAM -->
+    <!-- Légende sur la couleur de la memoire RAM -->
     
     <TextView
         android:id="@+id/textView1"
