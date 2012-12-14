@@ -236,7 +236,11 @@ public class MainActivity extends Activity implements OnClickListener {
 		UserDataBase l_dataBase = new UserDataBase(this);
 		l_dataBase.open();
 		User l_user = l_dataBase.getUser();
-		return pin.matches(l_user.getPIN());
+		if (l_user != null) {
+			return pin.matches(l_user.getPIN());
+		} else {
+			return false;
+		}
 	}
 
 	public boolean onCreateOptionsMenu(Menu menu) {
