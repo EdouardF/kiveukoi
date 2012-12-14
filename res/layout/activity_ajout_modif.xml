@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="#ffffff"
     tools:context=".AjoutModif" >
 
     <LinearLayout
@@ -96,6 +97,7 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/pickTimeDeb"
         android:layout_alignParentRight="true"
+        android:background="@drawable/button5"
         android:text="@string/choixDate" />
 
     <Button
@@ -104,6 +106,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_below="@+id/pickDate"
+        android:background="@drawable/button5"
         android:text="@string/choixHeureDeb" />
 
     <Button
@@ -113,6 +116,7 @@
         android:layout_alignLeft="@+id/pickTimeDeb"
         android:layout_alignParentRight="true"
         android:layout_below="@+id/displayTimeDeb"
+        android:background="@drawable/button5"
         android:text="@string/choixHeureFin" />
 
     <TextView
@@ -188,6 +192,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
         android:layout_below="@+id/nombrePoste"
+        android:background="@drawable/button5"
         android:text="@string/ajouterModif" />
 
     <Spinner
