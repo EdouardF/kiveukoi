@@ -27,31 +27,11 @@ public class MainActivity extends Activity implements OnClickListener {
 
 		try {
 			l_dataBase.open();
+			if(!l_dataBase.possedeData()){
+				this.redirectionConnexion();
+			}
 		} catch (SQLException sqle) {
-			final Intent monIntent = new Intent(this, Connexion.class);
-	        AlertDialog.Builder dialog = new AlertDialog.Builder(this);
-	        dialog.setTitle("Première connexion");
-	        dialog.setMessage("C'est la première fois que vous utilisez Kiveukoi.\n" +
-	        		"Veuillez renseigner votre adresse email et votre mot de passe, puis choissiez un code à 4 chiffres.");
-	        dialog.setIcon(android.R.drawable.ic_dialog_alert);
-	        dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-				@Override
-				public void onClick(DialogInterface arg0, int arg1) {
-					/**
-					 * Si on n'a pas de base de données,
-					 * on redirige vers la première connexion
-					 * pour définir un code PIN
-					 */
-					startActivity(monIntent);
-				}
-	        });
-	        dialog.setNegativeButton("Annuler", new DialogInterface.OnClickListener() {
-				@Override
-				public void onClick(DialogInterface dialog, int which) {
-					finish();
-				}
-	        });
-	        dialog.show();
+			this.redirectionConnexion();
 		}
 		
 		super.onCreate(savedInstanceState);
@@ -264,5 +244,32 @@ public class MainActivity extends Activity implements OnClickListener {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.activity_main, menu);
 		return true;
+	}
+	
+	public void redirectionConnexion(){
+		final Intent monIntent = new Intent(this, Connexion.class);
+        AlertDialog.Builder dialog = new AlertDialog.Builder(this);
+        dialog.setTitle("Première connexion");
+        dialog.setMessage("C'est la première fois que vous utilisez Kiveukoi.\n" +
+        		"Veuillez renseigner votre adresse email et votre mot de passe, puis choissiez un code à 4 chiffres.");
+        dialog.setIcon(android.R.drawable.ic_dialog_alert);
+        dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+			@Override
+			public void onClick(DialogInterface arg0, int arg1) {
+				/**
+				 * Si on n'a pas de base de données,
+				 * on redirige vers la première connexion
+				 * pour définir un code PIN
+				 */
+				startActivity(monIntent);
+			}
+        });
+        dialog.setNegativeButton("Annuler", new DialogInterface.OnClickListener() {
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				finish();
+			}
+        });
+        dialog.show();
 	}
 }
