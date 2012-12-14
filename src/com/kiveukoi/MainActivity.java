@@ -23,9 +23,9 @@ public class MainActivity extends Activity implements OnClickListener {
 	 */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
-		UserDataBase l_dataBase = new UserDataBase(this);
 
 		try {
+			UserDataBase l_dataBase = new UserDataBase(this);
 			l_dataBase.open();
 			if(!l_dataBase.possedeData()){
 				redirectionConnexion();
@@ -233,13 +233,10 @@ public class MainActivity extends Activity implements OnClickListener {
 	 * @return true si le code est bon, false sinon
 	 */
 	public boolean checkPIN(String pin) {
-		// on récupère le PIN dans la base
-		// puis on compare avec celui saisi
-		// return pin.matches(_PIN de la BDD_);
 		UserDataBase l_dataBase = new UserDataBase(this);
 		l_dataBase.open();
 		User l_user = l_dataBase.getUser();
-		return pin.matches(String.valueOf(l_user.getPIN()));
+		return pin.matches(l_user.getPIN());
 	}
 
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -257,7 +254,7 @@ public class MainActivity extends Activity implements OnClickListener {
         AlertDialog.Builder dialog = new AlertDialog.Builder(this);
         dialog.setTitle("Première connexion");
         dialog.setMessage("C'est la première fois que vous utilisez Kiveukoi.\n" +
-        		"Veuillez renseigner votre adresse email et votre mot de passe, puis choissiez un code à 4 chiffres.");
+        		"Veuillez renseigner votre adresse email et votre mot de passe, puis choisissez un code à 4 chiffres.");
         dialog.setIcon(android.R.drawable.ic_dialog_alert);
         dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
 			@Override

@@ -117,15 +117,16 @@ public class Profil extends Activity implements OnClickListener {
 	 * @return vrai si le code a été changé, faux sinon
 	 */
 	public boolean checkPIN(String actuel, String new1, String new2) {
+		UserDataBase l_dataBase = new UserDataBase(this);
+		l_dataBase.open();
+		User l_user = l_dataBase.getUser();
+		
 		// on vérifie dans la base que actuel est ok
 		// si il est ok
-		if (actuel.matches("0123")) {
-			if (new1.matches(new2)) {
-				// on fait la modif dans la BDD
-				return true;
-			} else {
-				return false;
-			}
+		if (actuel.matches(l_user.getPIN())) {
+			l_user.setPIN(new1);
+			l_dataBase.updateUser(l_user);
+			return new1.matches(new2);
 		} else if (!actuel.matches("")){
 			Toast.makeText(this, "Le code actuel est incorrect", Toast.LENGTH_SHORT).show();
 			return false;
