@@ -124,8 +124,10 @@ public class Profil extends Activity implements OnClickListener {
 		// on vérifie dans la base que actuel est ok
 		// si il est ok
 		if (actuel.matches(l_user.getPIN())) {
-			l_user.setPIN(new1);
-			l_dataBase.updateUser(l_user);
+			if (new1.matches(new2)) {
+				l_user.setPIN(new1);
+				l_dataBase.updateUser(l_user);
+			}
 			return new1.matches(new2);
 		} else if (!actuel.matches("")){
 			Toast.makeText(this, "Le code actuel est incorrect", Toast.LENGTH_SHORT).show();
