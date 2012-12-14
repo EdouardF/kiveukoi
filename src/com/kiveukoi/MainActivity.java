@@ -27,6 +27,10 @@ public class MainActivity extends Activity implements OnClickListener {
 		try {
 			UserDataBase l_dataBase = new UserDataBase(this);
 			l_dataBase.open();
+			User l_user = l_dataBase.getUser();
+			if (l_user != null) {
+				Toast.makeText(this, "Connexion en tant que : "+l_user.getLogin(), Toast.LENGTH_SHORT).show();
+			}
 			if(!l_dataBase.possedeData()){
 				redirectionConnexion();
 			}
@@ -239,6 +243,7 @@ public class MainActivity extends Activity implements OnClickListener {
 		if (l_user != null) {
 			return pin.matches(l_user.getPIN());
 		} else {
+			finish();
 			return false;
 		}
 	}
