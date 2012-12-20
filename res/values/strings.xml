@@ -77,5 +77,6 @@
 		<item>SIO2 Groupe 2</item>
 		<item>Bachelor</item>
 	</string-array>
+    <string name="deconnexion">Déconnexion</string>
 	
 </resources>
