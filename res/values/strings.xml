@@ -53,8 +53,11 @@
     <string name="choixHeureFin">Heure de fin</string>
     <string name="saisirRam">Saisir la RAM</string>
     <string name="ramGiga">Go</string>
+    <string name="voirResa">Voir</string>
+    <string name="titleResa">Mes réservations</string>
     <string name="ramMega">Mo</string>
     <string name="titreMegaGiga">Choisir la RAM</string>
+    <color name="titletextcolor">#333333</color>
 	<string-array name="megaGiga">	
 		<item>MegaOctet</item>
 		<item>GigaOctet</item>
