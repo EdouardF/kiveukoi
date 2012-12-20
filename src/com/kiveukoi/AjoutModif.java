@@ -118,8 +118,10 @@ public class AjoutModif extends Activity implements OnClickListener {
 
 	/** Updates the date in the TextView */
 	private void updateDisplay() {
+		/**
+		 * des 0 sont rajoutés pour améliorer l'expérience visuelle de l'utilisateur
+		 */
 		pDisplayDate.setText(new StringBuilder()
-				// Month is 0 based so add 1
 				.append(timesWithZero(pDay)).append("/").append(timesWithZero(pMonth + 1)).append("/")
 				.append(pYear).append(" "));
 		pDisplayTimeDeb.setText(new StringBuilder()
