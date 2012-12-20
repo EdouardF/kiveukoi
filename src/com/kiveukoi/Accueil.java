@@ -57,7 +57,8 @@ public class Accueil extends Activity implements OnClickListener{
 					if (l_user != null) {
 						// purger la base
 						l_dataBase.removeUser();
-						finish();
+						Intent monIntent = new Intent(this,Connexion.class);
+						startActivity(monIntent);
 					}
 					l_dataBase.close();
 				} catch (SQLException sqle) {

@@ -3,6 +3,7 @@ package com.kiveukoi;
 import android.os.Bundle;
 import android.app.Activity;
 import android.text.Editable;
+import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.Menu;
@@ -10,6 +11,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class Connexion extends Activity implements OnClickListener {
@@ -80,6 +82,27 @@ public class Connexion extends Activity implements OnClickListener {
 				}
 
 			});
+			
+			Editable login = m_login.getText();
+			Editable password = m_password.getText();
+			Editable code1 = m_code1.getText();
+			Editable code2 = m_code2.getText();
+			
+			if (TextUtils.isEmpty(login)) {
+				this.m_login.setError(getString(R.string.error_field_required));
+			}
+
+			if (TextUtils.isEmpty(password)) {
+				this.m_password.setError(getString(R.string.error_field_required));
+			}
+			
+			if (TextUtils.isEmpty(code1)) {
+				this.m_code1.setError(getString(R.string.error_field_required));
+			}
+
+			if (TextUtils.isEmpty(code2)) {
+				this.m_code2.setError(getString(R.string.error_field_required));
+			}
 		} catch (Exception ex) {
 		}
 	}
