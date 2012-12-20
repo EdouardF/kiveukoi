@@ -18,7 +18,7 @@ import android.widget.TimePicker;
 import android.widget.Toast;
 
 public class AjoutModif extends Activity implements OnClickListener {
-	private TextView pDisplayDate;
+	private TextView pDisplayDate;		
 	private TextView pDisplayTimeDeb;
 	private TextView pDisplayTimeFin;
 	private Button pPickDate;
@@ -120,7 +120,7 @@ public class AjoutModif extends Activity implements OnClickListener {
 	private void updateDisplay() {
 		pDisplayDate.setText(new StringBuilder()
 				// Month is 0 based so add 1
-				.append(pDay).append("/").append(pMonth + 1).append("/")
+				.append(timesWithZero(pDay)).append("/").append(timesWithZero(pMonth + 1)).append("/")
 				.append(pYear).append(" "));
 		pDisplayTimeDeb.setText(new StringBuilder()
 				.append(timesWithZero(mHourDeb)).append(":")
@@ -137,8 +137,7 @@ public class AjoutModif extends Activity implements OnClickListener {
 	 */
 	public String timesWithZero(int time) {
 		String times = String.valueOf(time);
-		if (time == 0 || time == 1 | time == 2 | time == 3 | time == 4
-				| time == 5 | time == 6 | time == 7 | time == 8 | time == 9) {
+		if (time >= 0 && time <= 9) {
 			return "0" + times;
 		} else {
 			return times;
