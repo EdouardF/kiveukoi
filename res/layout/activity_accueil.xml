@@ -73,7 +73,6 @@
         android:layout_centerVertical="true"
         android:text=" - Le 18/12/12 de 9h à 17h" />
 
-<<<<<<< HEAD
     <Button
         android:id="@+id/button1"
         style="?android:attr/buttonStyleSmall"
@@ -86,97 +85,7 @@
         android:minHeight="30dp"
         android:minWidth="50dp"
         android:text="@string/voirResa" />
-=======
     <!-- Barre de progression pour le creneau de 17h -->
-
-    <ProgressBar
-        android:id="@+id/progressBar10"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/progressBar1"
-        android:layout_alignTop="@+id/dixsepth"
-        android:layout_marginLeft="5dp"
-        android:layout_toRightOf="@+id/dixh"
-        android:max="100"
-        android:minHeight="16dp"
-        android:minWidth="30dp"
-        android:progress="8"
-        android:progressDrawable="@drawable/custom_progress_bar_horizontal"
-        android:secondaryProgress="70" />
-
-    <!-- Barre de progression pour le creneau de 18h -->
-
-    <ProgressBar
-        android:id="@+id/progressBar11"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/progressBar1"
-        android:layout_alignTop="@+id/dixhuith"
-        android:layout_marginLeft="5dp"
-        android:layout_toRightOf="@+id/dixh"
-        android:max="100"
-        android:minHeight="16dp"
-        android:minWidth="30dp"
-        android:progress="8"
-        android:progressDrawable="@drawable/custom_progress_bar_horizontal"
-        android:secondaryProgress="70" />
-
-    <!-- Barre de progression en bas de la page -->
-
-    <ProgressBar
-        android:id="@+id/ProgressBar01"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignRight="@+id/btnStatistiques"
-        android:max="100"
-        android:minHeight="16dp"
-        android:minWidth="30dp"
-        android:progress="28"
-        android:progressDrawable="@drawable/custom_progress_bar_horizontal"
-        android:secondaryProgress="70" />
-
-    <TextView
-        android:id="@+id/textViewAlignementProgressBar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/btnStatistiques"
-        android:layout_alignTop="@+id/progressBar1"
-        android:layout_marginLeft="42dp"
-        android:text="  "
-        android:textAppearance="?android:attr/textAppearanceSmall" />
-
-    <!-- LÃ©gende sur la couleur de la memoire RAM -->
-
-    <!-- LÃ©gende sur la couleur du nombre de coeurs -->
-
-    <!-- Légende sur la couleur de la memoire RAM -->
-    
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView3"
-        android:layout_alignBottom="@+id/textView3"
-        android:layout_toRightOf="@+id/progressBar11"
-        android:text=" "
-        android:textAppearance="?android:attr/textAppearanceSmall" />
-
-    <!-- Légende sur la couleur du nombre de coeurs -->
-    
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/ProgressBar01"
-        android:layout_centerHorizontal="true"
-        android:text="Nombre de coeurs"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
->>>>>>> ef3e4a42d8e9a6c25f0d22db24f4400c22645217
 
     <Button
         android:id="@+id/Button01"
