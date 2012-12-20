@@ -44,7 +44,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_toLeftOf="@+id/btnStatistiques"
-        android:background="@drawable/button5"
+        android:background="@drawable/button3"
         android:text="@string/btnajouter" />
 
     <!-- affichage 8h -->
