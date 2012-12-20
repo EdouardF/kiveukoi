@@ -32,22 +32,14 @@ public class Profil extends Activity implements OnClickListener {
 		EditText editText2 = (EditText)findViewById(R.id.editText2);
 		TextView textView2 = (TextView)findViewById(R.id.textView2);
 		
-		try {
-			UserDataBase l_dataBase = new UserDataBase(this);
-			l_dataBase.open();
-			User l_user = l_dataBase.getUser();
-			if (l_user != null) {
-				String login = l_user.getLogin();
-				textView2.setText("Modification du code secret de : "+login);
-			}
-			l_dataBase.close();
-		} catch (SQLException sqle) {
-			Toast.makeText(this, "Erreur", Toast.LENGTH_SHORT).show();
+		UserDataBase l_dataBase = new UserDataBase(this);
+		l_dataBase.open();
+		User l_user = l_dataBase.getUser();
+		if (l_user != null) {
+			String login = l_user.getLogin();
+			textView2.setText("Modification du code secret de : "+login);
 		}
-		
-		/*if (login != null) {
-			textView2.setText(l_user.getLogin());
-		}*/
+		l_dataBase.close();
 		
 		/**
 		 * Passer d'une case à la suivante
