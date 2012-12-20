@@ -7,7 +7,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
  
 public class UserDataBase {
-	 
+     
 	private static final int VERSION_BDD = 1;
 	private static final String NOM_BDD = "kiveukoi.db";
  
@@ -26,17 +26,17 @@ public class UserDataBase {
 	private DataBase BaseSQLite;
  
 	public UserDataBase(Context context){
-		//On crée la BDD et sa table
+		//On crÃ©e la BDD et sa table
 		BaseSQLite = new DataBase(context, NOM_BDD, null, VERSION_BDD);
 	}
  
 	public void open(){
-		//on ouvre la BDD en écriture
+		//on ouvre la BDD en Ã©criture
 		bdd = BaseSQLite.getWritableDatabase();
 	}
  
 	public void close(){
-		//on ferme l'accès à la BDD
+		//on ferme l'accÃ¨s Ã  la BDD
 		bdd.close();
 	}
  
@@ -46,13 +46,13 @@ public class UserDataBase {
  
 	public long insertUser(User user){
 		if(!this.possedeData()){
-			//Création d'un ContentValues (fonctionne comme une HashMap)
+			//CrÃ©ation d'un ContentValues (fonctionne comme une HashMap)
 			ContentValues values = new ContentValues();
-			//on lui ajoute une valeur associée à une clé (qui est le nom de la colonne dans laquelle on veut mettre la valeur)
+			//on lui ajoute une valeur associÃ©e Ã  une clÃ© (qui est le nom de la colonne dans laquelle on veut mettre la valeur)
 			values.put(COL_LOGIN, user.getLogin());
 			values.put(COL_PASSWORD, user.getPassword());
 			values.put(COL_PIN, user.getPIN());
-			//on insère l'objet dans la BDD via le ContentValues
+			//on insÃ¨re l'objet dans la BDD via le ContentValues
 			return bdd.insert(TABLE_USERS, null, values);
 		}else{
 			return this.updateUser(user);
@@ -60,8 +60,8 @@ public class UserDataBase {
 	}
  
 	public int updateUser(User user){
-		//La mise à jour d'un livre dans la BDD fonctionne plus ou moins comme une insertion
-		//il faut simplement préciser quel livre on doit mettre à jour grâce à l'ID
+		//La mise Ã  jour d'un livre dans la BDD fonctionne plus ou moins comme une insertion
+		//il faut simplement prÃ©ciser quel livre on doit mettre Ã  jour grÃ¢ce Ã  l'ID
 		ContentValues values = new ContentValues();
 		values.put(COL_LOGIN, user.getLogin());
 		values.put(COL_PASSWORD, user.getPassword());
@@ -70,12 +70,12 @@ public class UserDataBase {
 	}
  
 	public int removeUser(){
-		//Suppression d'un livre de la BDD grâce à l'ID
+		//Suppression d'un livre de la BDD grÃ¢ce Ã  l'ID
 		return bdd.delete(TABLE_USERS, COL_ID + " = " + this.getId(), null);
 	}
  
 	public User getUser(){
-		//Récupère dans un Cursor les valeurs correspondant à un livre contenu dans la BDD (ici on sélectionne le livre grâce à son titre)
+		//RÃ©cupÃ¨re dans un Cursor les valeurs correspondant Ã  un livre contenu dans la BDD (ici on sÃ©lectionne le livre grÃ¢ce Ã  son titre)
 		Cursor c = bdd.query(TABLE_USERS, new String[] {COL_ID, COL_LOGIN, COL_PASSWORD, COL_PIN}, null, null, null, null, null);
 		return cursorToUser(c);
 	}
@@ -97,17 +97,17 @@ public class UserDataBase {
 		return c.getCount() != 0;
 	}
 	
-	//Cette méthode permet de convertir un cursor en un livre
+	//Cette mÃ©thode permet de convertir un cursor en un livre
 	private User cursorToUser(Cursor c){
-		//si aucun élément n'a été retourné dans la requête, on renvoie null
+		//si aucun Ã©lÃ©ment n'a Ã©tÃ© retournÃ© dans la requÃªte, on renvoie null
 		if (c.getCount() == 0){
 			return null;
 		}else{
-			//Sinon on se place sur le premier élément
+			//Sinon on se place sur le premier Ã©lÃ©ment
 			c.moveToFirst();
-			//On créé un livre
+			//On crÃ©Ã© un livre
 			User user = new User();
-			//on lui affecte toutes les infos grâce aux infos contenues dans le Cursor
+			//on lui affecte toutes les infos grÃ¢ce aux infos contenues dans le Cursor
 			user.setLogin(c.getString(NUM_COL_LOGIN));
 			user.setPassword(c.getString(NUM_COL_PASSWORD));
 			user.setPIN(c.getString(NUM_COL_PIN));

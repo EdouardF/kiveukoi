@@ -23,15 +23,20 @@ public class MainActivity extends Activity implements OnClickListener {
 	 */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
-		UserDataBase l_dataBase = new UserDataBase(this);
 
 		try {
+			UserDataBase l_dataBase = new UserDataBase(this);
 			l_dataBase.open();
-			if(!l_dataBase.possedeData()){
-				this.redirectionConnexion();
+			User l_user = l_dataBase.getUser();
+			if (l_user != null) {
+				Toast.makeText(this, "Connexion en tant que : "+l_user.getLogin(), Toast.LENGTH_SHORT).show();
 			}
+			if(!l_dataBase.possedeData()){
+				redirectionConnexion();
+			}
+			l_dataBase.close();
 		} catch (SQLException sqle) {
-			this.redirectionConnexion();
+			redirectionConnexion();
 		}
 		
 		super.onCreate(savedInstanceState);
@@ -178,8 +183,6 @@ public class MainActivity extends Activity implements OnClickListener {
 		if (loginok) {
 			redirectToHome();
 			Toast.makeText(this, "Code accepté\nBienvenue sur Kiveukoi !", Toast.LENGTH_SHORT).show();
-		} else {
-			Toast.makeText(this, "Code incorrect", Toast.LENGTH_SHORT).show();
 		}
 	}
 	
@@ -234,10 +237,15 @@ public class MainActivity extends Activity implements OnClickListener {
 	 * @return true si le code est bon, false sinon
 	 */
 	public boolean checkPIN(String pin) {
-		// on récupère le PIN dans la base
-		// puis on compare avec celui saisi
-		// return pin.matches(_PIN de la BDD_);
-		return pin.matches("0123");
+		UserDataBase l_dataBase = new UserDataBase(this);
+		l_dataBase.open();
+		User l_user = l_dataBase.getUser();
+		if (l_user == null) {
+			redirectionConnexion();
+			return false;
+		} else {
+			return pin.matches(l_user.getPIN());
+		}
 	}
 
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -246,12 +254,16 @@ public class MainActivity extends Activity implements OnClickListener {
 		return true;
 	}
 	
-	public void redirectionConnexion(){
+	/**
+	 * Redirection vers la page de première connexion
+	 * lors de la première utilisation de l'application
+	 */
+	private void redirectionConnexion(){
 		final Intent monIntent = new Intent(this, Connexion.class);
         AlertDialog.Builder dialog = new AlertDialog.Builder(this);
         dialog.setTitle("Première connexion");
         dialog.setMessage("C'est la première fois que vous utilisez Kiveukoi.\n" +
-        		"Veuillez renseigner votre adresse email et votre mot de passe, puis choissiez un code à 4 chiffres.");
+        		"Veuillez renseigner votre adresse email et votre mot de passe, puis choisissez un code à 4 chiffres.");
         dialog.setIcon(android.R.drawable.ic_dialog_alert);
         dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
 			@Override

@@ -3,6 +3,7 @@ package com.kiveukoi;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -22,7 +23,15 @@ public class Accueil extends Activity implements OnClickListener{
 		btnStatistiques.setOnClickListener(this);
 		btnProfil = (Button) findViewById(R.id.btnProfil);
 		btnProfil.setOnClickListener(this);
-
+		
+		/**
+		 * Alignement des boutons
+		 */
+		DisplayMetrics metrics = new DisplayMetrics();
+		getWindowManager().getDefaultDisplay().getMetrics(metrics);
+		btnStatistiques.setWidth(metrics.widthPixels/3);
+		btnAjout.setWidth(metrics.widthPixels/3);
+		btnProfil.setWidth(metrics.widthPixels/3);
 	}
 
 	@Override
