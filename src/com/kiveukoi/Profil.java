@@ -3,6 +3,7 @@ package com.kiveukoi;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.database.SQLException;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.Menu;
@@ -10,11 +11,12 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class Profil extends Activity implements OnClickListener {
 	Button btnModifPIN = null;
-
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -28,6 +30,24 @@ public class Profil extends Activity implements OnClickListener {
 		 */
 		EditText editText1 = (EditText)findViewById(R.id.editText1);
 		EditText editText2 = (EditText)findViewById(R.id.editText2);
+		TextView textView2 = (TextView)findViewById(R.id.textView2);
+		
+		try {
+			UserDataBase l_dataBase = new UserDataBase(this);
+			l_dataBase.open();
+			User l_user = l_dataBase.getUser();
+			if (l_user != null) {
+				String login = l_user.getLogin();
+				textView2.setText("Modification du code secret de : "+login);
+			}
+			l_dataBase.close();
+		} catch (SQLException sqle) {
+			Toast.makeText(this, "Erreur", Toast.LENGTH_SHORT).show();
+		}
+		
+		/*if (login != null) {
+			textView2.setText(l_user.getLogin());
+		}*/
 		
 		/**
 		 * Passer d'une case à la suivante
