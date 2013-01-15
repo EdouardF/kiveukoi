@@ -1,5 +1,7 @@
 package com.kiveukoi;
 
+import java.util.HashMap;
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.text.Editable;
@@ -11,7 +13,6 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 public class Connexion extends Activity implements OnClickListener {
@@ -19,8 +20,8 @@ public class Connexion extends Activity implements OnClickListener {
 	private EditText m_code1;
 	private EditText m_code2;
 	private Button m_btnConnexion;
-	private EditText m_login;
-	private EditText m_password;
+	public EditText m_login;
+	public EditText m_password;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -29,11 +30,11 @@ public class Connexion extends Activity implements OnClickListener {
 
 		try {
 			// Assignation
-			this.m_code1=(EditText)findViewById(R.id.txtSecret1);
-			this.m_code2=(EditText)findViewById(R.id.txtSecret2);
-			this.m_login=(EditText)findViewById(R.id.txtLogin);
-			this.m_password=(EditText)findViewById(R.id.txtPassword);
-			this.m_btnConnexion=(Button)findViewById(R.id.btnLogin);
+			this.m_code1 = (EditText) findViewById(R.id.txtSecret1);
+			this.m_code2 = (EditText) findViewById(R.id.txtSecret2);
+			this.m_login = (EditText) findViewById(R.id.txtLogin);
+			this.m_password = (EditText) findViewById(R.id.txtPassword);
+			this.m_btnConnexion = (Button) findViewById(R.id.btnLogin);
 			this.m_btnConnexion.setOnClickListener(this);
 			// Si le texte change
 			this.m_code1.addTextChangedListener(new TextWatcher() {
@@ -82,20 +83,21 @@ public class Connexion extends Activity implements OnClickListener {
 				}
 
 			});
-			
+
 			Editable login = m_login.getText();
 			Editable password = m_password.getText();
 			Editable code1 = m_code1.getText();
 			Editable code2 = m_code2.getText();
-			
+
 			if (TextUtils.isEmpty(login)) {
 				this.m_login.setError(getString(R.string.error_field_required));
 			}
 
 			if (TextUtils.isEmpty(password)) {
-				this.m_password.setError(getString(R.string.error_field_required));
+				this.m_password
+						.setError(getString(R.string.error_field_required));
 			}
-			
+
 			if (TextUtils.isEmpty(code1)) {
 				this.m_code1.setError(getString(R.string.error_field_required));
 			}
@@ -116,39 +118,43 @@ public class Connexion extends Activity implements OnClickListener {
 
 	@Override
 	public void onClick(View arg0) {
-		this.m_code1=(EditText)findViewById(R.id.txtSecret1);
-		this.m_code2=(EditText)findViewById(R.id.txtSecret2);
-		this.m_login=(EditText)findViewById(R.id.txtLogin);
-		this.m_password=(EditText)findViewById(R.id.txtPassword);
-		this.m_btnConnexion=(Button)findViewById(R.id.btnLogin);
-		try{
-			if(arg0 == this.m_btnConnexion){
-				//Recupere le login et le mot de passe
-				String l_login=this.m_login.getText().toString();
-				String l_password=this.m_password.getText().toString();
-				String l_code1=this.m_code1.getText().toString();
-				String l_code2=this.m_code2.getText().toString();
-				
+		this.m_code1 = (EditText) findViewById(R.id.txtSecret1);
+		this.m_code2 = (EditText) findViewById(R.id.txtSecret2);
+		this.m_login = (EditText) findViewById(R.id.txtLogin);
+		this.m_password = (EditText) findViewById(R.id.txtPassword);
+		this.m_btnConnexion = (Button) findViewById(R.id.btnLogin);
+		try {
+			if (arg0 == this.m_btnConnexion) {
+				// Recupere le login et le mot de passe
+				String l_login = this.m_login.getText().toString();
+				String l_password = this.m_password.getText().toString();
+				String l_code1 = this.m_code1.getText().toString();
+				String l_code2 = this.m_code2.getText().toString();
+
 				boolean loginok = verifiePIN(l_code1, l_code2);
-				if(loginok && !l_login.matches("") && !l_password.matches("") 
-						&& !l_code1.matches("") && !l_code2.matches("")){
-					//Ajoute les donnees dans la base sqlite
-					if (this.addDataSql(l_login ,l_password, l_code1)) {
-						//Termine l'activity
+				if (loginok && !l_login.matches("") && !l_password.matches("")
+						&& !l_code1.matches("") && !l_code2.matches("")) {
+					// Ajoute les donnees dans la base sqlite
+					if (this.addDataSql(l_login, l_password, l_code1)) {
+						// Termine l'activity
 						finish();
-						Toast.makeText(this, "Connexion réussie", Toast.LENGTH_SHORT).show();
+						Toast.makeText(this, "Connexion réussie",
+								Toast.LENGTH_SHORT).show();
 					}
 				} else {
-					Toast.makeText(this, "Echec de l'authentification", Toast.LENGTH_SHORT).show();
+					Toast.makeText(this, "Echec de l'authentification",
+							Toast.LENGTH_SHORT).show();
 				}
 			}
-		}catch(Exception ex){
-			Toast.makeText(this, "Erreur : "+ex.toString(), Toast.LENGTH_SHORT).show();
+		} catch (Exception ex) {
+			Toast.makeText(this, "Erreur : " + ex.toString(),
+					Toast.LENGTH_SHORT).show();
 		}
 	}
 
 	/**
 	 * Verifie que les codes PIN sont identiques
+	 * 
 	 * @return Vrai si le couple est correct
 	 */
 	private boolean verifiePIN(String code1, String code2) {
@@ -157,21 +163,42 @@ public class Connexion extends Activity implements OnClickListener {
 
 	/**
 	 * Ajoute les donnees dans la base SQLite
-	 * @param _login Login de l'utilisateur
-	 * @param _password Password de l'utilisateur
-	 * @param _code Code PIN
-	 * @throws Exception 
+	 * 
+	 * @param _login
+	 *            Login de l'utilisateur
+	 * @param _password
+	 *            Password de l'utilisateur
+	 * @param _code
+	 *            Code PIN
+	 * @throws Exception
 	 */
-	private boolean addDataSql(String _login,String _password,String _code) throws Exception{
-		try{
-			UserDataBase l_dataBase=new  UserDataBase(this);
-			User l_user=new User(_login,_password,_code);
+	private boolean addDataSql(String _login, String _password, String _code)
+			throws Exception {
+		try {
+			connexion();
+			UserDataBase l_dataBase = new UserDataBase(this);
+			User l_user = new User(_login, _password, _code);
 			l_dataBase.open();
 			l_dataBase.insertUser(l_user);
 			l_dataBase.close();
-		}catch(Exception ex){
+		} catch (Exception ex) {
 			Log.e("Erreur", ex.toString());
 		}
 		return true;
+	}
+
+	private void connexion() {
+		new Thread(new Runnable() {
+
+			@Override
+			public void run() {
+				HashMap<String, String> hs =new HashMap<String, String>();
+				hs.put("$login",m_login.getText().toString());
+				hs.put("$mdp", m_password.getText().toString());
+				Soap soap = new Soap("authentification",hs);
+				Log.e("SOAP",soap.getSo().toString());
+			}
+
+		}).start();
 	}
 }

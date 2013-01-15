@@ -70,12 +70,12 @@ public class UserDataBase {
 	}
  
 	public int removeUser(){
-		//Suppression d'un livre de la BDD grÃ¢ce Ã  l'ID
+		//Suppression d'un user de la BDD grÃ¢ce Ã  l'ID
 		return bdd.delete(TABLE_USERS, COL_ID + " = " + this.getId(), null);
 	}
  
 	public User getUser(){
-		//RÃ©cupÃ¨re dans un Cursor les valeurs correspondant Ã  un livre contenu dans la BDD (ici on sÃ©lectionne le livre grÃ¢ce Ã  son titre)
+		//RÃ©cupÃ¨re dans un Cursor les valeurs correspondant à  un user contenu dans la BDD
 		Cursor c = bdd.query(TABLE_USERS, new String[] {COL_ID, COL_LOGIN, COL_PASSWORD, COL_PIN}, null, null, null, null, null);
 		return cursorToUser(c);
 	}
@@ -97,17 +97,17 @@ public class UserDataBase {
 		return c.getCount() != 0;
 	}
 	
-	//Cette mÃ©thode permet de convertir un cursor en un livre
+	//Cette méthode permet de convertir un cursor en un user
 	private User cursorToUser(Cursor c){
-		//si aucun Ã©lÃ©ment n'a Ã©tÃ© retournÃ© dans la requÃªte, on renvoie null
+		//si aucun élèment n'a été retourné dans la requète, on renvoie null
 		if (c.getCount() == 0){
 			return null;
 		}else{
-			//Sinon on se place sur le premier Ã©lÃ©ment
+			//Sinon on se place sur le premier élément
 			c.moveToFirst();
-			//On crÃ©Ã© un livre
+			//On créé un livre
 			User user = new User();
-			//on lui affecte toutes les infos grÃ¢ce aux infos contenues dans le Cursor
+			//on lui affecte toutes les infos grâce aux infos contenues dans le Cursor
 			user.setLogin(c.getString(NUM_COL_LOGIN));
 			user.setPassword(c.getString(NUM_COL_PASSWORD));
 			user.setPIN(c.getString(NUM_COL_PIN));
